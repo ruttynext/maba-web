@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/mba-web/static/css/main.c789676a.css",
+    "main.js": "/mba-web/static/js/main.601fec01.js",
+    "static/js/787.b6063c01.chunk.js": "/mba-web/static/js/787.b6063c01.chunk.js",
+    "static/media/MaterialIcons-Regular.eot": "/mba-web/static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
+    "static/media/MaterialIcons-Regular.ttf": "/mba-web/static/media/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
+    "static/media/MaterialIcons-Regular.woff": "/mba-web/static/media/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
+    "static/media/MaterialIcons-Regular.woff2": "/mba-web/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
+    "index.html": "/mba-web/index.html",
+    "main.c789676a.css.map": "/mba-web/static/css/main.c789676a.css.map",
+    "main.601fec01.js.map": "/mba-web/static/js/main.601fec01.js.map",
+    "787.b6063c01.chunk.js.map": "/mba-web/static/js/787.b6063c01.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c789676a.css",
+    "static/js/main.601fec01.js"
+  ]
+}
