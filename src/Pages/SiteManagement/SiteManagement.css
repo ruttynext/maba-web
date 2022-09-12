@@ -1,0 +1,17 @@
+.k-form-fieldset{
+ direction: rtl;
+}
+.div-spinner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.div-submit{
+    text-align: left;
+}
+.k-grid td  {
+    text-align: center !important;
+  }
+/* .btn-submit{
+   margin-left: 0;
+} */

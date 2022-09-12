@@ -1,0 +1,5065 @@
+{
+	"header": {
+		"DAGUID": "81b4b9df-11d0-4409-8b6d-df49839d8dd7",
+		"RangeStart": 0,
+		"RangeStop": 721,
+		"Description": null
+	},
+	"startTime": "2022-08-28T15:27:36.0781107+03:00",
+	"Measures": [
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 0,
+			"Value": 26.68595,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 0,
+			"Value": 25.04466,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 10,
+			"Value": 26.54929,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 10,
+			"Value": 25.11342,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 20,
+			"Value": 26.63617,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 20,
+			"Value": 25.0046,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 30,
+			"Value": 26.70847,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 30,
+			"Value": 25.1698,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 40,
+			"Value": 26.5035,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 40,
+			"Value": 25.34286,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 50,
+			"Value": 26.71613,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 50,
+			"Value": 25.4109,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 60,
+			"Value": 26.72513,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 60,
+			"Value": 25.28076,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 70,
+			"Value": 26.74076,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 70,
+			"Value": 25.2595,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 80,
+			"Value": 26.77991,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 80,
+			"Value": 25.0625,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 90,
+			"Value": 26.64419,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 90,
+			"Value": 25.22705,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 100,
+			"Value": 26.57943,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 100,
+			"Value": 25.21565,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 110,
+			"Value": 26.7416,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 110,
+			"Value": 25.1642,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 120,
+			"Value": 26.54408,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 120,
+			"Value": 25.08935,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 130,
+			"Value": 26.5832,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 130,
+			"Value": 25.39225,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 140,
+			"Value": 26.67865,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 140,
+			"Value": 25.2914,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 150,
+			"Value": 26.65915,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 150,
+			"Value": 25.11654,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 160,
+			"Value": 26.55123,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 160,
+			"Value": 25.12716,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 170,
+			"Value": 26.60528,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 170,
+			"Value": 25.18959,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 180,
+			"Value": 26.67584,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 180,
+			"Value": 25.1524,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 190,
+			"Value": 26.67932,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 190,
+			"Value": 25.01341,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 200,
+			"Value": 26.40976,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 200,
+			"Value": 24.96219,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 210,
+			"Value": 26.56249,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 210,
+			"Value": 25.03247,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 220,
+			"Value": 26.50738,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 220,
+			"Value": 25.06069,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 230,
+			"Value": 26.51476,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 230,
+			"Value": 25.14471,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 240,
+			"Value": 26.51756,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 240,
+			"Value": 25.13002,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 250,
+			"Value": 26.65427,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 250,
+			"Value": 25.2423,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 260,
+			"Value": 26.64026,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 260,
+			"Value": 25.48216,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 270,
+			"Value": 26.77837,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 270,
+			"Value": 25.36554,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 280,
+			"Value": 26.74034,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 280,
+			"Value": 25.34677,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 290,
+			"Value": 26.80006,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 290,
+			"Value": 25.59326,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 300,
+			"Value": 26.59742,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 300,
+			"Value": 25.65596,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 310,
+			"Value": 26.63005,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 310,
+			"Value": 25.29381,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 320,
+			"Value": 26.65099,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 320,
+			"Value": 24.99305,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 330,
+			"Value": 26.74145,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 330,
+			"Value": 25.06226,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 340,
+			"Value": 26.77261,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 340,
+			"Value": 24.99784,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 350,
+			"Value": 26.77719,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 350,
+			"Value": 25.11235,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 360,
+			"Value": 26.7187,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 360,
+			"Value": 25.09713,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 370,
+			"Value": 26.71397,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 370,
+			"Value": 24.96485,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 380,
+			"Value": 26.59862,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 380,
+			"Value": 25.09766,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 390,
+			"Value": 26.69563,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 390,
+			"Value": 25.04713,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 400,
+			"Value": 26.58147,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 400,
+			"Value": 25.31734,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 410,
+			"Value": 26.54908,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 410,
+			"Value": 25.79497,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 420,
+			"Value": 26.51333,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 420,
+			"Value": 33.8401,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 430,
+			"Value": 26.50934,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 430,
+			"Value": 32.40476,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 440,
+			"Value": 26.54319,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 440,
+			"Value": 31.57061,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 450,
+			"Value": 26.67686,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 450,
+			"Value": 29.56403,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 460,
+			"Value": 26.55833,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 460,
+			"Value": 28.76298,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 470,
+			"Value": 26.45801,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 470,
+			"Value": 28.35082,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 480,
+			"Value": 26.5046,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 480,
+			"Value": 27.96248,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 490,
+			"Value": 26.55034,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 490,
+			"Value": 27.74155,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 500,
+			"Value": 26.76277,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 500,
+			"Value": 27.73832,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 510,
+			"Value": 26.90398,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 510,
+			"Value": 27.61446,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 520,
+			"Value": 26.9582,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 520,
+			"Value": 27.65458,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 530,
+			"Value": 27.0052,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 530,
+			"Value": 27.59861,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 540,
+			"Value": 27.04252,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 540,
+			"Value": 27.66407,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 550,
+			"Value": 27.13299,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 550,
+			"Value": 27.73256,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 560,
+			"Value": 27.24007,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 560,
+			"Value": 27.78296,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 570,
+			"Value": 34.70863,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 570,
+			"Value": 27.78739,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 580,
+			"Value": 31.5396,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 580,
+			"Value": 27.91792,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 590,
+			"Value": 29.29198,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 590,
+			"Value": 27.95683,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 600,
+			"Value": 28.70189,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 600,
+			"Value": 27.87993,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 610,
+			"Value": 27.72971,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 610,
+			"Value": 27.85928,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 620,
+			"Value": 27.66774,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 620,
+			"Value": 27.80162,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 630,
+			"Value": 27.47255,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 630,
+			"Value": 27.83552,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 640,
+			"Value": 27.52093,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 640,
+			"Value": 27.6594,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 650,
+			"Value": 27.6264,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 650,
+			"Value": 27.77945,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 660,
+			"Value": 27.56221,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 660,
+			"Value": 27.82782,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 670,
+			"Value": 27.40432,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 670,
+			"Value": 28.00808,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 680,
+			"Value": 27.11127,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 680,
+			"Value": 53.01037,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 690,
+			"Value": 27.08197,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 690,
+			"Value": 41.29355,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 700,
+			"Value": 27.15044,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 700,
+			"Value": 33.44939,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 710,
+			"Value": 27.02837,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 710,
+			"Value": 30.84221,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 720,
+			"Value": 26.99558,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 720,
+			"Value": 29.40677,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 730,
+			"Value": 27.05155,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 730,
+			"Value": 28.84823,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 740,
+			"Value": 27.18217,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 740,
+			"Value": 28.50929,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 750,
+			"Value": 27.29182,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 750,
+			"Value": 28.08505,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 760,
+			"Value": 27.24574,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 760,
+			"Value": 27.90574,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 770,
+			"Value": 26.6166,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 770,
+			"Value": 27.84432,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 780,
+			"Value": 26.76089,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 780,
+			"Value": 27.71775,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 790,
+			"Value": 26.85863,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 790,
+			"Value": 27.53457,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 800,
+			"Value": 27.09896,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 800,
+			"Value": 27.50334,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 810,
+			"Value": 27.23421,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 810,
+			"Value": 27.54074,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 820,
+			"Value": 27.17547,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 820,
+			"Value": 27.47566,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 830,
+			"Value": 27.35819,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 830,
+			"Value": 27.48643,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 840,
+			"Value": 27.40252,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 840,
+			"Value": 27.60428,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 850,
+			"Value": 27.33329,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 850,
+			"Value": 27.68488,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 860,
+			"Value": 27.3307,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 860,
+			"Value": 27.61479,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 870,
+			"Value": 27.25184,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 870,
+			"Value": 27.58357,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 880,
+			"Value": 27.36294,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 880,
+			"Value": 27.41091,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 890,
+			"Value": 27.43909,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 890,
+			"Value": 27.15073,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 900,
+			"Value": 27.40647,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 900,
+			"Value": 27.05293,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 910,
+			"Value": 27.48444,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 910,
+			"Value": 26.94764,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 920,
+			"Value": 27.49121,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 920,
+			"Value": 26.82565,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 930,
+			"Value": 27.52038,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 930,
+			"Value": 26.62233,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 940,
+			"Value": 27.51793,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 940,
+			"Value": 26.51619,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 950,
+			"Value": 27.49346,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 950,
+			"Value": 26.33549,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 960,
+			"Value": 27.49922,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 960,
+			"Value": 26.24681,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 970,
+			"Value": 27.49235,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 970,
+			"Value": 26.24517,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 980,
+			"Value": 27.4178,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 980,
+			"Value": 26.16968,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 990,
+			"Value": 27.20584,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 990,
+			"Value": 26.13197,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1000,
+			"Value": 27.23093,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1000,
+			"Value": 26.126,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1010,
+			"Value": 27.32329,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1010,
+			"Value": 26.09899,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1020,
+			"Value": 27.313110000000003,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1020,
+			"Value": 25.98756,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1030,
+			"Value": 27.32959,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1030,
+			"Value": 26.07587,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1040,
+			"Value": 27.27857,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1040,
+			"Value": 26.11558,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1050,
+			"Value": 27.18664,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1050,
+			"Value": 26.0876,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1060,
+			"Value": 27.19287,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1060,
+			"Value": 26.04043,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1070,
+			"Value": 27.23274,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1070,
+			"Value": 26.01436,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1080,
+			"Value": 27.31711,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1080,
+			"Value": 26.08006,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1090,
+			"Value": 27.33705,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1090,
+			"Value": 26.14036,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1100,
+			"Value": 27.36881,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1100,
+			"Value": 26.13519,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1110,
+			"Value": 27.3746,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1110,
+			"Value": 26.18251,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1120,
+			"Value": 27.25243,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1120,
+			"Value": 26.16098,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1130,
+			"Value": 27.34429,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1130,
+			"Value": 26.0357,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1140,
+			"Value": 27.27123,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1140,
+			"Value": 25.99189,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1150,
+			"Value": 27.18456,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1150,
+			"Value": 25.97854,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1160,
+			"Value": 27.27109,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1160,
+			"Value": 25.95736,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1170,
+			"Value": 27.18961,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1170,
+			"Value": 25.90665,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1180,
+			"Value": 27.15208,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1180,
+			"Value": 25.92586,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1190,
+			"Value": 27.29621,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1190,
+			"Value": 25.97428,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1200,
+			"Value": 27.23501,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1200,
+			"Value": 25.9388,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1210,
+			"Value": 27.14304,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1210,
+			"Value": 25.88315,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1220,
+			"Value": 27.26908,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1220,
+			"Value": 25.89437,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1230,
+			"Value": 27.21915,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1230,
+			"Value": 25.88036,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1240,
+			"Value": 27.18916,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1240,
+			"Value": 25.83745,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1250,
+			"Value": 27.23044,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1250,
+			"Value": 25.74785,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1260,
+			"Value": 27.23663,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1260,
+			"Value": 25.75966,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1270,
+			"Value": 27.19649,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1270,
+			"Value": 25.96275,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1280,
+			"Value": 27.06531,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1280,
+			"Value": 26.06305,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1290,
+			"Value": 27.19622,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1290,
+			"Value": 26.05235,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1300,
+			"Value": 27.16073,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1300,
+			"Value": 26.06873,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1310,
+			"Value": 27.10239,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1310,
+			"Value": 26.07933,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1320,
+			"Value": 27.11237,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1320,
+			"Value": 26.13825,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1330,
+			"Value": 27.11492,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1330,
+			"Value": 26.17569,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1340,
+			"Value": 27.06163,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1340,
+			"Value": 26.06174,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1350,
+			"Value": 27.01534,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1350,
+			"Value": 26.04192,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1360,
+			"Value": 27.08733,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1360,
+			"Value": 26.0132,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1370,
+			"Value": 27.10791,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1370,
+			"Value": 26.01283,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1380,
+			"Value": 27.17627,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1380,
+			"Value": 26.00164,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1390,
+			"Value": 27.26987,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1390,
+			"Value": 26.07457,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1400,
+			"Value": 27.27245,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1400,
+			"Value": 26.00351,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1410,
+			"Value": 27.0887,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1410,
+			"Value": 25.99229,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1420,
+			"Value": 27.03856,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1420,
+			"Value": 26.06839,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1430,
+			"Value": 26.95754,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1430,
+			"Value": 26.11905,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1440,
+			"Value": 27.13704,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1440,
+			"Value": 26.12752,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1450,
+			"Value": 27.21951,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1450,
+			"Value": 26.07,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1460,
+			"Value": 27.08397,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1460,
+			"Value": 26.03552,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1470,
+			"Value": 27.08126,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1470,
+			"Value": 26.073,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1480,
+			"Value": 27.10331,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1480,
+			"Value": 26.13014,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1490,
+			"Value": 27.23807,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1490,
+			"Value": 26.09097,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1500,
+			"Value": 27.18112,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1500,
+			"Value": 26.01631,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1510,
+			"Value": 27.12467,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1510,
+			"Value": 26.00516,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1520,
+			"Value": 27.2496,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1520,
+			"Value": 25.99545,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1530,
+			"Value": 27.07697,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1530,
+			"Value": 25.93176,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1540,
+			"Value": 27.04948,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1540,
+			"Value": 25.97329,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1550,
+			"Value": 27.2121,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1550,
+			"Value": 25.95522,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1560,
+			"Value": 27.30218,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1560,
+			"Value": 25.85358,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1570,
+			"Value": 27.16928,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1570,
+			"Value": 25.8524,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1580,
+			"Value": 27.25359,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1580,
+			"Value": 25.85266,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1590,
+			"Value": 27.01657,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1590,
+			"Value": 25.86599,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1600,
+			"Value": 27.12532,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1600,
+			"Value": 25.93458,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1610,
+			"Value": 27.17957,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1610,
+			"Value": 25.9074,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1620,
+			"Value": 27.34881,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1620,
+			"Value": 25.88897,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1630,
+			"Value": 27.18812,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1630,
+			"Value": 25.84755,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1640,
+			"Value": 27.13968,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1640,
+			"Value": 25.93183,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1650,
+			"Value": 27.20967,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1650,
+			"Value": 25.99651,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1660,
+			"Value": 27.32233,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1660,
+			"Value": 25.96728,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1670,
+			"Value": 27.23354,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1670,
+			"Value": 25.938,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1680,
+			"Value": 27.18405,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1680,
+			"Value": 26.06642,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1690,
+			"Value": 27.23751,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1690,
+			"Value": 26.12241,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1700,
+			"Value": 27.16461,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1700,
+			"Value": 25.93572,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1710,
+			"Value": 27.20492,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1710,
+			"Value": 25.96274,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1720,
+			"Value": 27.17193,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1720,
+			"Value": 26.01569,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1730,
+			"Value": 27.10857,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1730,
+			"Value": 25.88213,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1740,
+			"Value": 27.07198,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1740,
+			"Value": 25.89375,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1750,
+			"Value": 27.14859,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1750,
+			"Value": 25.88827,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1760,
+			"Value": 27.23963,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1760,
+			"Value": 25.97179,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1770,
+			"Value": 27.11619,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1770,
+			"Value": 25.95477,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1780,
+			"Value": 27.23884,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1780,
+			"Value": 25.91936,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1790,
+			"Value": 27.17246,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1790,
+			"Value": 26.04597,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1800,
+			"Value": 27.10658,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1800,
+			"Value": 25.89458,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1810,
+			"Value": 27.17018,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1810,
+			"Value": 25.83406,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1820,
+			"Value": 27.12504,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1820,
+			"Value": 26.00791,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1830,
+			"Value": 27.09787,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1830,
+			"Value": 26.00289,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1840,
+			"Value": 27.10784,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1840,
+			"Value": 25.90325,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1850,
+			"Value": 27.04595,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1850,
+			"Value": 25.9315,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1860,
+			"Value": 27.04795,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1860,
+			"Value": 25.90928,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1870,
+			"Value": 27.12728,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1870,
+			"Value": 25.91419,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1880,
+			"Value": 27.18627,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1880,
+			"Value": 25.82589,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1890,
+			"Value": 27.04753,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1890,
+			"Value": 25.73562,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1900,
+			"Value": 27.13098,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1900,
+			"Value": 25.70203,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1910,
+			"Value": 27.01593,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1910,
+			"Value": 25.66074,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1920,
+			"Value": 27.07909,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1920,
+			"Value": 25.70021,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1930,
+			"Value": 27.09954,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1930,
+			"Value": 25.66664,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1940,
+			"Value": 27.23609,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1940,
+			"Value": 25.64016,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1950,
+			"Value": 27.0294,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1950,
+			"Value": 25.63119,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1960,
+			"Value": 27.08458,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1960,
+			"Value": 25.64038,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1970,
+			"Value": 27.12477,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1970,
+			"Value": 25.58826,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1980,
+			"Value": 27.12532,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1980,
+			"Value": 25.57526,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 1990,
+			"Value": 27.19468,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 1990,
+			"Value": 25.68342,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2000,
+			"Value": 27.21439,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2000,
+			"Value": 25.6832,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2010,
+			"Value": 27.23779,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2010,
+			"Value": 25.81483,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2020,
+			"Value": 27.19079,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2020,
+			"Value": 25.91786,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2030,
+			"Value": 27.20154,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2030,
+			"Value": 25.88018,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2040,
+			"Value": 27.13836,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2040,
+			"Value": 25.87103,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2050,
+			"Value": 27.06477,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2050,
+			"Value": 25.82239,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2060,
+			"Value": 27.03079,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2060,
+			"Value": 25.83079,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2070,
+			"Value": 26.96021,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2070,
+			"Value": 25.74401,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2080,
+			"Value": 27.00119,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2080,
+			"Value": 25.75054,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2090,
+			"Value": 27.00792,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2090,
+			"Value": 25.67562,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2100,
+			"Value": 27.14336,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2100,
+			"Value": 25.66977,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2110,
+			"Value": 26.87505,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2110,
+			"Value": 25.7175,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2120,
+			"Value": 27.02274,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2120,
+			"Value": 25.59913,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2130,
+			"Value": 26.98427,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2130,
+			"Value": 25.59815,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2140,
+			"Value": 26.99682,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2140,
+			"Value": 25.62526,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2150,
+			"Value": 27.06792,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2150,
+			"Value": 25.65534,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2160,
+			"Value": 27.09678,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2160,
+			"Value": 25.80649,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2170,
+			"Value": 26.90252,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2170,
+			"Value": 25.71471,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2180,
+			"Value": 27.0414,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2180,
+			"Value": 25.70681,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2190,
+			"Value": 27.14649,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2190,
+			"Value": 25.887,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2200,
+			"Value": 27.16135,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2200,
+			"Value": 25.95228,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2210,
+			"Value": 27.08602,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2210,
+			"Value": 26.13822,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2220,
+			"Value": 27.14297,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2220,
+			"Value": 26.2258,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2230,
+			"Value": 27.05195,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2230,
+			"Value": 26.22572,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2240,
+			"Value": 27.10619,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2240,
+			"Value": 26.23128,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2250,
+			"Value": 27.0559,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2250,
+			"Value": 26.33492,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2260,
+			"Value": 27.21128,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2260,
+			"Value": 26.2401,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2270,
+			"Value": 27.38824,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2270,
+			"Value": 26.10372,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2280,
+			"Value": 27.31687,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2280,
+			"Value": 26.12457,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2290,
+			"Value": 27.27586,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2290,
+			"Value": 26.1369,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2300,
+			"Value": 27.18868,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2300,
+			"Value": 26.11035,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2310,
+			"Value": 27.30513,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2310,
+			"Value": 26.15626,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2320,
+			"Value": 27.20092,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2320,
+			"Value": 26.18731,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2330,
+			"Value": 27.36312,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2330,
+			"Value": 26.15267,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2340,
+			"Value": 27.07624,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2340,
+			"Value": 26.10451,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2350,
+			"Value": 27.12183,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2350,
+			"Value": 26.15483,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2360,
+			"Value": 27.31244,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2360,
+			"Value": 26.09189,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2370,
+			"Value": 27.18003,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2370,
+			"Value": 25.96046,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2380,
+			"Value": 27.22847,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2380,
+			"Value": 26.03158,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2390,
+			"Value": 27.3937,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2390,
+			"Value": 26.13659,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2400,
+			"Value": 27.22894,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2400,
+			"Value": 26.05089,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2410,
+			"Value": 27.18694,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2410,
+			"Value": 26.11646,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2420,
+			"Value": 27.3387,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2420,
+			"Value": 26.05646,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2430,
+			"Value": 27.27742,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2430,
+			"Value": 26.02143,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2440,
+			"Value": 26.89669,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2440,
+			"Value": 26.03504,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2450,
+			"Value": 27.03121,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2450,
+			"Value": 26.01339,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2460,
+			"Value": 27.18763,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2460,
+			"Value": 26.074,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2470,
+			"Value": 27.19511,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2470,
+			"Value": 26.16569,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2480,
+			"Value": 27.24287,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2480,
+			"Value": 26.13223,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2490,
+			"Value": 27.12219,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2490,
+			"Value": 26.05943,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2500,
+			"Value": 27.12321,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2500,
+			"Value": 26.03452,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2510,
+			"Value": 27.25537,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2510,
+			"Value": 26.04971,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2520,
+			"Value": 27.29341,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2520,
+			"Value": 26.11026,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2530,
+			"Value": 27.34384,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2530,
+			"Value": 26.03394,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2540,
+			"Value": 27.26974,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2540,
+			"Value": 26.04686,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2550,
+			"Value": 27.28625,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2550,
+			"Value": 25.95059,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2560,
+			"Value": 27.2274,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2560,
+			"Value": 25.91759,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2570,
+			"Value": 27.37895,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2570,
+			"Value": 25.94346,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2580,
+			"Value": 27.05779,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2580,
+			"Value": 25.877,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2590,
+			"Value": 27.17393,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2590,
+			"Value": 26.18896,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2600,
+			"Value": 27.03787,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2600,
+			"Value": 26.272,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2610,
+			"Value": 27.04427,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2610,
+			"Value": 26.11216,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2620,
+			"Value": 27.11599,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2620,
+			"Value": 26.26046,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2630,
+			"Value": 27.18965,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2630,
+			"Value": 26.19056,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2640,
+			"Value": 27.24781,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2640,
+			"Value": 26.21623,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2650,
+			"Value": 27.20926,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2650,
+			"Value": 26.22215,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2660,
+			"Value": 27.25868,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2660,
+			"Value": 26.3806,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2670,
+			"Value": 27.03837,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2670,
+			"Value": 26.50493,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2680,
+			"Value": 27.11237,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2680,
+			"Value": 26.29048,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2690,
+			"Value": 27.15702,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2690,
+			"Value": 26.21591,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2700,
+			"Value": 27.14522,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2700,
+			"Value": 26.41735,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2710,
+			"Value": 27.09185,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2710,
+			"Value": 26.31374,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2720,
+			"Value": 27.05357,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2720,
+			"Value": 26.31117,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2730,
+			"Value": 27.06502,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2730,
+			"Value": 26.35942,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2740,
+			"Value": 27.03201,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2740,
+			"Value": 26.40184,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2750,
+			"Value": 27.00585,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2750,
+			"Value": 26.21889,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2760,
+			"Value": 27.07993,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2760,
+			"Value": 26.21428,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2770,
+			"Value": 26.91084,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2770,
+			"Value": 26.26607,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2780,
+			"Value": 26.97125,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2780,
+			"Value": 26.21324,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2790,
+			"Value": 26.90347,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2790,
+			"Value": 26.09271,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2800,
+			"Value": 26.92235,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2800,
+			"Value": 25.96502,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2810,
+			"Value": 26.85952,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2810,
+			"Value": 26.02073,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2820,
+			"Value": 26.77699,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2820,
+			"Value": 25.98198,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2830,
+			"Value": 26.78082,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2830,
+			"Value": 25.77598,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2840,
+			"Value": 26.92466,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2840,
+			"Value": 26.07753,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2850,
+			"Value": 26.6933,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2850,
+			"Value": 26.05046,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2860,
+			"Value": 26.78888,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2860,
+			"Value": 26.16223,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2870,
+			"Value": 26.91894,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2870,
+			"Value": 26.26123,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2880,
+			"Value": 26.64205,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2880,
+			"Value": 26.31913,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2890,
+			"Value": 26.68323,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2890,
+			"Value": 26.35274,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2900,
+			"Value": 26.68422,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2900,
+			"Value": 26.25126,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2910,
+			"Value": 26.69432,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2910,
+			"Value": 26.15081,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2920,
+			"Value": 26.61329,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2920,
+			"Value": 26.18703,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2930,
+			"Value": 26.6392,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2930,
+			"Value": 26.14724,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2940,
+			"Value": 26.65326,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2940,
+			"Value": 26.02275,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2950,
+			"Value": 26.7092,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2950,
+			"Value": 25.88599,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2960,
+			"Value": 26.62404,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2960,
+			"Value": 25.82483,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2970,
+			"Value": 26.5988,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2970,
+			"Value": 25.82655,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2980,
+			"Value": 26.681,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2980,
+			"Value": 25.87938,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 2990,
+			"Value": 26.72618,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 2990,
+			"Value": 25.7921,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3000,
+			"Value": 26.58779,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3000,
+			"Value": 25.8122,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3010,
+			"Value": 26.65485,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3010,
+			"Value": 25.80507,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3020,
+			"Value": 26.41593,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3020,
+			"Value": 25.81975,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3030,
+			"Value": 26.47027,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3030,
+			"Value": 25.86338,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3040,
+			"Value": 26.68052,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3040,
+			"Value": 25.8562,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3050,
+			"Value": 26.68122,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3050,
+			"Value": 26.00762,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3060,
+			"Value": 26.58957,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3060,
+			"Value": 25.80361,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3070,
+			"Value": 26.56802,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3070,
+			"Value": 25.82396,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3080,
+			"Value": 26.57394,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3080,
+			"Value": 25.83763,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3090,
+			"Value": 26.54255,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3090,
+			"Value": 25.97299,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3100,
+			"Value": 26.66641,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3100,
+			"Value": 25.88882,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3110,
+			"Value": 26.52721,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3110,
+			"Value": 26.05075,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3120,
+			"Value": 26.62156,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3120,
+			"Value": 26.05557,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3130,
+			"Value": 26.52123,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3130,
+			"Value": 26.05433,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3140,
+			"Value": 26.58758,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3140,
+			"Value": 26.25954,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3150,
+			"Value": 26.60004,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3150,
+			"Value": 26.27495,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3160,
+			"Value": 26.47028,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3160,
+			"Value": 26.12226,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3170,
+			"Value": 26.54794,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3170,
+			"Value": 26.299,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3180,
+			"Value": 26.56525,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3180,
+			"Value": 26.09305,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3190,
+			"Value": 26.70405,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3190,
+			"Value": 26.03326,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3200,
+			"Value": 26.67478,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3200,
+			"Value": 25.96581,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3210,
+			"Value": 26.57046,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3210,
+			"Value": 26.00889,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3220,
+			"Value": 26.51611,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3220,
+			"Value": 26.10227,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3230,
+			"Value": 26.46259,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3230,
+			"Value": 25.97223,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3240,
+			"Value": 26.4146,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3240,
+			"Value": 26.19735,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3250,
+			"Value": 26.51958,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3250,
+			"Value": 26.1759,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3260,
+			"Value": 26.48459,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3260,
+			"Value": 26.06156,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3270,
+			"Value": 26.53869,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3270,
+			"Value": 25.90255,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3280,
+			"Value": 26.45812,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3280,
+			"Value": 26.1328,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3290,
+			"Value": 26.62807,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3290,
+			"Value": 25.94094,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3300,
+			"Value": 26.59866,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3300,
+			"Value": 25.82909,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3310,
+			"Value": 26.36025,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3310,
+			"Value": 25.91059,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3320,
+			"Value": 26.22547,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3320,
+			"Value": 25.89329,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3330,
+			"Value": 26.29774,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3330,
+			"Value": 25.91546,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3340,
+			"Value": 26.37668,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3340,
+			"Value": 25.86721,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3350,
+			"Value": 26.37534,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3350,
+			"Value": 25.76876,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3360,
+			"Value": 26.47647,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3360,
+			"Value": 25.66672,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3370,
+			"Value": 26.39845,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3370,
+			"Value": 25.84286,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3380,
+			"Value": 26.34901,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3380,
+			"Value": 25.76312,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3390,
+			"Value": 26.21274,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3390,
+			"Value": 25.71556,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3400,
+			"Value": 26.26198,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3400,
+			"Value": 25.72388,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3410,
+			"Value": 26.43636,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3410,
+			"Value": 25.66629,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3420,
+			"Value": 26.41674,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3420,
+			"Value": 25.60418,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3430,
+			"Value": 26.53572,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3430,
+			"Value": 25.55564,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3440,
+			"Value": 26.51499,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3440,
+			"Value": 25.82837,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3450,
+			"Value": 26.44246,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3450,
+			"Value": 25.58583,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3460,
+			"Value": 26.32168,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3460,
+			"Value": 25.36825,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3470,
+			"Value": 26.316,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3470,
+			"Value": 25.89084,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3480,
+			"Value": 26.27721,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3480,
+			"Value": 25.91162,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3490,
+			"Value": 26.26375,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3490,
+			"Value": 26.1373,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3500,
+			"Value": 26.36619,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3500,
+			"Value": 25.85781,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3510,
+			"Value": 26.32765,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3510,
+			"Value": 25.72561,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3520,
+			"Value": 26.33838,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3520,
+			"Value": 25.57194,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3530,
+			"Value": 26.30614,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3530,
+			"Value": 25.59425,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3540,
+			"Value": 26.37041,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3540,
+			"Value": 25.58699,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3550,
+			"Value": 26.34026,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3550,
+			"Value": 25.55136,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3560,
+			"Value": 26.51539,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3560,
+			"Value": 25.52006,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3570,
+			"Value": 26.47732,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3570,
+			"Value": 25.57308,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3580,
+			"Value": 26.55138,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3580,
+			"Value": 25.44582,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3590,
+			"Value": 26.61334,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3590,
+			"Value": 25.4361,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 1,
+			"ElapsedTime": 3600,
+			"Value": 26.54552,
+			"InRange": 1
+		},
+		{
+			"Logger": 1234,
+			"Channel": 3,
+			"ElapsedTime": 3600,
+			"Value": 25.45806,
+			"InRange": 1
+		}
+	]
+}

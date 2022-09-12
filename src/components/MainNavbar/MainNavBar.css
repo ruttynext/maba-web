@@ -1,0 +1,11 @@
+
+
+.c- main-nav-bar {
+  position: sticky !important;
+  top: 0 !important;
+  }
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    background-color: gainsboro;
+  }

@@ -1,0 +1,39 @@
+.p-login .login-container {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid rgba(0, 0, 0, .12);
+    background: linear-gradient( rgba(188, 208, 238, 0.4),  rgba(188, 208, 238, 0.4) 25%);
+    padding: 45px 45px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.p-login .signup-vertical-sep-text {
+    display: inline-block;    
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;    
+}
+
+.p-login .signup-vertical-sep {
+    display: inline-block;
+    border-bottom: 1px solid #c7c7c7;
+    width: 30%;
+}
+
+@media screen and (max-width: 580px){
+    .p-login .signup-vertical-sep {
+        display: none;
+    }
+    .p-login .signup-vertical-sep-text {
+        white-space: nowrap;
+    }
+
+    .p-login .loginContainer {
+        padding: 0 5px;
+        margin-top: 3px;
+        margin: 3px;
+    }
+    
+}

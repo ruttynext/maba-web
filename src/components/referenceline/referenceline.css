@@ -1,0 +1,11 @@
+.c-reference-line {
+    display: flex;
+  }
+  .flexControls{
+    display: flex; 
+  }
+  .divDinamicRanges{
+    border: 1px solid black;
+    overflow: auto; 
+    height: 240px; 
+  }

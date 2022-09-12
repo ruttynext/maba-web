@@ -1,0 +1,22 @@
+[{
+    "UserNumber" : 20,
+    "UserLogin" : "rutty@gmail.com",
+    "UserPassword" : "123456",
+    "UserFullName" : "Ruth Oster",
+    "UserPhone" : "054-8482547",
+    "UserAddress" : "Yached Shivti Isreal 14",
+    "UserIsCalibrator" : 1,
+    "UserIsCustomer" : 1,
+    "IsAdmin" : 1
+}, {
+    "UserNumber" : 30,
+    "UserLogin" : "yoel@gmail.com",
+    "UserPassword" : "9999",
+    "UserFullName" : "yoel",
+    "UserPhone" : "054-8482547",
+    "UserAddress" :  "Isreal 184",
+    "UserIsCalibrator" : 1,
+    "UserIsCustomer" : 1,
+    "IsAdmin" : 1
+}]
+

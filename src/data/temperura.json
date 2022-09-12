@@ -1,0 +1,20 @@
+[{
+    "Type" : "טמפרטורה",
+    "MeasuringValue" : "C",
+    "Range" : ""
+}, {
+    "Type" : "לחות",
+    "MeasuringValue" : "C",
+    "Range" : ""
+},
+{
+    "Type" : "לחץ",
+    "MeasuringValue" : "C",
+    "Range" : ""
+},
+{
+    "Type" : "CO2",
+    "MeasuringValue" : "C",
+    "Range" : ""
+}
+]

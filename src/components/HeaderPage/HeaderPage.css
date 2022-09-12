@@ -1,0 +1,34 @@
+
+.c-header-page .navbar{
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.c-header-page .nav-links {
+    color: rgb(27, 32, 102) !important ;
+    padding-top: 12px;
+    padding-bottom: 25px;
+    padding-left: 10px;
+    font-size: larger;
+}
+
+.c-header-page .nav-links:hover {
+    background-color: rgba(188, 208, 238, 0.4);
+}
+
+.c-header-page .active {
+    color: rgb(8, 100, 0) !important;
+}
+
+/* .c-header-page .toggle {
+    margin: 10px !important;
+} */
+
+.c-header-page .brand{
+    font-weight: 900;
+}
+
+.c-header-page .logo-img{
+    width: 100%;
+    height: 100%;
+}

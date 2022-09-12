@@ -1,0 +1,32 @@
+[{
+    "RagashNum" : "T1",
+    "MinValue" : "71.2",
+    "MaxValue" : "71.4",
+    "AvarageValue" : "71.3",
+    "Accuracy" : "נכשל",
+    "Stability" : "עובר"
+}, {
+    "RagashNum" : "T2",
+    "MinValue" : "78.2",
+    "MaxValue" : "79.4",
+    "AvarageValue" : "73.3",
+    "Accuracy" : "נכשל",
+    "Stability" : "עובר"
+},
+{
+    "RagashNum" : "T3",
+    "MinValue" : "71.2",
+    "MaxValue" : "71.4",
+    "AvarageValue" : "71.3",
+    "Accuracy" : "נכשל",
+    "Stability" : "עובר"
+},
+{
+    "RagashNum" : "T4",
+    "MinValue" : "71.2",
+    "MaxValue" : "71.4",
+    "AvarageValue" : "71.3",
+    "Accuracy" : "נכשל",
+    "Stability" : "עובר"
+}
+]

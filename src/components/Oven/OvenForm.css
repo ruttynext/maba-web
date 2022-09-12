@@ -1,0 +1,29 @@
+ /* Add a card effect for articles */
+ .card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    direction: rtl;
+  } 
+   
+  .k-label 
+  {
+    display:block;
+    text-align:right;
+
+  }
+  .div-sign
+  {
+    margin-top: 8px;
+  }
+   .img-sign
+  {
+    vertical-align: baseline;
+  } 
+
+  .temperture{
+   
+    float: right !important;
+    padding-left: 10px;
+    width: 100px;
+  }

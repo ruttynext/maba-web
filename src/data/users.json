@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "fname": "סלביק",
+        "lname": "שמאילוב",
+        "email": "shamailov@gmail.com",
+        "pwd":  "12345678"
+    },
+    {
+        "id": 2,
+        "fname": "יוסי",
+        "lname": "כהן",
+        "email": "Yosi.Cohen@domain.com",
+        "pwd":  "12345678"
+    },
+    {
+        "id": 3,
+        "fname": "ותי",
+        "lname": "אוסטר",
+        "email": "rutty100200@gmail.com",
+        "pwd":  "12345678"
+    }
+]
