@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/OvensDemo/static/css/main.e5c1aa95.css",
-    "main.js": "/OvensDemo/static/js/main.d5c9107a.js",
-    "static/js/787.b6063c01.chunk.js": "/OvensDemo/static/js/787.b6063c01.chunk.js",
-    "static/media/ticket.pdf": "/OvensDemo/static/media/ticket.bf1da0a05800ab66b59f.pdf",
-    "static/media/MaterialIcons-Regular.eot": "/OvensDemo/static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
-    "static/media/MaterialIcons-Regular.ttf": "/OvensDemo/static/media/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
-    "static/media/MaterialIcons-Regular.woff": "/OvensDemo/static/media/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
-    "static/media/MaterialIcons-Regular.woff2": "/OvensDemo/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
-    "index.html": "/OvensDemo/index.html",
-    "main.e5c1aa95.css.map": "/OvensDemo/static/css/main.e5c1aa95.css.map",
-    "main.d5c9107a.js.map": "/OvensDemo/static/js/main.d5c9107a.js.map",
-    "787.b6063c01.chunk.js.map": "/OvensDemo/static/js/787.b6063c01.chunk.js.map"
+    "main.css": "/maba-web-demo/static/css/main.cba8aa6f.css",
+    "main.js": "/maba-web-demo/static/js/main.2dea0d39.js",
+    "static/js/787.b6063c01.chunk.js": "/maba-web-demo/static/js/787.b6063c01.chunk.js",
+    "static/media/ticket.pdf": "/maba-web-demo/static/media/ticket.bf1da0a05800ab66b59f.pdf",
+    "static/media/MaterialIcons-Regular.eot": "/maba-web-demo/static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
+    "static/media/MaterialIcons-Regular.ttf": "/maba-web-demo/static/media/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
+    "static/media/MaterialIcons-Regular.woff": "/maba-web-demo/static/media/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
+    "static/media/MaterialIcons-Regular.woff2": "/maba-web-demo/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
+    "index.html": "/maba-web-demo/index.html",
+    "main.cba8aa6f.css.map": "/maba-web-demo/static/css/main.cba8aa6f.css.map",
+    "main.2dea0d39.js.map": "/maba-web-demo/static/js/main.2dea0d39.js.map",
+    "787.b6063c01.chunk.js.map": "/maba-web-demo/static/js/787.b6063c01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5c1aa95.css",
-    "static/js/main.d5c9107a.js"
+    "static/css/main.cba8aa6f.css",
+    "static/js/main.2dea0d39.js"
   ]
 }
