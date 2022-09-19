@@ -1,4 +1,5 @@
 import {React,  useState } from 'react'
+
 import './referenceline.css'
 
 import {
@@ -12,33 +13,11 @@ import {
     ResponsiveContainer,
     ReferenceLine,Legend
 } from "recharts";
-import { Input } from '@progress/kendo-react-inputs';
+import { Input, Checkbox } from '@progress/kendo-react-inputs';
 import { Button } from '@progress/kendo-react-buttons';
-const colors= ['aqua', 'black', 'blue', 'fuchsia', 'gray', 'green', 
-'lime', 'maroon', 'navy', 'olive', 'orange', 'purple', 'red', 
-'silver', 'teal', 'white', 'yellow'];
-const initialData = [
-    { timeStamp: "01:00", T1: 100.11, T2: 100 },
-    { timeStamp: "01:01", T1: 28.37,T2: 120 },
-    { timeStamp: "01:02", T1: 40.37, T2: 150 },
-    { timeStamp: "01:03", T1: 28.16, T2: 180 },
-    { timeStamp: "01:04", T1: 28.29, T2: 200 },
-    { timeStamp: "01:05", T1: 28, T2: 499 },
-    { timeStamp: "01:06", T1: 28.53, T2: 50 },
-    { timeStamp: "01:07", T1: 28.52, T2: 100 },
-    { timeStamp: "01:08", T1: 28.79, T2: 200 },
-    { timeStamp: "01:09", T1: 28.94, T2: 222 },
-    { timeStamp: "01:10", T1: 28.3, T2: 210 },
-    { timeStamp: "01:11", T1: 28.41, T2: 300 },
-    { timeStamp: "01:12", T1: 90.37, T2: 50 },
-    { timeStamp: "01:13", T1: 28, T2: 190 },
-    { timeStamp: "01:14", T1: 28, T2: 300 },
-    { timeStamp: "01:15", T1: 28, T2: 400 },
-    { timeStamp: "01:16", T1: 3, T2: 200 },
-    { timeStamp: "01:17", T1: 2, T2: 50 },
-    { timeStamp: "01:18", T1: 3, T2: 100 },
-    { timeStamp: "01:19", T1: 7, T2: 100 }
-];
+import { Label } from "@progress/kendo-react-labels";
+
+
 const initialData2 = [
     { index: 1, timeStamp: "01:01", "Channels" : [{"ChannelName": "T1", "Value": 2.52},{"ChannelName": "T2", "Value": 4.41}]},
     { index: 2, timeStamp: "01:02", "Channels" : [{"ChannelName": "T1", "Value": 17.79},{"ChannelName": "T2", "Value": 120}]},
@@ -75,60 +54,50 @@ function Referenceline(props) {
     const [ragashim, setRagashim] = useState(ragashimData);
     const [refLineActive, setRefLineActive] = useState("");
     const [sideLineActive, setSideLineActive] = useState("");
-   
+    const [zoomInActive, setZoomInActive] = useState(false);
+    const [showUnderShootLine, setShowUnderShootLine] = useState(true);
+    const [showOverShootLine, setShowOverShootLine] = useState(true);
+
     const [refAreaLeft, setRefAreaLeft] = useState("");
     const [refAreaRight, setRefAreaRight] = useState("");
     
-    const [ranges, setRanges] = useState([])
-    const [displayColorPicker, setDisplayColorPicker] = useState(false);
-
-    function handleClick() {
-        setDisplayColorPicker(!displayColorPicker);
-      }
-    
-      function handleClose() 
-      {
-        setDisplayColorPicker(false);
-      }
+    //const [ranges, setRanges] = useState([]);
 
     function onMouseUpFromArea(active, activeIndex) {
-        console.log("onMouseUpFromArea00");
-        console.log(refAreaLeft);
-        console.log(refAreaRight);
-        if(refLineActive !== "")
-        {
-            console.log("onMouseUpFromArea11");
-            setRanges(ranges.map(range => (range.key === refLineActive ? {...range, 'rangeLeft' : sideLineActive === 'left' ? active : range.rangeLeft,
-            'rangeRight' : sideLineActive === 'right' ? active : range.rangeRight, 'strokeWidthValue' : 3} : range)));
-            setRefLineActive("");
-            setSideLineActive("");
-            return;
-
-        }
-
        
-        if(refAreaLeft !== "" && refAreaRight !== "")
+        switch(zoomInActive) 
         {
-           // console.log("onMouseUpFromArea22");
-           // console.log(refAreaLeft  + "  " + refAreaRight);
-            //const indexleft = data.map((d) => { return d.timeStamp === refAreaLeft ?  d : ''} );
-            //console.log(data[indexleft]);
-            
-            setData(data.slice(refAreaLeft, refAreaRight +1));
-             console.log(data);
-        }
+            case true:
+                if(refAreaLeft !== "" && refAreaRight !== "")
+                {    
+                  const indexAreaLeft = data.findIndex(x => x.timeStamp === refAreaLeft);
+                  const indexAreaRight = data.findIndex(x => x.timeStamp === refAreaRight);  
+
+                  setData(data.slice(indexAreaLeft, indexAreaRight + 1));  
+                  setRefAreaLeft("");   
+                  setRefAreaRight("");
+                }
+                break
+            case false:
+                if(refLineActive !== "")
+                {
+                    props.updateRanges(props.ranges.map(range => (range.key === refLineActive ? {...range, 'rangeLeft' : sideLineActive === 'left' ? active : range.rangeLeft,
+                    'rangeRight' : sideLineActive === 'right' ? active : range.rangeRight, 'strokeWidthValue' : 2} : range)));
+                    setRefLineActive("");
+                    setSideLineActive("");
+                }
+                break;
+            default:
+        }      
 
     }
 
-    function zoom()
-    {
-       
-    }
+  
 
     function RemoveRange(key)
     {
-       setRanges(ranges =>
-          ranges.filter(obj => {
+        props.updateRanges(ranges =>
+        props.ranges.filter(obj => {
           return obj.key !== key;
         }),
       );
@@ -137,7 +106,7 @@ function Referenceline(props) {
      function SetLabelText(value, key)
      {
 
-        setRanges(ranges.map(range => (range.key === key ? {...range, 'labelText' : value} : range)));
+        props.updateRanges(props.ranges.map(range => (range.key === key ? {...range, 'labelText' : value} : range)));
      }
 
     function toggleDataSeries(e)
@@ -154,53 +123,72 @@ function Referenceline(props) {
 
     function MoveReferanceLine(key, side)
     {
-        setRanges(ranges.map(range => (range.key === key ? {...range, 'strokeWidthValue' : 1} : range)));
+        props.updateRanges(props.ranges.map(range => (range.key === key ? {...range, 'strokeWidthValue' : 1} : range)));
         setRefLineActive(key); 
         setSideLineActive(side);
     }
    
     function onMoveArea(activeLabel, activeIndex)
     {  
-        if(!(refLineActive !== ""))
+
+        switch(zoomInActive) 
         {
-             if(refAreaLeft !== "")
-             {
-               setRefAreaRight(activeIndex);
-              
-             } 
-             return;
-        }
-        
-        setRanges(ranges.map(range => (range.key === refLineActive ? {...range, 'rangeLeft' : sideLineActive === 'left' ? activeLabel : range.rangeLeft,
-                                                                    'rangeRight' : sideLineActive === 'right' ? activeLabel : range.rangeRight} : range)));
+            case true:
+     
+                if(refAreaLeft !== "")
+                {
+                  setRefAreaRight(activeLabel);
+                }
+                break
+            case false:
+                if(refLineActive !== "")
+                {
+                   props.updateRanges(props.ranges.map(range => (range.key === refLineActive ? {...range, 'rangeLeft' : sideLineActive === 'left' ? activeLabel : range.rangeLeft,
+                   'rangeRight' : sideLineActive === 'right' ? activeLabel : range.rangeRight} : range)));
+                }
+                break;
+            default:
+        }  
     }
     
     function AddReferanceLine()
     {
-        let color = colors[Math.floor(Math.random() * colors.length)];
-        ranges.push({'key': ranges.length, 'rangeLeft': '01:01', 'rangeRight': '01:02', 'strokeWidthValue': 3, 'labelText' : '', 'color' :  color});
-        setRanges(ranges.concat());  
+        props.ranges.push({'key': props.ranges.length, 'rangeLeft': '01:01', 'rangeRight': '01:02', 'strokeWidthValue': 2, 'labelText' : '', 'rangeIsFixed': false});
+        props.updateRanges(props.ranges.concat());  
     }
 
-    
-     function onMouseDownLine(activeLabel, activeIndex)
-     {
-        console.log(activeIndex);
-        setRefAreaLeft(activeIndex);
-     }
+
+     const hundleZoomActive = () =>{
+
+       setZoomInActive(current => !current);
+
+       if(!!zoomInActive)
+         setData(reverData.slice());
+
+     };
      
-     function ZoomOut()
-     {
-        setData(reverData.slice());
-     }
+     const SetLimit = (value, key) =>{
+   
+        props.updateRanges(props.ranges.map(range => (range.key === key ? {...range, 'rangeIsFixed': value } : range)));
+   }
     return (
         <div className='c-reference-line'>
             <div className="highlight-bar-charts" style={{ userSelect: "none" }}>
                 <br/>
-                <Button onClick={ZoomOut}>Zoom Out</Button>
-                <LineChart width={700} height={290}
+                <div className='flexControl'>
+                    <Button onClick={hundleZoomActive} style={{background : zoomInActive ? "#a5a5a5" : "",}}>
+                        <span className={zoomInActive ? "k-icon k-i-zoom-out" : "k-icon k-i-zoom-in"}></span>
+                    </Button>
+                    <Checkbox onChange={(e) => (setShowUnderShootLine(e.value))} checked={showUnderShootLine}></Checkbox><Label>UnderShoot</Label>
+                    <Checkbox onChange={(e) => (setShowOverShootLine(e.value))} checked={showOverShootLine}></Checkbox><Label>OverShoot</Label> 
+                   
+                </div>
+                
+                
+
+                <LineChart width={props.width} height={props.height} style={{cursor : zoomInActive ? "zoom-in" : "",}}
                     data={data}
-                     onMouseDown={(e) => onMouseDownLine(e.activeLabel, e.activeTooltipIndex) }
+                     onMouseDown={(e) => zoomInActive ? setRefAreaLeft(e.activeLabel) : '' }
                      onMouseMove={(e) => onMoveArea(e.activeLabel, e.activeTooltipIndex)}
                      onMouseUp={(e) => onMouseUpFromArea(e.activeLabel, e.activeTooltipIndex) }
                     >
@@ -209,6 +197,7 @@ function Referenceline(props) {
                         dataKey="timeStamp"
                     />
                     <YAxis
+                         allowDataOverflow
                         domain={['0', '500']}
                         type="number"
                         //yAxisId="1"
@@ -216,23 +205,46 @@ function Referenceline(props) {
                     <Tooltip />
                     <Legend onClick={(e) => toggleDataSeries(e)}  />
                     {
-                            ranges.map(({key, rangeLeft, rangeRight, strokeWidthValue, labelText, color }, index) => {
+                             props.ranges.map(({key, rangeLeft, rangeRight, strokeWidthValue, labelText, rangeIsFixed }, index) => 
+                             {
                                 return(
-                                <>
-                                    <ReferenceLine key={key + "1"} name={key} x= {rangeLeft} stroke={color} label={labelText} strokeWidth={strokeWidthValue} 
-                                      onMouseDown = {(e) => {MoveReferanceLine(key, 'left')} }
-                                    />
-                                    <ReferenceLine key={key + "2"} name={key} x= {rangeRight} stroke={color}  strokeWidth={strokeWidthValue} 
-                                     onMouseDown = {(e) => {MoveReferanceLine(key, 'right')} }
-                                    />
-                                </>   )
-                            })
+                                    rangeIsFixed ?
+                                    <>
+                                      <ReferenceArea
+                                            label={{ value: labelText, fill: 'black', position: 'insideTop'}}
+                                            fill="white"                             
+                                            x1={rangeLeft}
+                                            x2={rangeRight}
+                                            stroke="yellow"
+                                            strokeWidth = "5"/>
+                                    </> : 
+                                    <>
+                                      <ReferenceLine key={key + "1"} name={key} x= {rangeLeft} stroke="blue" strokeWidth={strokeWidthValue} 
+                                         onMouseDown = {(e) => {MoveReferanceLine(key, 'left')} }/>
+                                      <ReferenceLine key={key + "2"} name={key} x= {rangeRight} stroke="red"  strokeWidth={strokeWidthValue} 
+                                         onMouseDown = {(e) => {MoveReferanceLine(key, 'right')} }/>
+                                    </> 
+                                )
+                             })
                     }
-                    <ReferenceLine y={100} label="Overshoot" stroke="red" />
+
+                    {
+                        refAreaLeft && refAreaRight ? (
+                            <ReferenceArea
+                                x1={refAreaLeft}
+                                x2={refAreaRight}
+                                strokeOpacity={0.3}
+                            />
+                        ) : null
+                    }
+                    {showOverShootLine ? <ReferenceLine y={100} label="OverShoot" stroke="green" /> : ''}
+                    {showUnderShootLine ? <ReferenceLine y={20} label="UnderShoot" stroke="green" /> : ''}
+                   
                     {
                             ragashim.map(({ yAxisId, dataKey, stroke, hide }, index) => {
                                 return(
                                     <Line
+                                    key={index}
                                     //yAxisId= {yAxisId}
                                     type="monotone"
                                     dataKey={dataKey}
@@ -242,21 +254,23 @@ function Referenceline(props) {
                                 />)
                             })
                     }
+                  
                 </LineChart>
             </div>
            
             <div>
                 <Button onClick={AddReferanceLine}>הוסף גבול</Button>   
                 {
-                    ranges.length > 0 ?
+                    props.ranges.length > 0 ?
                     <div className='divDinamicRanges'>
                     {
-                        ranges.map(({key, rangeLeft, rangeRight, labelText }) => {
-                            return <div>
+                        props.ranges.map(({key, rangeLeft, rangeRight, labelText }, index) => {
+                            return <div key={"divRange_" + index}>
                                     {rangeLeft} - {rangeRight}
-                                    <div className='flexControls'>
-                                        <Input Value={labelText} onChange={(e) => SetLabelText(e.target.value, key)}/>
-                                        <Button onClick={(e) => RemoveRange(key)}>הסר</Button>
+                                    <div className='flexControls' key={"divRange2_" + index}> 
+                                        <Checkbox key={"CheckSetLimit_" + index} onChange={(e) => (SetLimit(e.value, key))}></Checkbox>  &nbsp;    
+                                        <Input key={"txtLabelText_" + index} value={labelText} onChange={(e) => SetLabelText(e.target.value, key)}/> &nbsp;
+                                        <Button key={"btnRemoveRange_" + index} onClick={(e) => RemoveRange(key)}><span className="k-icon k-i-close"></span></Button>
                                     </div> 
                                     
                                 </div>

@@ -2,6 +2,7 @@
   "name": "mba-web",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ruttynext.github.io/OvensDemo",
   "dependencies": {
     "@progress/kendo-data-query": "^1.6.0",
     "@progress/kendo-drawing": "^1.16.3",
@@ -23,6 +24,7 @@
     "@progress/kendo-react-treeview": "^5.5.0",
     "@progress/kendo-theme-default": "^5.6.0",
     "@react-pdf-viewer/core": "^3.7.0",
+    "@react-pdf-viewer/default-layout": "^3.7.0",
     "@telerik/kendo-intl": "^2.3.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -34,12 +36,17 @@
     "formik": "^2.2.9",
     "link-react": "^3.0.0",
     "material-design-icons": "^3.0.1",
+    "pdf-image": "^2.0.0",
     "pdf-viewer-reactjs": "^2.2.3",
+    "pdfjs-dist": "^2.16.105",
+    "pspdfkit": "^2022.4.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",
     "react-fetch": "^0.0.9",
     "react-hook-form": "^7.33.0",
+    "react-pdf": "^5.7.2",
+    "react-pdf-to-image": "^1.0.2",
     "react-redirect": "^1.0.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
@@ -49,6 +56,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -71,5 +80,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
   }
 }
