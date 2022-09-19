@@ -1,11 +1,16 @@
 .flexrow{
     display: flex ; 
-   flex-wrap: nowrap; 
+   /* flex-wrap: nowrap;  */
  
 }
  .flexcolumn
 {
    width: 33%;
+   margin-right: 20px;
+} 
+.flexcolumnLarge
+{
+  
    margin-right: 20px;
 } 
 .flexRightcolumn
@@ -35,6 +40,21 @@
    width: 30%;
    margin-right: 20px;
 }
+.flexChooseChannelsCol
+{
+   width: 40%;
+   margin-right: 20px;
+}
+.flexDeviceDetailsCol
+{
+   width: 55%;
+   margin-right: 20px;
+}
+.divRanges
+{
+   margin-right: 20px;
+   width: 95%;
+}
  .flexControl{
    display: flex;    
    /* flex-wrap: nowrap; */
@@ -46,7 +66,7 @@
    margin-left: 15px;
    margin-top: 6px;
 }
-.container-channels{
+.div-title{
    margin-top: 20px;
    background-color:beige;
    text-align: center;
@@ -59,11 +79,12 @@
 }
 .tabStripDiv
 {
+   position: relative;
    margin-top: 20px;
+    z-index: 1; 
 }
 .arrowsChannels{
-   margin-right: 5px;
-   justify-content: center;
+   /* margin-right: 5px; */
 }
 .nextBtn{
    margin-left: 0px;
@@ -80,4 +101,33 @@
 .c-ModalC{
    height: 900px;
    width: 150px;
+}
+/* input:checked .recharts-surface{
+   cursor: zoom-in;
+} */
+
+
+.btnViewReport{
+   direction: ltr !important;
+   left: 0px;
+   position:fixed;
+    transform: translate(-50%) rotate(90deg) translate(0px,-50%); 
+   
+}
+.viewReport{
+   position:fixed;
+
+   left: 0px;
+   z-index: 2;
+   height: 800px;
+   width: 600px;
+}
+.k-panelbar > .k-item > .k-link.k-state-selected, .k-panelbar > .k-item > .k-link.k-selected, .k-panelbar > .k-panelbar-header > .k-link.k-state-selected, .k-panelbar > .k-panelbar-header > .k-link.k-selected {
+   color: #ff6358 !important;
+   background-color: #f8f7f7 !important;
+}
+.divPanelBarItem{
+   padding-right: 10px;
+   padding-left: 10px;
+   padding-bottom: 10px;
 }
