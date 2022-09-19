@@ -31,11 +31,12 @@ function App() {
 
     return (
       
-      <>        
-      <React.Fragment>
+      <>  
+      <h1>fffss</h1>
+      {/* <React.Fragment>
        <BrowserRouter> 
        <HeaderPage activeUser={activeUser} onLogout={(user) => onLogout(null)} ></HeaderPage>
-       {/* {activeUser ? <MainNavbar ></MainNavbar> : ''} */}
+        {activeUser ? <MainNavbar ></MainNavbar> : ''} 
          <Routes>
               <Route exact={true} path="/" element={<HomePage></HomePage>}/>
               <Route exact={true} path="/login" element={<LoginPage path="/login" activeUser={activeUser} onLogin={user => onLogin(user)}/>}/>
@@ -47,7 +48,7 @@ function App() {
               <Route exact={true} path="/ReferenceLine" element={<ReferenceLine/>}/>
           </Routes>
     </BrowserRouter>
-  </React.Fragment>
+  </React.Fragment> */}
     </>
     );
   
