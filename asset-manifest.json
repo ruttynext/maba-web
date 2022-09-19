@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maba-web-demo/static/css/main.cba8aa6f.css",
-    "main.js": "/maba-web-demo/static/js/main.e0832af5.js",
+    "main.js": "/maba-web-demo/static/js/main.2dea0d39.js",
     "static/js/787.b6063c01.chunk.js": "/maba-web-demo/static/js/787.b6063c01.chunk.js",
     "static/media/ticket.pdf": "/maba-web-demo/static/media/ticket.bf1da0a05800ab66b59f.pdf",
     "static/media/MaterialIcons-Regular.eot": "/maba-web-demo/static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
@@ -10,11 +10,11 @@
     "static/media/MaterialIcons-Regular.woff2": "/maba-web-demo/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
     "index.html": "/maba-web-demo/index.html",
     "main.cba8aa6f.css.map": "/maba-web-demo/static/css/main.cba8aa6f.css.map",
-    "main.e0832af5.js.map": "/maba-web-demo/static/js/main.e0832af5.js.map",
+    "main.2dea0d39.js.map": "/maba-web-demo/static/js/main.2dea0d39.js.map",
     "787.b6063c01.chunk.js.map": "/maba-web-demo/static/js/787.b6063c01.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cba8aa6f.css",
-    "static/js/main.e0832af5.js"
+    "static/js/main.2dea0d39.js"
   ]
 }
