@@ -2,7 +2,7 @@
   "name": "mba-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ruttynext.github.io/maba-web-demo/",
+  "homepage": "https://ruttynext.github.io/maba-web-demo",
   "dependencies": {
     "@progress/kendo-data-query": "^1.6.0",
     "@progress/kendo-drawing": "^1.16.3",
