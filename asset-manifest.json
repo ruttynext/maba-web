@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maba-web/static/css/main.aef1ca2f.css",
-    "main.js": "/maba-web/static/js/main.940078bf.js",
+    "main.js": "/maba-web/static/js/main.4f6f8ce5.js",
     "static/js/787.b6063c01.chunk.js": "/maba-web/static/js/787.b6063c01.chunk.js",
     "static/media/MaterialIcons-Regular.eot": "/maba-web/static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
     "static/media/MaterialIcons-Regular.ttf": "/maba-web/static/media/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
@@ -10,11 +10,11 @@
     "static/media/MaterialIcons-Regular.woff2": "/maba-web/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
     "index.html": "/maba-web/index.html",
     "main.aef1ca2f.css.map": "/maba-web/static/css/main.aef1ca2f.css.map",
-    "main.940078bf.js.map": "/maba-web/static/js/main.940078bf.js.map",
+    "main.4f6f8ce5.js.map": "/maba-web/static/js/main.4f6f8ce5.js.map",
     "787.b6063c01.chunk.js.map": "/maba-web/static/js/787.b6063c01.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aef1ca2f.css",
-    "static/js/main.940078bf.js"
+    "static/js/main.4f6f8ce5.js"
   ]
 }
