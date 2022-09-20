@@ -81,11 +81,10 @@
 {
    position: relative;
    margin-top: 20px;
-    z-index: 1; 
+   margin-left: 20px;
+   z-index: 1; 
 }
-.arrowsChannels{
-   /* margin-right: 5px; */
-}
+
 .nextBtn{
    margin-left: 0px;
 }
@@ -107,20 +106,31 @@
 } */
 
 
-.btnViewReport{
+.viewReport{
    direction: ltr !important;
    left: 0px;
    position:fixed;
+   
+}
+.viewReport2{
+  
+   padding-right: 50px;
+   /* position:fixed; */
+   /* z-index: 3; */
+   
+}
+.btnViewReport{
+
     transform: translate(-50%) rotate(90deg) translate(0px,-50%); 
    
 }
-.viewReport{
+.viewReportDialoug{
    position:fixed;
-
-   left: 0px;
-   z-index: 2;
-   height: 800px;
+   left: 27px;
+   z-index: 3;
+    height: 800px; 
    width: 600px;
+   border-style: solid;
 }
 .k-panelbar > .k-item > .k-link.k-state-selected, .k-panelbar > .k-item > .k-link.k-selected, .k-panelbar > .k-panelbar-header > .k-link.k-state-selected, .k-panelbar > .k-panelbar-header > .k-link.k-selected {
    color: #ff6358 !important;
@@ -130,4 +140,12 @@
    padding-right: 10px;
    padding-left: 10px;
    padding-bottom: 10px;
+}
+.createReportBtn{
+ 
+   left: 0px;
+}
+.k-panelbar
+{
+   border-width: 2px;
 }

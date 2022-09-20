@@ -9,3 +9,11 @@
     overflow: auto; 
     height: 240px; 
   }
+  .divControlsRange
+  {
+    padding: 5px;
+  }
+  .recharts-default-legend
+  {
+    overflow: auto;
+  }

@@ -15,7 +15,7 @@ import OvenRangeData from '../../../data/OvenRange.json';
 import HydraData from '../../../data/HydraData.json';
 import './OvenTest3.css'
 import Referenceline from '../../../components/referenceline/referenceline';
-import samplePDF from "./ticket.pdf";
+import ReportOvenImage from "./ReportOvenImage.PNG";
 
 import { Container } from 'react-bootstrap';
 import { TextDirection } from '@react-pdf-viewer/core';
@@ -90,6 +90,8 @@ const columns = [
    
     const toggleDialog = (e) => {
         setVisible(!visible);
+        console.log(e.screenY);
+        console.log(e.screenX);
         setPositionDialoug({marginTop: e.screenY, marginRight: e.screenX,});
       };
 
@@ -104,7 +106,9 @@ const columns = [
                 onClose={toggleDialog}
                 initialHeight={630}
                 initialWidth={1150}
-                style={positionDialoug}>
+                style={positionDialoug}
+                
+                >
                   <Referenceline ranges = {ranges} updateRanges= {setRanges} width={950} height={500}/>
                 </Window>
             )
@@ -123,15 +127,18 @@ const columns = [
 
     return (
       <>
-       <div className='btnViewReport'>
-            <Button onClick={hundleDisplayReport} themeColor={"info"}><span className={displayReport ? "k-icon k-i-arrow-60-down" : "k-icon k-i-arrow-60-up"}></span> 
-             {displayReport ? "הסתר דוח" : " הצג דוח"  }</Button>
+       <div className='viewReport'>
+            <div className='btnViewReport'>
+                <Button onClick={hundleDisplayReport} themeColor={"info"}><span className={displayReport ? "k-icon k-i-arrow-60-down" : "k-icon k-i-arrow-60-up"}></span> 
+                {displayReport ? "הסתר דוח" : " הצג דוח"  }</Button>
+             </div>
        </div> 
         {
             displayReport ? 
-            <div className='viewReport'>
+            <div className='viewReportDialoug'>
             <div>
                 <Button onClick={(e) => setDisplayReport(false)}><span className="k-icon k-i-close"></span></Button>    
+                <img src={ReportOvenImage}/>
             </div>
         </div> : ""
         }
@@ -164,12 +171,7 @@ function OvenTest(props) {
       const handleIndexPage = (e) => {
         SetFirstPage(current => !current);
       };
-      //const [ranges, setRanges] = useState([]);
-      //const [visible, setVisible] = useState(false);
-      
-    //   const toggleDialog = () => {
-    //     setVisible(!visible);
-    //   };
+
  
     return (
         <>
@@ -187,11 +189,15 @@ function OvenTest(props) {
                         <Input></Input>
                     </div>
                 <Button className='nextBtn' onClick={handleIndexPage}>{firstPage ? "הבא": "הקודם"}
-                <span className={firstPage ? "k-icon k-i-arrow-chevron-left" : "k-icon k-i-arrow-chevron-right"}></span></Button> 
+                        <span className={firstPage ? "k-icon k-i-arrow-chevron-left" : "k-icon k-i-arrow-chevron-right"}></span>
+                </Button> 
+                 <div className='viewReport2'>
+            <Button className='createReportBtn' themeColor={"success"}>הנפק דוח</Button>
+            </div>
             </div>
           </div>
-           <DispalyReportContainer></DispalyReportContainer>
-           
+         
+           <DispalyReportContainer></DispalyReportContainer>   
            {
              firstPage ?
                 <div className='divPanelBarItem'>
@@ -206,7 +212,7 @@ function OvenTest(props) {
                     </div>
               </div> :
      
-            <>
+            <div className='tabStripDiv'>
             <div className='flexrow'>
                  <div className='flexChooseChannelsCol'>
          
@@ -517,121 +523,129 @@ function OvenTest(props) {
                                             </div>
                                         </div>
                                     </PanelBarItem>
-                                    <PanelBarItem title="הגדרת חישובים">
+                                    <PanelBarItem title="הצגה גרפית של תחומים">
                                         <div className='divPanelBarItem'>
                                             <div>
                                                 <ReferanceLineContainer/>
                                             </div>
-                                            <div className='flexControl'>
-                                                <div className='card'  style={{width:"21%",}}>
-                                                    <div className='intentional-value'>
-                                                    <div className='flexControl'> 
-                                                        <Checkbox></Checkbox>
-                                                        <Label>ערך מכוון:</Label>
+                                        </div>
+                                    </PanelBarItem>
+                                    <PanelBarItem expanded={true} title="הגדרת חישובים">
+                                       <div className='divPanelBarItem'>
+                                        <div className='flexControl'>
+                                                    <div className='card'  style={{width:"21%",}}>
+                                                        <div className='intentional-value'>
+                                                        <div className='flexControl'> 
+                                                            <Checkbox></Checkbox>
+                                                            <Label>ערך מכוון:</Label>
+                                                        </div>
+                                                        <div>
+                                                            <Label>הבחנת הנבדק</Label>
+                                                            <Input></Input>
+                                                        </div> 
+                                                        <div>
+                                                            <Label>דרגת דיוק</Label>
+                                                            
+                                                            <div className='flexControl'>
+                                                                <div>
+                                                                    <Input></Input>
+                                                                    <Input></Input>
+                                                                </div>
+                                                                
+                                                                
+                                                                <Label> +- </Label> 
+                                                            <Input/>
+                                                            
+                                                            </div>
+                                                            
+                                                        </div>
+                                                        </div>
                                                     </div>
-                                                    <div>
-                                                        <Label>הבחנת הנבדק</Label>
+                                                    <div className='card'  style={{width:"15%",}}>
+                                                        <div className='flexControl'> 
+                                                            <Checkbox></Checkbox>
+                                                            <Label>תצוגה:</Label>
+                                                        </div>
+                                                        <div>
+                                                        <Label>הבחנה:</Label>
                                                         <Input></Input>
-                                                    </div> 
-                                                    <div>
-                                                        <Label>דרגת דיוק</Label>
-                                                        
+                                                        <Label>ערך:</Label>
+                                                        <Input></Input>
+                                                        </div>  
+                                                    </div>
+                                                    <div className='card' style={{width:"25%",}}>
                                                         <div className='flexControl'>
                                                             <div>
-                                                                <Input></Input>
-                                                                <Input></Input>
-                                                            </div>
-                                                            
-                                                            
-                                                            <Label> +- </Label> 
-                                                        <Input/>
-                                                        
-                                                        </div>
-                                                        
-                                                    </div>
-                                                    </div>
-                                                </div>
-                                                <div className='card'  style={{width:"15%",}}>
-                                                    <div className='flexControl'> 
-                                                        <Checkbox></Checkbox>
-                                                        <Label>תצוגה:</Label>
-                                                    </div>
-                                                    <div>
-                                                    <Label>הבחנה:</Label>
-                                                    <Input></Input>
-                                                    <Label>ערך:</Label>
-                                                    <Input></Input>
-                                                    </div>  
-                                                </div>
-                                                <div className='card' style={{width:"25%",}}>
-                                                    <div className='flexControl'>
-                                                        <div>
-                                                            <Label>חישוב אי וודאות</Label>
-                                                            <ComboBox></ComboBox>
-                                                            <Label>אי וודאות</Label>
-                                                            <NumericTextBox/>
-                                                        </div>
-                                                        <div>
-                                                            <div className='flexControl'> 
-                                                                <Checkbox></Checkbox>
-                                                                <Label>יציבות</Label>
-                                                            </div>  
-                                                            <div className='flexControl'>        
+                                                                <Label>חישוב אי וודאות</Label>
                                                                 <ComboBox></ComboBox>
-                                                                <Label>+-</Label>
-                                                            </div>
-                                                            <div className='flexControl'> 
-                                                                <Checkbox></Checkbox>
-                                                                <Label>אחידות</Label>
-                                                            </div>
-                                                            <div className='flexControl'> 
+                                                                <Label>אי וודאות</Label>
                                                                 <NumericTextBox/>
-                                                                <Label>+-</Label>
                                                             </div>
-                                                        </div>
-                                                    </div>  
-                                                </div>
-                                                <div className='card'  style={{width:"39%",}}>
-                                                    <div className='flexControl'> 
-                                                        <div>
-                                                            <div className='flexControl'> 
-                                                                <Checkbox></Checkbox>
-                                                                <Label>זמן התייצבות:</Label>
+                                                            <div>
+                                                                <div className='flexControl'> 
+                                                                    <Checkbox></Checkbox>
+                                                                    <Label>יציבות</Label>
+                                                                </div>  
+                                                                <div className='flexControl'>        
+                                                                    <ComboBox></ComboBox>
+                                                                    <Label>+-</Label>
+                                                                </div>
+                                                                <div className='flexControl'> 
+                                                                    <Checkbox></Checkbox>
+                                                                    <Label>אחידות</Label>
+                                                                </div>
+                                                                <div className='flexControl'> 
+                                                                    <NumericTextBox/>
+                                                                    <Label>+-</Label>
+                                                                </div>
                                                             </div>
+                                                        </div>  
+                                                    </div>
+                                                    <div className='card'  style={{width:"39%",}}>
+                                                        <div className='flexControl'> 
+                                                            <div>
+                                                                <div className='flexControl'> 
+                                                                    <Checkbox></Checkbox>
+                                                                    <Label>זמן התייצבות:</Label>
+                                                                </div>
+                                                                    <div className='flexControl'> 
+                                                                        <Checkbox></Checkbox>
+                                                                        <Label>חישוב אוטומטי</Label>
+                                                                    </div>
+                                                                    <NumericTextBox/>
+                                                                    <br/>
+                                                                    <div>
+                                                                        <div className='flexControl'> 
+                                                                            <Checkbox></Checkbox>
+                                                                            <Label>Overshoot:</Label>
+                                                                        </div>
+                                                                            <div className='flexControl'> 
+                                                                                <Checkbox></Checkbox>
+                                                                                <Label>חישוב אוטומטי</Label>
+                                                                            </div>
+                                                                            <NumericTextBox/>
+                                                                    </div>
+                                                            </div>
+                                                            <div>
+                                                                <div className='flexControl'> 
+                                                                    <Checkbox></Checkbox>
+                                                                    <Label>זמן כיול</Label>
+                                                                </div>
                                                                 <div className='flexControl'> 
                                                                     <Checkbox></Checkbox>
                                                                     <Label>חישוב אוטומטי</Label>
                                                                 </div>
                                                                 <NumericTextBox/>
-                                                                <br/>
-                                                                <div>
-                                                                    <div className='flexControl'> 
-                                                                        <Checkbox></Checkbox>
-                                                                        <Label>Overshoot:</Label>
-                                                                    </div>
-                                                                        <div className='flexControl'> 
-                                                                            <Checkbox></Checkbox>
-                                                                            <Label>חישוב אוטומטי</Label>
-                                                                        </div>
-                                                                        <NumericTextBox/>
-                                                                </div>
-                                                        </div>
-                                                        <div>
-                                                            <div className='flexControl'> 
-                                                                <Checkbox></Checkbox>
-                                                                <Label>זמן כיול</Label>
                                                             </div>
-                                                            <div className='flexControl'> 
-                                                                <Checkbox></Checkbox>
-                                                                <Label>חישוב אוטומטי</Label>
-                                                            </div>
-                                                            <NumericTextBox/>
-                                                        </div>
-                                                    
-                                                    </div> 
+                                                        
+                                                        </div> 
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <br/>
+                                       </div>
+                                    </PanelBarItem>
+                                    <PanelBarItem expanded={true} title="תוצאות כיול">
+                                       <div className='divPanelBarItem'>
+                                        <br/>
                                             <div>
                                                     <Grid>
                                                         <GridColumn field="RangeName" title="ערך מכוון [K]"  />
@@ -677,7 +691,7 @@ function OvenTest(props) {
                         </PanelBarItem>
                     </PanelBar>
                  </div>
-                </>
+                </div>
               }  
            
        
