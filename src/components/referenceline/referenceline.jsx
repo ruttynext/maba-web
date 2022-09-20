@@ -239,33 +239,32 @@ function Referenceline(props) {
                     }
                     {showOverShootLine ? <ReferenceLine y={100} label="OverShoot" stroke="green" /> : ''}
                     {showUnderShootLine ? <ReferenceLine y={20} label="UnderShoot" stroke="green" /> : ''}
-                   
-                    {
-                            ragashim.map(({ yAxisId, dataKey, stroke, hide }, index) => {
-                                return(
-                                    <Line
-                                    key={index}
-                                    //yAxisId= {yAxisId}
-                                    type="monotone"
-                                    dataKey={dataKey}
-                                    stroke={stroke}
-                                    animationDuration={300}
-                                    hide={hide}
-                                />)
-                            })
-                    }
-                  
+                        {
+                                ragashim.map(({ yAxisId, dataKey, stroke, hide }, index) => 
+                                {
+                                    return(
+                                        <Line
+                                            key={index}
+                                            //yAxisId= {yAxisId}
+                                            type="monotone"
+                                            dataKey={dataKey}
+                                            stroke={stroke}
+                                            animationDuration={300}
+                                            hide={hide}
+                                         />)
+                                })
+                        }
                 </LineChart>
             </div>
            
             <div>
-                <Button onClick={AddReferanceLine}>הוסף גבול</Button>   
+                <Button onClick={AddReferanceLine} icon="plus">הוסף גבול</Button>   
                 {
                     props.ranges.length > 0 ?
                     <div className='divDinamicRanges'>
                     {
                         props.ranges.map(({key, rangeLeft, rangeRight, labelText }, index) => {
-                            return <div key={"divRange_" + index}>
+                            return <div className='divControlsRange' key={"divRange_" + index}>
                                     {rangeLeft} - {rangeRight}
                                     <div className='flexControls' key={"divRange2_" + index}> 
                                         <Checkbox key={"CheckSetLimit_" + index} onChange={(e) => (SetLimit(e.value, key))}></Checkbox>  &nbsp;    
