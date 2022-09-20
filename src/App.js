@@ -35,6 +35,7 @@ function App() {
       <React.Fragment>
        <BrowserRouter> 
        <HeaderPage activeUser={activeUser} onLogout={(user) => onLogout(null)} ></HeaderPage>
+       <h1>dddd</h1>
        {/* {activeUser ? <MainNavbar ></MainNavbar> : ''} */}
          <Routes>
               <Route exact={true} path="/" element={<HomePage></HomePage>}/>
