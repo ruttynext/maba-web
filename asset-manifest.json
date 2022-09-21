@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/maba-web/static/css/main.259080b3.css",
-    "main.js": "/maba-web/static/js/main.fafd64b3.js",
+    "main.css": "/maba-web/static/css/main.7d4d22f6.css",
+    "main.js": "/maba-web/static/js/main.13cde456.js",
     "static/js/787.b6063c01.chunk.js": "/maba-web/static/js/787.b6063c01.chunk.js",
+    "static/media/220837062.pdf": "/maba-web/static/media/220837062.f9fa607b94eacae7badf.pdf",
     "static/media/MaterialIcons-Regular.eot": "/maba-web/static/media/MaterialIcons-Regular.4674f8ded773cb03e824.eot",
     "static/media/MaterialIcons-Regular.ttf": "/maba-web/static/media/MaterialIcons-Regular.5e7382c63da0098d634a.ttf",
     "static/media/ReportOvenImage.PNG": "/maba-web/static/media/ReportOvenImage.fdae58676108bea83c57.PNG",
     "static/media/MaterialIcons-Regular.woff": "/maba-web/static/media/MaterialIcons-Regular.83bebaf37c09c7e1c3ee.woff",
     "static/media/MaterialIcons-Regular.woff2": "/maba-web/static/media/MaterialIcons-Regular.cff684e59ffb052d72cb.woff2",
     "index.html": "/maba-web/index.html",
-    "main.259080b3.css.map": "/maba-web/static/css/main.259080b3.css.map",
-    "main.fafd64b3.js.map": "/maba-web/static/js/main.fafd64b3.js.map",
+    "main.7d4d22f6.css.map": "/maba-web/static/css/main.7d4d22f6.css.map",
+    "main.13cde456.js.map": "/maba-web/static/js/main.13cde456.js.map",
     "787.b6063c01.chunk.js.map": "/maba-web/static/js/787.b6063c01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.259080b3.css",
-    "static/js/main.fafd64b3.js"
+    "static/css/main.7d4d22f6.css",
+    "static/js/main.13cde456.js"
   ]
 }
