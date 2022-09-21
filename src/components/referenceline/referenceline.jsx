@@ -169,7 +169,8 @@ function Referenceline(props) {
      
      const SetLimit = (value, key) =>{
    
-        props.updateRanges(props.ranges.map(range => (range.key === key ? {...range, 'rangeIsFixed': value } : range)));
+        props.updateRanges(props.ranges.map(range => (range.key === key ? {...range, 'rangeIsFixed': value, 
+                                                      'labelText' : value === true ? "p" + (key + 1) : ""} : range)));
    }
     return (
         <div className='c-reference-line'>
