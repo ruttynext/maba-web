@@ -15,10 +15,9 @@ import OvenRangeData from '../../../data/OvenRange.json';
 import HydraData from '../../../data/HydraData.json';
 import './OvenTest3.css'
 import Referenceline from '../../../components/referenceline/referenceline';
+import SamplePDF from "./220837062.pdf";
 import ReportOvenImage from "./ReportOvenImage.PNG";
-
-import { Container } from 'react-bootstrap';
-import { TextDirection } from '@react-pdf-viewer/core';
+//import { Document, Page } from 'react-pdf';
 
 // Core viewer
 
@@ -124,7 +123,7 @@ const columns = [
             setDisplayReport(current => !current);
 
           };
-
+        
     return (
       <>
        <div className='viewReport'>
@@ -138,7 +137,8 @@ const columns = [
             <div className='viewReportDialoug'>
             <div>
                 <Button onClick={(e) => setDisplayReport(false)}><span className="k-icon k-i-close"></span></Button>    
-                <img src={ReportOvenImage}/>
+                  
+                <img src={ReportOvenImage}/> 
             </div>
         </div> : ""
         }
