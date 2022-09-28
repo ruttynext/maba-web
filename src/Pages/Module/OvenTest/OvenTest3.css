@@ -13,12 +13,12 @@
   
    margin-right: 20px;
 } 
-.flexRightcolumn
+.flexRightcolumnRanges
 {
    width: 25%;
    margin-right: 20px;
 } 
-.flexMiddlecolumn
+.flexMiddlecolumnRanges
 {
    width: 70%;
    margin-right: 20px;
@@ -32,20 +32,21 @@
    width: 30%;
    margin-right: 20px;
 }
-.flexRightTemperturacolumn{
+.divCalibrationAreas{
    width: 48%;
    margin-right: 20px;
 }
-.flexLeftTemperturacolumn{
+
+.divEnvironmentalconditions{
    width: 30%;
    margin-right: 20px;
 }
-.flexChooseChannelsCol
+.divChooseChannelsCol
 {
    width: 40%;
    margin-right: 20px;
 }
-.flexDeviceDetailsCol
+.divDeviceDetails
 {
    width: 55%;
    margin-right: 20px;
@@ -71,9 +72,7 @@
    background-color:beige;
    text-align: center;
 }
-.divTemperura{
-   margin-top: 20px;
-}
+
 .inLineControl{
    display: inline;
 }
@@ -85,7 +84,7 @@
    z-index: 1; 
 }
 
-.nextBtn{
+.nextOrPrevBtn{
    margin-left: 0px;
 }
 /* .card
@@ -112,7 +111,7 @@
    position:fixed;
    
 }
-.viewReport2{
+.viewCreateReport{
   
    padding-right: 50%;
    /* position:fixed; */
@@ -149,4 +148,14 @@
 .k-panelbar
 {
    border-width: 2px;
+}
+.img-sign
+{
+   height: 60px;
+   width: 300px;
+  /* vertical-align: baseline; */
+} 
+.Div-close-view-report-dialoug{
+   position: fixed;
+   margin-top: 0px;
 }
