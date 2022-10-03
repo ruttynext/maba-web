@@ -7,10 +7,45 @@ import { Label } from "@progress/kendo-react-labels";
 import { ComboBox, DropDownList } from '@progress/kendo-react-dropdowns';
 import { Window } from "@progress/kendo-react-dialogs";
 import CalcalateRangesData from '../../../data/CalcalateRangesData.json';
-
 import Referenceline from '../../../components/referenceline/referenceline';
-
 import OvenRangeData from '../../../data/OvenRange.json';
+import { GetFormatTime } from '../../../Utils';
+
+const initialData2 = [
+    { index: 1, timeStamp: "07/30/2019 01:01", "Channels" : [{"ChannelName": "T1", "Value": 2.52}, {"ChannelName": "T2", "Value": 4.41}]},
+    { index: 2, timeStamp: "07/30/2019 01:02", "Channels" : [{"ChannelName": "T1", "Value": 17.79}, {"ChannelName": "T2", "Value": 120}]},
+    { index: 3, timeStamp: "07/30/2019 01:03", "Channels" : [{"ChannelName": "T1", "Value": 2.94}, {"ChannelName": "T2", "Value": 1.79}]},
+    { index: 4, timeStamp: "07/30/2019 01:04", "Channels" : [{"ChannelName": "T1", "Value": 140.12}, {"ChannelName": "T2", "Value": 27.41}]},
+    { index: 5, timeStamp: "07/30/2019 01:05", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 144.3}]},
+    { index: 6, timeStamp: "07/30/2019 01:06", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 140.79}]},
+    { index: 7, timeStamp: "07/30/2019 01:07", "Channels" : [{"ChannelName": "T1", "Value": 2.52}, {"ChannelName": "T2", "Value": 4.41}]},
+    { index: 8, timeStamp: "07/30/2019 01:08", "Channels" : [{"ChannelName": "T1", "Value": 17.79}, {"ChannelName": "T2", "Value": 4.3}]},
+    { index: 9, timeStamp: "07/30/2019 01:09", "Channels" : [{"ChannelName": "T1", "Value": 2.94}, {"ChannelName": "T2", "Value": 1.79}]},
+    { index: 10, timeStamp: "07/30/2019 01:10", "Channels" : [{"ChannelName": "T1", "Value": 54.12}, {"ChannelName": "T2", "Value": 27.41}]},
+    { index: 11, timeStamp: "07/30/2019 01:11", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 144.3}]},
+    { index: 12, timeStamp: "07/30/2019 01:12", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 13, timeStamp: "07/30/2019 01:13", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 14, timeStamp: "07/30/2019 01:14", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 15, timeStamp: "07/30/2019 01:15", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 16, timeStamp: "07/30/2019 01:16", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 17, timeStamp: "07/30/2019 01:17", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 18, timeStamp: "07/30/2019 01:18", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 19, timeStamp: "07/30/2019 01:19", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 20, timeStamp: "07/30/2019 01:20", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]}
+];
+
+const reverData = initialData2.map(item=> 
+    {
+        const container = {};
+        container.index = item.index;
+        container.timeStamp = new Date(item.timeStamp);
+        container.timeStampToDisplay = GetFormatTime(new Date(item.timeStamp), true);
+        item.Channels.map(channel => {
+            container[channel.ChannelName] = channel.Value;
+        });
+
+        return container;
+    });
 
 const DeleteRange = (props) => {
 
@@ -20,33 +55,51 @@ const DeleteRange = (props) => {
       </td>
     );
   };
+
   const ReferanceLineContainer = (props) => {
+
+    const [data, setData] = useState(reverData);
+    const [areaInData , setAreaInData] = useState(null);
     const [ranges, setRanges] = useState([]);
     const [visible, setVisible] = useState(false);
     const [positionDialoug, setPositionDialoug] = useState({});
    
-    const toggleDialog = (e) => {
-       
+    //Opening a dialog that displays the chart
+    const openDialog = (e) => {
         setVisible(!visible);
         setPositionDialoug({marginTop: e.screenY, marginRight: e.screenX,});
       };
+      
+      //Close dialog
+      const closeDialoug = (e) => {    
+        setVisible(!visible);
+        setAreaInData(null);
+      };
+
+      const showRangeInDialoug = (area) => {
+        setAreaInData(area);  
+        setVisible(true);
+      }
 
     return (
       <> <br/>
-       <Button onClick={(e) => toggleDialog(e)} >הרחב גרף</Button>
-       <Referenceline ranges = {ranges} updateRanges= {setRanges} width={700} height={290}/>
+       <Button onClick={(e) => openDialog(e)} >הרחב גרף</Button>
+       <Referenceline ranges={ranges} updateRanges={setRanges} data={data} updateData={setData} width={700} height={290} 
+          showRange={showRangeInDialoug} />
             {
                  visible && 
                 (
                     <Window
-                     title={"גרף תנורים"}
-                     onClose={toggleDialog}
+                     title={areaInData ? (data[areaInData.indexTo].timeStampToDisplay + " - " + data[areaInData.indexFrom].timeStampToDisplay) : "גרף תנורים" }
+                     onClose={closeDialoug}
                      initialHeight={630}
                      initialWidth={1400}
                      style={positionDialoug}
                     
                     >
-                        <Referenceline ranges = {ranges} updateRanges= {setRanges} width={950} height={500}/>
+                        <Referenceline ranges = {ranges} updateRanges= {setRanges} width={950} height={500} 
+                        data={areaInData ? data.slice(areaInData.indexFrom, areaInData.indexTo) : data.slice()} 
+                         updateData={setData}/>
                     </Window>
                 )
             }

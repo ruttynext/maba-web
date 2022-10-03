@@ -16,45 +16,11 @@ import {
 import { Input, Checkbox } from '@progress/kendo-react-inputs';
 import { Button } from '@progress/kendo-react-buttons';
 import { Label } from "@progress/kendo-react-labels";
-import { formatTime, GetFormatTime, getTime } from '../../Utils';
+import { GetFormatTime, getTime } from '../../Utils';
 
 
 
-const initialData2 = [
-    { index: 1, timeStamp: "07/30/2019 01:01", "Channels" : [{"ChannelName": "T1", "Value": 2.52},{"ChannelName": "T2", "Value": 4.41}]},
-    { index: 2, timeStamp: "07/30/2019 01:02", "Channels" : [{"ChannelName": "T1", "Value": 17.79},{"ChannelName": "T2", "Value": 120}]},
-    { index: 3, timeStamp: "07/30/2019 01:03", "Channels" : [{"ChannelName": "T1", "Value": 2.94},{"ChannelName": "T2", "Value": 1.79}]},
-    { index: 4, timeStamp: "07/30/2019 01:04", "Channels" : [{"ChannelName": "T1", "Value": 140.12},{"ChannelName": "T2", "Value": 27.41}]},
-    { index: 5, timeStamp: "07/30/2019 01:05", "Channels" : [{"ChannelName": "T1", "Value": 14.58},{"ChannelName": "T2", "Value": 144.3}]},
-    { index: 6, timeStamp: "07/30/2019 01:06", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 140.79}]},
-    { index: 7, timeStamp: "07/30/2019 01:07", "Channels" : [{"ChannelName": "T1", "Value": 2.52},{"ChannelName": "T2", "Value": 4.41}]},
-    { index: 8, timeStamp: "07/30/2019 01:08", "Channels" : [{"ChannelName": "T1", "Value": 17.79},{"ChannelName": "T2", "Value": 4.3}]},
-    { index: 9, timeStamp: "07/30/2019 01:09", "Channels" : [{"ChannelName": "T1", "Value": 2.94},{"ChannelName": "T2", "Value": 1.79}]},
-    { index: 10, timeStamp: "07/30/2019 01:10", "Channels" : [{"ChannelName": "T1", "Value": 54.12},{"ChannelName": "T2", "Value": 27.41}]},
-    { index: 11, timeStamp: "07/30/2019 01:11", "Channels" : [{"ChannelName": "T1", "Value": 14.58},{"ChannelName": "T2", "Value": 144.3}]},
-    { index: 12, timeStamp: "07/30/2019 01:12", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]},
-      { index: 13, timeStamp: "07/30/2019 01:13", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]},
-      { index: 14, timeStamp: "07/30/2019 01:14", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]},
-      { index: 15, timeStamp: "07/30/2019 01:15", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]},
-      { index: 16, timeStamp: "07/30/2019 01:16", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]},
-      { index: 17, timeStamp: "07/30/2019 01:17", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]},
-      { index: 18, timeStamp: "07/30/2019 01:18", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]},
-      { index: 19, timeStamp: "07/30/2019 01:19", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]},
-      { index: 20, timeStamp: "07/30/2019 01:20", "Channels" : [{"ChannelName": "T1", "Value": 36.7},{"ChannelName": "T2", "Value": 95.79}]}
-];
 
-const reverData = initialData2.map(item=> 
-    {
-        const container = {};
-        container.index = item.index;
-        container.timeStamp = new Date(item.timeStamp);
-        container.timeStampToDisplay = GetFormatTime(new Date(item.timeStamp), true);
-        item.Channels.map(channel => {
-            container[channel.ChannelName] = channel.Value;
-        });
-
-        return container;
-    });
 
 const ragashimData = [
  
@@ -63,7 +29,6 @@ const ragashimData = [
 ];
 
 function Referenceline(props) {
-    const [data, setData] = useState(reverData);
     const [ragashim, setRagashim] = useState(ragashimData);
     const [refLineActive, setRefLineActive] = useState("");
     const [sideLineActive, setSideLineActive] = useState("");
@@ -74,7 +39,7 @@ function Referenceline(props) {
     
     const [refAreaLeft, setRefAreaLeft] = useState("");
     const [refAreaRight, setRefAreaRight] = useState("");
-    
+    const [areaZoom , setAreaZoom] = useState(null);
 
     const onMouseUpFromArea=(active, activeIndex)=> {
        
@@ -83,10 +48,10 @@ function Referenceline(props) {
             case true:
                 if(refAreaLeft !== "" && refAreaRight !== "")
                 {    
-                  const indexAreaLeft = data.findIndex(x => x.timeStampToDisplay === refAreaLeft);
-                  const indexAreaRight = data.findIndex(x => x.timeStampToDisplay === refAreaRight);  
-
-                  setData(data.slice(indexAreaLeft, indexAreaRight + 1));  
+                  const indexAreaLeft = props.data.findIndex(x => x.timeStampToDisplay === refAreaLeft);
+                  const indexAreaRight = props.data.findIndex(x => x.timeStampToDisplay === refAreaRight);  
+                  setAreaZoom({'indexFrom': indexAreaLeft, 'indexTo': indexAreaRight + 1});
+ 
                   setRefAreaLeft("");   
                   setRefAreaRight("");
                 }
@@ -94,9 +59,10 @@ function Referenceline(props) {
             case false:
                 if(refLineActive !== "")
                 {
-                    const currentTimeStamp = data[activeIndex].timeStamp;
-                    props.updateRanges(props.ranges.map(range => (range.key === refLineActive ? {...range, 'rangeLeft' : sideLineActive === 'left' ? currentTimeStamp : range.rangeLeft,
-                    'rangeRight' : sideLineActive === 'right' ? currentTimeStamp : range.rangeRight, 'strokeWidthValue' : 2} : range)));
+                    const currentTimeStamp = props.data[activeIndex].timeStamp;
+                    props.updateRanges(props.ranges.map(range => (range.key === refLineActive ? {...range, 'timeStampLeft' : sideLineActive === 'left' ? currentTimeStamp : range.timeStampLeft,
+                    'sideLeftIndex' : sideLineActive === 'left' ? activeIndex : range.sideLeftIndex, 'timeStampRight' : sideLineActive === 'right' ? currentTimeStamp : range.timeStampRight, 
+                    'sideRightIndex' : sideLineActive === 'right' ? activeIndex : range.sideRightIndex, 'strokeWidthValue' : 2} : range)));
                     setRefLineActive("");
                     setSideLineActive("");
                 }
@@ -157,10 +123,10 @@ function Referenceline(props) {
             case false:
                 if(refLineActive !== "")
                 {
-                   const currentTimeStamp = data[activeIndex].timeStamp;
+                   const currentTimeStamp = props.data[activeIndex].timeStamp;
                    props.updateRanges(props.ranges.map(range => (range.key === refLineActive ? {...range, 
-                                      'rangeLeft' : sideLineActive === 'left' ? currentTimeStamp : range.rangeLeft,
-                                      'rangeRight' : sideLineActive === 'right' ? currentTimeStamp : range.rangeRight} : range)));
+                                      'timeStampLeft' : sideLineActive === 'left' ? currentTimeStamp : range.timeStampLeft,
+                                      'timeStampRight' : sideLineActive === 'right' ? currentTimeStamp : range.timeStampRight} : range)));
                 }
                 break;
             default:
@@ -169,10 +135,11 @@ function Referenceline(props) {
   
     const AddReferanceLine=()=>
     {
-        var firstTime = data[0].timeStamp;
-        var secTime = data[1].timeStamp;
+        var firstTime = props.data[0].timeStamp;
+        var secTime = props.data[1].timeStamp;
     
-        props.ranges.push({'key': props.ranges.length, 'rangeLeft': firstTime, 'rangeRight': secTime, 'strokeWidthValue': 2, 'labelText' : '', 'rangeIsFixed': false});
+        props.ranges.push({'key': props.ranges.length, 'timeStampLeft': firstTime, 'sideLeftIndex' : 0, 'timeStampRight': secTime, 
+                           'sideRightIndex' : 1,'strokeWidthValue': 2, 'labelText' : '', 'rangeIsFixed': false});
         props.updateRanges(props.ranges.concat());  
     }
 
@@ -181,7 +148,8 @@ function Referenceline(props) {
        setZoomInActive(current => !current);
 
        if(!!zoomInActive)
-         setData(reverData.slice());
+         setAreaZoom(null);
+
     };
      
     const SetLimit = (value, key) =>{
@@ -192,7 +160,7 @@ function Referenceline(props) {
     const hundleFullDateTime = (val) =>{
     setShowFullDateTime(val);
 
-    setData(data.map(item => ({...item, 'timeStampToDisplay':  GetFormatTime(item.timeStamp, val)} )));
+    props.updateData(props.data.map(item => ({...item, 'timeStampToDisplay':  GetFormatTime(item.timeStamp, val)} )));
 
     };
 
@@ -227,7 +195,7 @@ function Referenceline(props) {
                 
                <div className='divRe' >
                     <LineChart width={props.width + 400} height={props.height} style={{cursor : zoomInActive ? "zoom-in" : "",}}
-                            data={data}
+                            data={areaZoom ? props.data.slice(areaZoom.indexFrom, areaZoom.indexTo) : props.data.slice()} 
                             onMouseDown={(e) => zoomInActive ? setRefAreaLeft(e.activeLabel) : '' }
                             onMouseMove={(e) => onMoveArea(e.activeLabel, e.activeTooltipIndex)}
                             onMouseUp={(e) => onMouseUpFromArea(e.activeLabel, e.activeTooltipIndex) }
@@ -245,7 +213,7 @@ function Referenceline(props) {
                             <Tooltip />
                             <Legend onClick={(e) => toggleDataSeries(e)}  />
                             {
-                                    props.ranges.map(({key, rangeLeft, rangeRight, strokeWidthValue, labelText, rangeIsFixed }, index) => 
+                                    props.ranges.map(({key, timeStampLeft, timeStampRight, strokeWidthValue, labelText, rangeIsFixed }, index) => 
                                     {
                                        return(
                                             rangeIsFixed ?
@@ -253,15 +221,15 @@ function Referenceline(props) {
                                               <ReferenceArea
                                                     label={{ value: labelText, fill: 'black', position: 'insideTop'}}
                                                     fill="white"                             
-                                                    x1={GetFormatTime(rangeLeft, showFullDateTime)}
-                                                    x2={GetFormatTime(rangeRight, showFullDateTime)}
+                                                    x1={GetFormatTime(timeStampLeft, showFullDateTime)}
+                                                    x2={GetFormatTime(timeStampRight, showFullDateTime)}
                                                     stroke="yellow"
                                                     strokeWidth = "5"/>
                                             </> : 
                                             <>
-                                              <ReferenceLine key={key + "1"} name={key} x= {GetFormatTime(rangeLeft, showFullDateTime)} stroke="blue" strokeWidth={strokeWidthValue} 
+                                              <ReferenceLine key={key + "1"} name={key} x= {GetFormatTime(timeStampLeft, showFullDateTime)} stroke="blue" strokeWidth={strokeWidthValue} 
                                                  onMouseDown = {(e) => {MoveReferanceLine(key, 'left')} }/>
-                                              <ReferenceLine key={key + "2"} name={key} x= {GetFormatTime(rangeRight, showFullDateTime)} stroke="red"  strokeWidth={strokeWidthValue} 
+                                              <ReferenceLine key={key + "2"} name={key} x= {GetFormatTime(timeStampRight, showFullDateTime)} stroke="red"  strokeWidth={strokeWidthValue} 
                                                  onMouseDown = {(e) => {MoveReferanceLine(key, 'right')} }/>
                                             </> 
                                        )
@@ -277,7 +245,7 @@ function Referenceline(props) {
                                     />
                                 ) : null
                             }
-                            {showOverShootLine ? <ReferenceLine y={100} label="OverShoot" stroke="green" /> : ''}
+                            {showOverShootLine ? <ReferenceLine y={100} x={"07/30/2019 01:07"} label="OverShoot" stroke="green" /> : ''}
                             {showUnderShootLine ? <ReferenceLine y={20} label="UnderShoot" stroke="green" /> : ''}
                                 {
                                         ragashim.map(({ yAxisId, dataKey, stroke, hide }, index) => 
@@ -305,18 +273,18 @@ function Referenceline(props) {
                      props.ranges.length > 0 ?
                      <div className='divDinamicRanges'>
                      {
-                         props.ranges.map(({key, rangeLeft, rangeRight, labelText }, index) => {
+                         props.ranges.map(({key, timeStampLeft, sideLeftIndex, timeStampRight, sideRightIndex, labelText }, index) => {
                              return <div className='divControlsRange' key={"divRange_" + index}>
-                                     { GetFormatTime(rangeRight, showFullDateTime) } - { GetFormatTime(rangeLeft, showFullDateTime) } <br/>
+                                     { GetFormatTime(timeStampRight, showFullDateTime) } - { GetFormatTime(timeStampLeft, showFullDateTime) } <br/>
                                     
                                      {//time duration
-                                       getDurationRange(rangeRight, rangeLeft) 
+                                       getDurationRange(timeStampRight, timeStampLeft) 
                                      }
                                      <div className='flexControls' key={"divRange2_" + index}> 
                                          <Checkbox key={"CheckSetLimit_" + index} onChange={(e) => (SetLimit(e.value, key))}></Checkbox>  &nbsp;    
                                          <Input key={"txtLabelText_" + index} value={labelText} onChange={(e) => SetLabelText(e.target.value, key)}/> &nbsp;
                                          <Button key={"btnRemoveRange_" + index} onClick={(e) => RemoveRange(key)}><span className="k-icon k-i-close"></span></Button>
-                                         <Button key={"btnExpandChart_" + index} onClick={(e) => RemoveRange(key)}><span className="k-icon k-i-full-screen"></span></Button>
+                                         <Button key={"btnExpandChart_" + index} onClick={(e) => props.showRange({'indexFrom': sideLeftIndex, 'indexTo': sideRightIndex + 1})}><span className="k-icon k-i-full-screen"></span></Button>
                                      </div> 
                                     
                                  </div>
