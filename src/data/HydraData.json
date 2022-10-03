@@ -1,8 +1,16 @@
 [{
+    "HydraID" : 56,
     "HydraDegem" : "2685A",
     "Comment" : "רב ערוצי"
-}, {
+}, 
+{
+    "HydraID" : 845,
     "HydraDegem" : "2387B",
     "Comment" : "ערוץ בודד"
+},
+{
+    "HydraID" : 11,
+    "HydraDegem" : "ggg",
+    "Comment" : "ערוץ vvבודד"
 }
 ]

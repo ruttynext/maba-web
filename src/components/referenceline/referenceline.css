@@ -17,3 +17,9 @@
   {
     overflow: auto;
   }
+  .divRe
+  {
+    
+     overflow: auto;
+     direction: ltr;
+  }
