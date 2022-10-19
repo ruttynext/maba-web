@@ -2,17 +2,8 @@ import {React,  useState } from 'react'
 
 import './referenceline.css'
 
-import {
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ReferenceArea,
-    ResponsiveContainer,
-    ReferenceLine,Legend
-} from "recharts";
+import {LineChart, Line, XAxis, YAxis, CartesianGrid,Tooltip,
+        ReferenceArea, ReferenceLine, Legend } from "recharts";
 import { Input, Checkbox } from '@progress/kendo-react-inputs';
 import { Button } from '@progress/kendo-react-buttons';
 import { Label } from "@progress/kendo-react-labels";
@@ -28,6 +19,7 @@ const ragashimData = [
     { yAxisId: "1", dataKey:"T2", stroke: "#82ca9d",hide: false}
 ];
 
+  
 function Referenceline(props) {
     const [ragashim, setRagashim] = useState(ragashimData);
     const [refLineActive, setRefLineActive] = useState("");
@@ -178,6 +170,21 @@ function Referenceline(props) {
 
           return strDuration;
     };
+ 
+
+  const customDot = ({ key, cx, cy, payload, value, stroke, fill, r }) => {
+    return(
+     <circle
+         key={key}
+         cx={cx}
+         cy={cy}
+         r={value === 27.41  ? 7 : r}
+         stroke={stroke}
+         fill={fill}
+         data-testid={payload.name}
+         id={`dot_${payload.name}`}
+       />)
+    };
 
     return (
         <div className='c-reference-line'>
@@ -200,7 +207,7 @@ function Referenceline(props) {
                             onMouseMove={(e) => onMoveArea(e.activeLabel, e.activeTooltipIndex)}
                             onMouseUp={(e) => onMouseUpFromArea(e.activeLabel, e.activeTooltipIndex) }
                             >
-                            <CartesianGrid strokeDasharray="3 3" />
+                            <CartesianGrid strokeDasharray="3 3" points=''/>
                             <XAxis
                                 dataKey="timeStampToDisplay"             
                             />
@@ -250,16 +257,17 @@ function Referenceline(props) {
                                 {
                                         ragashim.map(({ yAxisId, dataKey, stroke, hide }, index) => 
                                         {
+                                            
                                             return(
                                                 <Line
-                                                    key={index}
+                                                    key={index}  
                                                     //yAxisId= {yAxisId}
                                                     type="monotone"
                                                     dataKey={dataKey}
-                                                    stroke={stroke}
+                                                    stroke={stroke}   
                                                     animationDuration={300}
                                                     hide={hide}
-                                                />)
+                                                    dot={customDot}/>)
                                         })
                                 }
                         </LineChart>
