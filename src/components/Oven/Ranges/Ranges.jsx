@@ -95,7 +95,6 @@ const DeleteRange = (props) => {
                      initialHeight={630}
                      initialWidth={1400}
                      style={positionDialoug}
-                    
                     >
                         <Referenceline ranges = {ranges} updateRanges= {setRanges} width={950} height={500} 
                         data={areaInData ? data.slice(areaInData.indexFrom, areaInData.indexTo) : data.slice()} 
