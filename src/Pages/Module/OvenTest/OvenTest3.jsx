@@ -14,7 +14,6 @@ import ChannelsSelection from '../../../components/Oven/ChannelsSelection/Channe
 import Ranges from '../../../components/Oven/Ranges/Ranges';
 import SignWeb from '../../../components/SignForm/SignWeb';
 import ReportOvenImage from "./ReportOvenImage.PNG";
-import PdfViewerComponent from '../../../components/PdfViewerComponent/PdfViewerComponent';
 import { Upload } from "@progress/kendo-react-upload";
 
 
