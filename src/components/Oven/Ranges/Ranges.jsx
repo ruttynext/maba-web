@@ -61,6 +61,7 @@ const DeleteRange = (props) => {
     const [data, setData] = useState(reverData);
     const [areaInData , setAreaInData] = useState(null);
     const [ranges, setRanges] = useState([]);
+    const [markes, setMarkes] = useState([]);
     const [visible, setVisible] = useState(false);
     const [positionDialoug, setPositionDialoug] = useState({});
    
@@ -84,7 +85,8 @@ const DeleteRange = (props) => {
     return (
       <> <br/>
        <Button onClick={(e) => openDialog(e)} >הרחב גרף</Button>
-       <Referenceline ranges={ranges} updateRanges={setRanges} data={data} updateData={setData} width={700} height={290} 
+       <Referenceline ranges={ranges} updateRanges={setRanges} 
+         markes={markes} updateMarkes={setMarkes} data={data} updateData={setData} width={700} height={290} 
           showRange={showRangeInDialoug} />
             {
                  visible && 
