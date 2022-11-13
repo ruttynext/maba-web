@@ -33,31 +33,42 @@
    margin-right: 20px;
 }
 .divCalibrationAreas{
-    /* width: 48%;  */
-   margin-right: 20px;
+     /* width: 48%;   */
+    margin: 15px 15px 0px 0px;
 }
 
 .divEnvironmentalconditions{
-   /* width: 30%; */
-   margin-right: 20px;
+    width: 400px; 
+   margin: 15px 15px 0px 0px;
 }
 .divChooseChannelsCol
 {
-   width: 40%;
-   margin-right: 20px;
+    width: 500px;
+    margin: 15px 15px 0px 0px;
+}
+.divCustomerDetails
+{
+   width: 500px;
+   margin: 15px 15px 0px 0px;
+}
+.calibrate-Details
+{
+   width: 500px;
+   margin: 15px 15px 0px 0px;
 }
 .divDeviceDetails
 {
-   width: 55%;
-   margin-right: 20px;
+   width: 1000px; 
+   margin: 15px 15px 0px 0px;
 }
 .divRanges
 {
-   margin-right: 20px;
-   width: 95%;
+   margin: 15px 15px 0px 0px;
+   /* width: 95%; */
 }
  .flexControl{
-   display: flex;    
+   display: flex;   
+   /* flex-wrap: wrap;  */
    /* flex-wrap: nowrap; */
 
     /* justify-content:space-between; */
@@ -76,12 +87,11 @@
 .inLineControl{
    display: inline;
 }
-.tabStripDiv
+.container-second-page
 {
-   position: relative;
-   margin-top: 20px;
-   margin-left: 20px;
-   z-index: 1; 
+   /* position: relative; */
+   margin: 20px 0px 0px 20px ;
+   z-index: -1; 
 }
 
 .nextOrPrevBtn{
@@ -106,9 +116,11 @@
 
 
 .viewReport{
+   position: relative;
    direction: ltr !important;
    left: 0px;
    position:fixed;
+   z-index: 3;
    
 }
 .viewCreateReport{
@@ -126,20 +138,28 @@
 .viewReportDialoug{
    position:fixed;
    left: 27px;
-   z-index: 3;
+   z-index: 5;
     height: 800px; 
    width: 600px;
    border-style: solid;
    overflow: auto;
 }
 .k-panelbar > .k-item > .k-link.k-state-selected, .k-panelbar > .k-item > .k-link.k-selected, .k-panelbar > .k-panelbar-header > .k-link.k-state-selected, .k-panelbar > .k-panelbar-header > .k-link.k-selected {
-   color: #ff6358 !important;
+   color: #0d6efd !important;
    background-color: #f8f7f7 !important;
 }
 .divPanelBarItem{
-   padding-right: 10px;
-   padding-left: 10px;
-   padding-bottom: 10px;
+   padding: 10px 10px 10px 10px;
+     z-index: -1;
+}
+.divPanelBarItem2{
+   padding: 0px 10px 10px 10px;
+   display: flex;
+   flex-wrap: wrap;
+   z-index: -1;
+}
+.divPanelBarItem3{
+   flex-direction: column;
 }
 .createReportBtn{
  
@@ -151,11 +171,100 @@
 }
 .img-sign
 {
-   height: 60px;
-   width: 300px;
+   height: 40px;
+   width: 150px;
   /* vertical-align: baseline; */
 } 
 .Div-close-view-report-dialoug{
    position: fixed;
    margin-top: 0px;
+   z-index: 2;
 }
+.fieldImgSign
+{
+   border: 1px solid grey;
+   padding: 5px;
+}
+
+
+.wrapper
+{
+   display: flex;
+  flex-wrap: wrap;
+   /* justify-content: space-between;  */
+}
+
+.detailItem{
+   display: flex;
+   flex-direction: column;
+   margin: 5px 5px 5px 5px;
+   /* flex-basis: 100px; */
+   /* margin-bottom: 30px 30px 30px 30px; */
+}
+.detailSubItem
+{
+   margin-right: 15px;
+}
+.detailItem2{
+   display: flex;
+   flex-direction: column;
+   margin: 5px 5px 5px 5px;
+    flex-basis: 450px; 
+   /* margin-bottom: 30px 30px 30px 30px; */
+}
+  /* .divPanelBarItem2 .detailItem{
+   flex-grow: 0;
+   flex-shrink: 0;
+   flex-basis: 250px;
+} */
+/* 
+
+.divPanelBarItem2 .detail:nth-of-type(3) {
+   flex-basis: 350px;
+ } 
+
+ .divPanelBarItem2 .detail:nth-of-type(6) {
+   flex-basis: 350px;
+ }   */
+
+ .flex-container {
+   display: flex;
+   flex-direction: row;
+   
+ 
+ }
+ .cards-container
+ {
+   display: flex;
+   flex-direction: row;
+   margin: 5px 5px 5px 5px;
+ }
+
+ .card-content{
+   border: 1px solid grey;
+   border-radius:0.375rem;
+   margin-top: 5px;
+   margin-right: 5px;
+}
+ .flex-item-left {
+   /* padding: 10px; 
+   flex: 85%;
+   flex-basis: 350px;*/
+ }
+ 
+ .flex-item-right {
+   /* padding: 10px; 
+   flex: 20%;*/
+ }
+ /* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+   .flex-container {
+     flex-direction: column;
+   }
+ }
+  
+ @media (max-width: 800px) {
+   .cards-container {
+      flex-direction: column;
+    }
+  }

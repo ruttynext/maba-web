@@ -5,7 +5,7 @@ export const padTo2Digits = (num)=> {
 export const GetFormatTime =(timeStamp, fullDateTime)=>
 { 
      const timeFormat = padTo2Digits(timeStamp.getHours()) + ':' + padTo2Digits(timeStamp.getMinutes());
-     if(fullDateTime == true)
+     if(fullDateTime === true)
         return (timeStamp.getMonth() +1 ) + '/' + timeStamp.getDate() + '/' +  timeStamp.getFullYear() + " " + timeFormat;
     
      return timeFormat;

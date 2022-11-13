@@ -7,26 +7,26 @@ import { Label } from "@progress/kendo-react-labels";
 import { ComboBox, DropDownList } from '@progress/kendo-react-dropdowns';
 import { Window } from "@progress/kendo-react-dialogs";
 import CalcalateRangesData from '../../../data/CalcalateRangesData.json';
-import Referenceline from '../../../components/referenceline/referenceline';
+import CustomChart from '../../../components/CustomChart/CustomChart';
 import OvenRangeData from '../../../data/OvenRange.json';
 import { GetFormatTime } from '../../../Utils';
 
 const initialData2 = [
-    { index: 1, timeStamp: "07/30/2019 01:01", "Channels" : [{"ChannelName": "T1", "Value": 2.52}, {"ChannelName": "T2", "Value": 4.41}]},
-    { index: 2, timeStamp: "07/30/2019 01:02", "Channels" : [{"ChannelName": "T1", "Value": 17.79}, {"ChannelName": "T2", "Value": 120}]},
+    { index: 1, timeStamp: "07/30/2019 01:01", "Channels" : [{"ChannelName": "T1", "Value": 15}, {"ChannelName": "T2", "Value": 4.41}]},
+    { index: 2, timeStamp: "07/30/2019 01:02", "Channels" : [{"ChannelName": "T1", "Value": 25.79}, {"ChannelName": "T2", "Value": 72}]},
     { index: 3, timeStamp: "07/30/2019 01:03", "Channels" : [{"ChannelName": "T1", "Value": 2.94}, {"ChannelName": "T2", "Value": 1.79}]},
-    { index: 4, timeStamp: "07/30/2019 01:04", "Channels" : [{"ChannelName": "T1", "Value": 140.12}, {"ChannelName": "T2", "Value": 27.41}]},
-    { index: 5, timeStamp: "07/30/2019 01:05", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 144.3}]},
-    { index: 6, timeStamp: "07/30/2019 01:06", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 140.79}]},
+    { index: 4, timeStamp: "07/30/2019 01:04", "Channels" : [{"ChannelName": "T1", "Value": 96.12}, {"ChannelName": "T2", "Value": 27.41}]},
+    { index: 5, timeStamp: "07/30/2019 01:05", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 92.3}]},
+    { index: 6, timeStamp: "07/30/2019 01:06", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 75.79}]},
     { index: 7, timeStamp: "07/30/2019 01:07", "Channels" : [{"ChannelName": "T1", "Value": 2.52}, {"ChannelName": "T2", "Value": 4.41}]},
     { index: 8, timeStamp: "07/30/2019 01:08", "Channels" : [{"ChannelName": "T1", "Value": 17.79}, {"ChannelName": "T2", "Value": 4.3}]},
     { index: 9, timeStamp: "07/30/2019 01:09", "Channels" : [{"ChannelName": "T1", "Value": 2.94}, {"ChannelName": "T2", "Value": 1.79}]},
     { index: 10, timeStamp: "07/30/2019 01:10", "Channels" : [{"ChannelName": "T1", "Value": 54.12}, {"ChannelName": "T2", "Value": 27.41}]},
-    { index: 11, timeStamp: "07/30/2019 01:11", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 144.3}]},
+    { index: 11, timeStamp: "07/30/2019 01:11", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 72.3}]},
     { index: 12, timeStamp: "07/30/2019 01:12", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
     { index: 13, timeStamp: "07/30/2019 01:13", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
     { index: 14, timeStamp: "07/30/2019 01:14", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
-    { index: 15, timeStamp: "07/30/2019 01:15", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+    { index: 15, timeStamp: "07/30/2019 01:15", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 150}]},
     { index: 16, timeStamp: "07/30/2019 01:16", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
     { index: 17, timeStamp: "07/30/2019 01:17", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
     { index: 18, timeStamp: "07/30/2019 01:18", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
@@ -83,10 +83,11 @@ const DeleteRange = (props) => {
       }
 
     return (
-      <> <br/>
+      <> 
+      <br/>
        <Button onClick={(e) => openDialog(e)} >הרחב גרף</Button>
-       <Referenceline ranges={ranges} updateRanges={setRanges} 
-         markes={markes} updateMarkes={setMarkes} data={data} updateData={setData} width={700} height={290} 
+       <CustomChart limits={ranges} updateLimits={setRanges} maxValue = {150}
+         markes={markes} updateMarkes={setMarkes} data={data} updateData={setData} width={700} height={450} 
           showRange={showRangeInDialoug} />
             {
                  visible && 
@@ -98,7 +99,7 @@ const DeleteRange = (props) => {
                      initialWidth={1400}
                      style={positionDialoug}
                     >
-                        <Referenceline ranges = {ranges} updateRanges= {setRanges} width={950} height={500} 
+                        <CustomChart limits={ranges} updateLimits={setRanges} width={950} height={500} maxValue={150}
                         data={areaInData ? data.slice(areaInData.indexFrom, areaInData.indexTo) : data.slice()} 
                          updateData={setData}/>
                     </Window>
@@ -132,44 +133,40 @@ function Ranges(props) {
         <div className='flexMiddlecolumnRanges'>
         <PanelBar>
             <PanelBarItem expanded={true} title="נתונים כללים בתחום">
-                <div className='divPanelBarItem'>
-                    <div className='flexControl'>
-                            <div>
-                                <Label>מסמך יחוס:</Label>    
-                                <div className='flexControl'>
-                                    <ComboBox></ComboBox>&nbsp;
-                                    <Button themeColor={"primary"}>שינוי</Button>
-                                </div>
+                <div className='divPanelBarItem2'>
+                            <div className='detailItem'>
+                                <Label>מסמך יחוס:</Label> 
+                                <div className='flex-container'>            
+                                     <ComboBox></ComboBox>&nbsp;
+                                      <Button themeColor={"primary"}>שינוי</Button>
+                                </div>    
                             </div>
-                            <div>
-                                <Label>מפרט כיול:</Label>    
-                                <div className='flexControl'>
-                                    <ComboBox></ComboBox>&nbsp;
-                                    <Button themeColor={"primary"}>שינוי</Button>
-                                </div>
+                            <div className='detailItem'>
+                                <Label>מפרט כיול:</Label>   
+                                <div className='flex-container'>            
+                                     <ComboBox></ComboBox>&nbsp;
+                                      <Button themeColor={"primary"}>שינוי</Button>
+                                </div>    
                             </div>
-                    </div>
-                    <div className='flexControl'>
-                            <div>
-                                <Label>סוג הבקר:</Label>    
+                            <div className='detailItem'>
+                                <Label>סוג הבקר:</Label>            
                                 <ComboBox></ComboBox>
-                            </div>
-                            <div>
+                            </div>    
+                            <div className='detailItem'>
                                 <Label>יצרן הבקר:</Label>    
                                 <ComboBox></ComboBox>
-                            </div>
-                            <div>
+                            </div> 
+                            <div className='detailItem'>
                                 <Label>דגם הבקר:</Label>    
                                 <Input></Input>
                             </div>
-                    </div>
-                    <div>
-                            <Label>תיאור תהליך הכיול:</Label>    
-                            <div className='flexControl'>
-                                <DropDownList style={{width: "70%", }}></DropDownList>&nbsp;
-                                <Button icon="plus" themeColor={"primary"}>הוספה</Button>
-                            </div>
-                    </div>
+                            <div className='detailItem2'>                                   
+                                    <Label>תיאור תהליך הכיול:</Label>     
+                                    <div className='flex-container'>
+                                       <DropDownList></DropDownList>&nbsp;
+                                       <Button icon="plus" themeColor={"primary"}>הוספה</Button>
+                                    </div>      
+                            </div> 
                 </div>
             </PanelBarItem>
             <PanelBarItem title="הצגה גרפית של תחומים">
@@ -181,115 +178,110 @@ function Ranges(props) {
             </PanelBarItem>
             <PanelBarItem expanded={true} title="הגדרת חישובים">
                <div className='divPanelBarItem'>
-                <div className='flexControl'>
-                            <div className='card'  style={{width:"21%",}}>
-                                <div className='intentional-value'>
-                                <div className='flexControl'> 
-                                    <Checkbox></Checkbox>
-                                    <Label>ערך מכוון:</Label>
+               <div className='cards-container'>
+               
+                            <div className='card-content'>
+                              
+                                <div className='detailItem'>
+                                   <Checkbox label={"ערך מכוון"}></Checkbox>
                                 </div>
-                                <div>
-                                    <Label>הבחנת הנבדק</Label>
-                                    <Input></Input>
+                                <div className='detailSubItem'>
+                                    <div className='detailItem'>
+                                        <Label>הבחנת הנבדק:</Label>
+                                        <Input style={{width: "100px",}}></Input>
+                                    </div> 
+                                    
+                                    <div className='detailItem'>
+                                    <Label style={{textAlign: 'center',}}>ערך</Label>
+                                        <div className='flex-container'>
+                                        <div className='detailItem'>
+                                                <Input style={{width: "100px",}}></Input>
+                                                <Input style={{width: "100px",}}></Input>
+                                        </div>
+                                        <Label style={{paddingTop: '10%', }}> +- </Label> 
+                                        <Input style={{width: "100px",}}></Input>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                            <div className='card-content'>
+
+                                <div className='detailItem'>
+                                   <Checkbox label={"תצוגה"}></Checkbox>
+                                </div>
+                                 <div className='detailSubItem'>  
+                                        <div className='detailItem'>
+                                            <Label>הבחנה:</Label>
+                                            <Input style={{width: "100px",}}></Input>
+                                        </div> 
+
+                                        <div className='detailItem'>
+                                            <Label>ערך:</Label>
+                                            <Input style={{width: "100px",}}></Input>
+                                        </div> 
                                 </div> 
-                                <div>
-                                    <Label>דרגת דיוק</Label>
-                                    
-                                    <div className='flexControl'>
-                                        <div>
-                                            <Input></Input>
-                                            <Input></Input>
-                                        </div>
-                                        
-                                        
-                                        <Label> +- </Label> 
-                                    <Input/>
-                                    
-                                    </div>
-                                    
-                                </div>
-                                </div>
                             </div>
-                            <div className='card'  style={{width:"15%",}}>
-                                <div className='flexControl'> 
-                                    <Checkbox></Checkbox>
-                                    <Label>תצוגה:</Label>
-                                </div>
-                                <div>
-                                <Label>הבחנה:</Label>
-                                <Input></Input>
-                                <Label>ערך:</Label>
-                                <Input></Input>
-                                </div>  
-                            </div>
-                            <div className='card' style={{width:"25%",}}>
-                                <div className='flexControl'>
-                                    <div>
-                                        <Label>חישוב אי וודאות</Label>
-                                        <ComboBox></ComboBox>
-                                        <Label>אי וודאות</Label>
-                                        <NumericTextBox/>
-                                    </div>
-                                    <div>
-                                        <div className='flexControl'> 
-                                            <Checkbox></Checkbox>
-                                            <Label>יציבות</Label>
-                                        </div>  
-                                        <div className='flexControl'>        
-                                            <ComboBox></ComboBox>
+              
+                
+                            <div className='card-content'>
+
+                                <div className='detailItem'>
+                                    <Label style={{textAlign: 'center',}}>חישוב אי וודאות:</Label>
+                                    <ComboBox></ComboBox>&nbsp;                      
+                                    <NumericTextBox/>          
+                                </div> 
+                                <div className='detailItem'>
+                                    <Checkbox label={"יציבות"}></Checkbox>
+                                    <div className='flex-container'>        
+                                            <NumericTextBox style={{width: "100px",}}/>        
                                             <Label>+-</Label>
-                                        </div>
-                                        <div className='flexControl'> 
-                                            <Checkbox></Checkbox>
-                                            <Label>אחידות</Label>
-                                        </div>
-                                        <div className='flexControl'> 
-                                            <NumericTextBox/>
+                                    </div>
+                                </div> 
+                                <div className='detailItem'>
+                                    <Checkbox label={"אחידות"}></Checkbox>
+                                    <div className='flex-container'>        
+                                            <NumericTextBox style={{width: "100px",}}/>        
                                             <Label>+-</Label>
-                                        </div>
                                     </div>
-                                </div>  
+                                </div> 
+    
+                               
                             </div>
-                            <div className='card'  style={{width:"39%",}}>
-                                <div className='flexControl'> 
-                                    <div>
-                                        <div className='flexControl'> 
-                                            <Checkbox></Checkbox>
-                                            <Label>זמן התייצבות:</Label>
-                                        </div>
-                                            <div className='flexControl'> 
-                                                <Checkbox></Checkbox>
-                                                <Label>חישוב אוטומטי</Label>
-                                            </div>
-                                            <NumericTextBox/>
-                                            <br/>
-                                            <div>
-                                                <div className='flexControl'> 
-                                                    <Checkbox></Checkbox>
-                                                    <Label>Overshoot:</Label>
-                                                </div>
-                                                    <div className='flexControl'> 
-                                                        <Checkbox></Checkbox>
-                                                        <Label>חישוב אוטומטי</Label>
-                                                    </div>
-                                                    <NumericTextBox/>
-                                            </div>
-                                    </div>
-                                    <div>
-                                        <div className='flexControl'> 
-                                            <Checkbox></Checkbox>
-                                            <Label>זמן כיול</Label>
-                                        </div>
-                                        <div className='flexControl'> 
-                                            <Checkbox></Checkbox>
-                                            <Label>חישוב אוטומטי</Label>
-                                        </div>
-                                        <NumericTextBox/>
-                                    </div>
+                            <div className='card-content' >
+                                <div className='detailItem'>
+                                   <Checkbox>
+                                      <label style={{fontWeight: 'bold', }}>זמן התייצבות</label>
+                                   </Checkbox>
+                                   <div className='detailSubItem'>
+                                       <Checkbox label={"חישוב אוטומטי"}></Checkbox>&nbsp;
+                                       <NumericTextBox  style={{width: "100px",}}/>
+                                   </div> 
+                                </div>
+
+
+                                <div className='detailItem'>
+                                   <Checkbox>
+                                      <label style={{fontWeight: 'bold', }}>זמן כיול</label>
+                                   </Checkbox>
+                                   <div className='detailSubItem'>
+                                       <Checkbox label={"חישוב אוטומטי"}></Checkbox>&nbsp;
+                                       <NumericTextBox style={{width: "100px",}}/>
+                                   </div> 
+                                </div>
                                 
+                                <div className='detailItem'>
+                                   <Checkbox>
+                                      <label style={{fontWeight: 'bold', }}>Overshoot</label>
+                                   </Checkbox>
+                                   <div className='detailSubItem'>
+                                       <Checkbox label={"חישוב אוטומטי"}></Checkbox>&nbsp;
+                                       <NumericTextBox style={{width: "100px",}}/>
+                                   </div> 
                                 </div> 
+
                             </div>
-                        </div>
+                       
+                    </div>
                </div>
             </PanelBarItem>
             <PanelBarItem expanded={true} title="תוצאות כיול">
@@ -308,7 +300,7 @@ function Ranges(props) {
                             </Grid>
                     </div>
                     <br/>
-                    <div className ='flexrow'>
+                    <div className ='flex-container'>
                         <div className='flexRightGridRange'>
                             <Grid data={CalcalateRangesData}>
                                 <GridColumn field="RagashNum" title="רגש"/>
