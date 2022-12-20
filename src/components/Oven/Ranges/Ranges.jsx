@@ -5,6 +5,7 @@ import { PanelBar, PanelBarItem } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
 import { Label } from "@progress/kendo-react-labels";
 import { ComboBox, DropDownList } from '@progress/kendo-react-dropdowns';
+import { Upload } from "@progress/kendo-react-upload";
 import { Window } from "@progress/kendo-react-dialogs";
 import CalcalateRangesData from '../../../data/CalcalateRangesData.json';
 import CustomChart from '../../../components/CustomChart/CustomChart';
@@ -12,37 +13,46 @@ import OvenRangeData from '../../../data/OvenRange.json';
 import { GetFormatTime } from '../../../Utils';
 
 const initialData2 = [
-    { index: 1, timeStamp: "07/30/2019 01:01", "Channels" : [{"ChannelName": "T1", "Value": 15}, {"ChannelName": "T2", "Value": 4.41}]},
-    { index: 2, timeStamp: "07/30/2019 01:02", "Channels" : [{"ChannelName": "T1", "Value": 25.79}, {"ChannelName": "T2", "Value": 72}]},
-    { index: 3, timeStamp: "07/30/2019 01:03", "Channels" : [{"ChannelName": "T1", "Value": 2.94}, {"ChannelName": "T2", "Value": 1.79}]},
-    { index: 4, timeStamp: "07/30/2019 01:04", "Channels" : [{"ChannelName": "T1", "Value": 96.12}, {"ChannelName": "T2", "Value": 27.41}]},
-    { index: 5, timeStamp: "07/30/2019 01:05", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 92.3}]},
-    { index: 6, timeStamp: "07/30/2019 01:06", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 75.79}]},
-    { index: 7, timeStamp: "07/30/2019 01:07", "Channels" : [{"ChannelName": "T1", "Value": 2.52}, {"ChannelName": "T2", "Value": 4.41}]},
-    { index: 8, timeStamp: "07/30/2019 01:08", "Channels" : [{"ChannelName": "T1", "Value": 17.79}, {"ChannelName": "T2", "Value": 4.3}]},
-    { index: 9, timeStamp: "07/30/2019 01:09", "Channels" : [{"ChannelName": "T1", "Value": 2.94}, {"ChannelName": "T2", "Value": 1.79}]},
-    { index: 10, timeStamp: "07/30/2019 01:10", "Channels" : [{"ChannelName": "T1", "Value": 54.12}, {"ChannelName": "T2", "Value": 27.41}]},
-    { index: 11, timeStamp: "07/30/2019 01:11", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 72.3}]},
-    { index: 12, timeStamp: "07/30/2019 01:12", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
-    { index: 13, timeStamp: "07/30/2019 01:13", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
-    { index: 14, timeStamp: "07/30/2019 01:14", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
-    { index: 15, timeStamp: "07/30/2019 01:15", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 150}]},
-    { index: 16, timeStamp: "07/30/2019 01:16", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
-    { index: 17, timeStamp: "07/30/2019 01:17", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
-    { index: 18, timeStamp: "07/30/2019 01:18", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
-    { index: 19, timeStamp: "07/30/2019 01:19", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
-    { index: 20, timeStamp: "07/30/2019 01:20", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]}
+    { index: 1, timeStamp: "01/2/2019 01:00" , "Channels" : [{"ChannelName": "T1", "Value": 15}, {"ChannelName": "T2", "Value": 4.41}, {"ChannelName": "T3", "Value": 25}]},
+    { index: 2, timeStamp:"01/02/2019 01:02"  , "Channels" : [{"ChannelName": "T1", "Value": 25.79}, {"ChannelName": "T2", "Value": 72}, {"ChannelName": "T3", "Value": 65}]},
+    { index: 3, timeStamp: "01/02/2019 01:03"  , "Channels" : [{"ChannelName": "T1", "Value": 2.94}, {"ChannelName": "T2", "Value": 2}, {"ChannelName": "T3", "Value": 22}]},
+     { index: 4, timeStamp: "01/02/2019 01:04"  , "Channels" : [{"ChannelName": "T1", "Value": 96.12}, {"ChannelName": "T2", "Value": 27.41}, {"ChannelName": "T3", "Value": 11}]},
+     { index: 5, timeStamp: "01/02/2019 01:05", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 92.3}, {"ChannelName": "T3", "Value": 32}]},
+     { index: 6, timeStamp: "01/02/2019 01:06", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 75.79}, {"ChannelName": "T3", "Value": 1}]},
+     { index: 7, timeStamp: "01/02/2019 01:07", "Channels" : [{"ChannelName": "T1", "Value": 2.52}, {"ChannelName": "T2", "Value": 4.41}, {"ChannelName": "T3", "Value": 44}]},
+     { index: 8, timeStamp: "01/02/2019 01:08", "Channels" : [{"ChannelName": "T1", "Value": 17.79}, {"ChannelName": "T2", "Value": 4.3}]},
+     { index: 9, timeStamp: "01/02/2019 01:09", "Channels" : [{"ChannelName": "T1", "Value": 2.94}, {"ChannelName": "T2", "Value": 5}]},
+     { index: 10, timeStamp: "01/02/2019 01:10", "Channels" : [{"ChannelName": "T1", "Value": 54.12}, {"ChannelName": "T2", "Value": 27.41}]},
+     { index: 11, timeStamp: "01/02/2019 01:11", "Channels" : [{"ChannelName": "T1", "Value": 14.58}, {"ChannelName": "T2", "Value": 72.3}, {"ChannelName": "T3", "Value": 39}]},
+     { index: 12, timeStamp: "01/02/2019 01:12", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}, {"ChannelName": "T3", "Value": 33}]},
+     { index: 13, timeStamp: "01/02/2019 01:13", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+     { index: 14, timeStamp: "01/02/2019 01:14", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+     { index: 15, timeStamp: "01/02/2019 01:15", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 150}]},
+     { index: 16, timeStamp: "01/02/2019 01:16", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+     { index: 17, timeStamp: "01/02/2019 01:17", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+     { index: 18, timeStamp: "01/02/2019 01:18", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+     { index: 19, timeStamp: "01/02/2019 01:19", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]},
+     { index: 20, timeStamp: "01/02/2019 01:20", "Channels" : [{"ChannelName": "T1", "Value": 36.7}, {"ChannelName": "T2", "Value": 95.79}]}
 ];
 
 const reverData = initialData2.map(item=> 
     {
         const container = {};
         container.index = item.index;
-        container.timeStamp = new Date(item.timeStamp);
-        container.timeStampToDisplay = GetFormatTime(new Date(item.timeStamp), true);
+        //container.timeStamp = new Date(item.timeStamp);
+    
+        container.timeStamp = new Date(item.timeStamp).getTime();
+        let [bottom, top] = [item.Channels[0].Value, item.Channels[0].Value];
         item.Channels.map(channel => {
             container[channel.ChannelName] = channel.Value;
+
+              if(channel.Value > top)
+                 top = channel.Value;
+              if(channel.Value < bottom) 
+                 bottom = channel.Value;  
         });
+        container.minValue = bottom;
+        container.maxValue = top;
 
         return container;
     });
@@ -55,12 +65,34 @@ const DeleteRange = (props) => {
       </td>
     );
   };
+  
+  
 
   const ReferanceLineContainer = (props) => {
-
+   
+    const getDefaultLimit = () =>
+    {
+        var dataValues = data.filter(o => (o.index >= 1 && o.index <= 2 ));      
+          
+        //Calculation of minimum and maximum dots between the limit lines
+        const maxObj = dataValues.reduce((prev, current)=>  (prev.maxValue > current.maxValue) ? prev : current);
+        const minObj = dataValues.reduce((prev, current)=>  (prev.minValue < current.minValue) ? prev : current);
+    
+        return [{'key': 0, 
+                 'leftSide': {'activeTooltipIndex': 0, 'activeLabel': dataValues[0].timeStamp},
+                 'rightSide': {'activeTooltipIndex': 1, 'activeLabel': dataValues[1].timeStamp}, 
+                 'strokeWidthValue': 2,
+                 'color': null, 
+                 'maxPoint': {'timeStamp' : maxObj.timeStamp, 'value': Math.max(maxObj.T1, maxObj.T2) },
+                 'minPoint': {'timeStamp' : minObj.timeStamp, 'value': Math.min(minObj.T1, minObj.T2) },
+                 'stabilizationLineKey' : null,
+                 'includeInResults': true,
+                 'name': "זמן כיול"}];
+    }
     const [data, setData] = useState(reverData);
+    const [precisionLines, sePrecisionLines] = useState({'topLimit': 15, bottonLimit:3});
     const [areaInData , setAreaInData] = useState(null);
-    const [ranges, setRanges] = useState([]);
+    const [ranges, setRanges] = useState(getDefaultLimit);
     const [markes, setMarkes] = useState([]);
     const [visible, setVisible] = useState(false);
     const [positionDialoug, setPositionDialoug] = useState({});
@@ -84,23 +116,25 @@ const DeleteRange = (props) => {
 
     return (
       <> 
-      <br/>
-       <Button onClick={(e) => openDialog(e)} >הרחב גרף</Button>
+      <br/> 
+       <Button onClick={(e) => openDialog(e)} >הרחב גרף</Button>&nbsp;
+       <Checkbox>הצגת הגרף בדוח</Checkbox>
+      
        <CustomChart limits={ranges} updateLimits={setRanges} maxValue = {150}
          markes={markes} updateMarkes={setMarkes} data={data} updateData={setData} width={700} height={450} 
-          showRange={showRangeInDialoug} />
+          showRange={showRangeInDialoug} precisionLines = {precisionLines}/>
             {
                  visible && 
                 (
                     <Window
-                     title={areaInData ? (data[areaInData.indexTo].timeStampToDisplay + " - " + data[areaInData.indexFrom].timeStampToDisplay) : "גרף תנורים" }
+                     //title={areaInData ? (data[areaInData.areaTo].timeStampToDisplay + " - " + data[areaInData.areaFrom].timeStampToDisplay) : "גרף תנורים" }
                      onClose={closeDialoug}
                      initialHeight={630}
                      initialWidth={1400}
                      style={positionDialoug}
                     >
                         <CustomChart limits={ranges} updateLimits={setRanges} width={950} height={500} maxValue={150}
-                        data={areaInData ? data.slice(areaInData.indexFrom, areaInData.indexTo) : data.slice()} 
+                        data={areaInData ? data.slice(areaInData.areaFrom.activeTooltipIndex, areaInData.areaTo.activeTooltipIndex +1) : data.slice()} 
                          updateData={setData}/>
                     </Window>
                 )
@@ -138,14 +172,18 @@ function Ranges(props) {
                                 <Label>מסמך יחוס:</Label> 
                                 <div className='flex-container'>            
                                      <ComboBox></ComboBox>&nbsp;
-                                      <Button themeColor={"primary"}>שינוי</Button>
+                                      <Button themeColor={"primary"}>הצג</Button>
                                 </div>    
+                            </div>
+                            <div className='detailItem'>
+                                <Label></Label>             
+                                <Checkbox Value={true}>לפי דרישת לקוח?</Checkbox>&nbsp;   
                             </div>
                             <div className='detailItem'>
                                 <Label>מפרט כיול:</Label>   
                                 <div className='flex-container'>            
                                      <ComboBox></ComboBox>&nbsp;
-                                      <Button themeColor={"primary"}>שינוי</Button>
+                                      <Button themeColor={"primary"}>הצג</Button>
                                 </div>    
                             </div>
                             <div className='detailItem'>
@@ -160,8 +198,33 @@ function Ranges(props) {
                                 <Label>דגם הבקר:</Label>    
                                 <Input></Input>
                             </div>
+                            <div className='detailItem'>    
+                                <Label>מיפוי רגשים:</Label>  
+                                <div className='flex-container'>
+                                    <Input value={"הוגדר"} style={{background: "#90ee90", textAlign: "center", width: "70px"}}></Input>&nbsp;
+                                    <Button themeColor={"primary"}>עיצוב</Button>
+                                </div>      
+                            </div>
+                            <div className='detailItem'>    
+                                <Label>הוספת תמונה:</Label>  
+                                <div className='flex-container'>
+                                <Upload selectMessageUI={() => "צרף קבצים"} batch={false} multiple={true}
+                                        defaultFiles={[]}
+                                        showFileList={false}
+                                        withCredentials={false}
+                                        saveUrl={"https://demos.telerik.com/kendo-ui/service-v4/upload/save"}
+                                        removeUrl={"https://demos.telerik.com/kendo-ui/service-v4/upload/remove"}/>  
+                                </div>      
+                            </div>
                             <div className='detailItem2'>                                   
                                     <Label>תיאור תהליך הכיול:</Label>     
+                                    <div className='flex-container'>
+                                       <DropDownList></DropDownList>&nbsp;
+                                       <Button icon="plus" themeColor={"primary"}>הוספה</Button>
+                                    </div>      
+                            </div> 
+                            <div className='detailItem2'>                                   
+                                    <Label>הערות בתחום:</Label>     
                                     <div className='flex-container'>
                                        <DropDownList></DropDownList>&nbsp;
                                        <Button icon="plus" themeColor={"primary"}>הוספה</Button>
@@ -224,27 +287,29 @@ function Ranges(props) {
               
                 
                             <div className='card-content'>
-
+                             <div className='flex-container'>
+                                    <div className='detailItem'>
+                                        <Label>חישוב אי וודאות:</Label>
+                                        <ComboBox data={["תקני"]} value={"תקני"} style={{width: "100px",}}></ComboBox>
+                                    </div> 
+                                    <div className='detailItem'>
+                                        <Label></Label>
+                                        <div className='flex-container'>
+                                        <NumericTextBox style={{width: "100px",}}/> 
+                                        <Label>+-</Label> 
+                                        </div> 
+                                    </div>     
+                             </div>                                                    
+                             <div className='flex-container'>
                                 <div className='detailItem'>
-                                    <Label style={{textAlign: 'center',}}>חישוב אי וודאות:</Label>
-                                    <ComboBox></ComboBox>&nbsp;                      
-                                    <NumericTextBox/>          
+                                    <Checkbox label={"יציבות"}></Checkbox>       
+                                    <NumericTextBox style={{width: "100px",}}/>        
                                 </div> 
                                 <div className='detailItem'>
-                                    <Checkbox label={"יציבות"}></Checkbox>
-                                    <div className='flex-container'>        
-                                            <NumericTextBox style={{width: "100px",}}/>        
-                                            <Label>+-</Label>
-                                    </div>
+                                    <Checkbox label={"אחידות"}></Checkbox>        
+                                    <NumericTextBox style={{width: "100px",}}/>        
                                 </div> 
-                                <div className='detailItem'>
-                                    <Checkbox label={"אחידות"}></Checkbox>
-                                    <div className='flex-container'>        
-                                            <NumericTextBox style={{width: "100px",}}/>        
-                                            <Label>+-</Label>
-                                    </div>
-                                </div> 
-    
+                            </div>
                                
                             </div>
                             <div className='card-content' >
@@ -289,12 +354,12 @@ function Ranges(props) {
                 <br/>
                     <div>
                             <Grid>
-                                <GridColumn field="RangeName" title="ערך מכוון [K]"  />
-                                <GridColumn field="IntentionalValue" title="ממוצע [K]" />
-                                <GridColumn field="Conclusion" title="תצוגה [K]" />
-                                <GridColumn field="RangeName" title="תיקון בקר [K]"  />
-                                <GridColumn field="IntentionalValue" title="תיקון תצוגה [K]" />
-                                <GridColumn field="Conclusion" title="Undershoot[K]"/>
+                                <GridColumn field="RangeName" title="ערך מכוון [C]"  />
+                                <GridColumn field="IntentionalValue" title="ממוצע [C]" />
+                                <GridColumn field="Conclusion" title="תצוגה [C]" />
+                                <GridColumn field="RangeName" title="תיקון בקר [C]"  />
+                                <GridColumn field="IntentionalValue" title="תיקון תצוגה [C]" />
+                                <GridColumn field="Conclusion" title="Undershoot[C]"/>
                                 <GridColumn field="IntentionalValue" title="זמן התייצבות" />
                                 <GridColumn field="Conclusion" title="זמן כיול"/>
                             </Grid>
@@ -306,17 +371,17 @@ function Ranges(props) {
                                 <GridColumn field="RagashNum" title="רגש"/>
                                 <GridColumn field="MinValue" title="ערך מינימום[C]" />
                                 <GridColumn field="MaxValue" title="ערך מקסימום [C]" />
-                                <GridColumn field="AvarageValue" title="ממוצע[C]"  />
+                                <GridColumn field="AvarageValue" title="ממוצע [C]"  />
                                 <GridColumn field="Accuracy" title="דיוק" />
                                 <GridColumn field="Stability" title="יציבות"/>
                             </Grid>
                         </div>
                         <div className='flexLeftGridRange'>
                             <Label>הצגת ערוצים מבוטלים</Label>
-                            <ComboBox></ComboBox>
+                            <ComboBox data={["להציג עם הערה","לא להציג בדוח"]}></ComboBox>
                             <br/>
                             <Label>אפשרויות כיול</Label>
-                            <ComboBox></ComboBox>
+                            <ComboBox data={[" דוח תוצאות","ללא מסקנות","קביעת מסקנות"]}></ComboBox>
                             <br/>
                             <Label>עמידת הפריט בתפריט הכיול</Label>
                             <div className='stateCalibrateDiv'>
