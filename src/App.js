@@ -1,15 +1,19 @@
 import React, { useState } from 'react';
+
 import './App.css';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import HomePage from './Pages/HomePage/HomePage';
 import SiteManagement from './Pages/SiteManagement/SiteManagement';
+
+
 import HeaderPage from './components/HeaderPage/HeaderPage';
 import MainNavbar from './components/MainNavbar/MainNavbar';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {reactLocalStorage} from 'reactjs-localstorage';
 import OvenTest3 from './Pages/Module/OvenTest/OvenTest3';
 import { ReferenceLine } from 'recharts';
-
+import {Provider} from 'react-redux';
+import store from "./store";
 
 
 function App() { 
@@ -30,22 +34,29 @@ function App() {
 
     return (
       
-      <>        
-      <React.Fragment>
-       <BrowserRouter> 
-       <HeaderPage activeUser={activeUser} onLogout={(user) => onLogout(null)} ></HeaderPage>
-        {activeUser ? <MainNavbar ></MainNavbar> : ''} 
-         <Routes>
-              <Route exact={true} path="/" element={<HomePage></HomePage>}/>
-              <Route exact={true} path="login" element={<LoginPage path="/login" activeUser={activeUser} onLogin={user => onLogin(user)}/>}/>
-              <Route exact={true} path="/SiteManagement" element={<SiteManagement/>}/>
-              <Route exact={true} path="/OvenTest3" element={<OvenTest3></OvenTest3>}></Route>
-              <Route exact={true} path="/ReferenceLine" element={<ReferenceLine/>}/>
-              
-          </Routes>
-    </BrowserRouter>
-  </React.Fragment>
-    </>
+    
+          <>   
+           <Provider store={store}>
+          <React.Fragment>
+            <BrowserRouter> 
+              <HeaderPage activeUser={activeUser} onLogout={(user) => onLogout(null)} ></HeaderPage>
+                {activeUser ? <MainNavbar ></MainNavbar> : ''} 
+                <Routes>
+                      <Route exact={true} path="/" element={<HomePage></HomePage>}/>
+                      <Route exact={true} path="login" element={<LoginPage path="/login" activeUser={activeUser} onLogin={user => onLogin(user)}/>}/>
+                      <Route exact={true} path="/SiteManagement" element={<SiteManagement/>}/>
+                      
+                         <Route exact={true} path="/OvenTest3" element={<OvenTest3></OvenTest3>}></Route>
+                  
+                    
+                      <Route exact={true} path="/ReferenceLine" element={<ReferenceLine/>}/>
+                      
+                </Routes>
+            </BrowserRouter>
+          </React.Fragment> 
+          </Provider>
+          </>   
+  
     );
   
 }

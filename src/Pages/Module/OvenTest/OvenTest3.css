@@ -43,8 +43,10 @@
 }
 .divChooseChannelsCol
 {
-    width: 500px;
+    width: 620px;
     margin: 15px 15px 0px 0px;
+    overflow: auto; 
+    height: 250px;
 }
 .divCustomerDetails
 {
@@ -90,7 +92,7 @@
 .container-second-page
 {
    /* position: relative; */
-   margin: 20px 0px 0px 20px ;
+   margin: 20px 20px 0px 20px ;
    z-index: -1; 
 }
 
@@ -205,11 +207,20 @@
 {
    margin-right: 15px;
 }
+
 .detailItem2{
    display: flex;
    flex-direction: column;
    margin: 5px 5px 5px 5px;
     flex-basis: 450px; 
+   /* margin-bottom: 30px 30px 30px 30px; */
+}
+
+.detailItem3{
+   display: flex;
+   flex-direction: column;
+   margin: 5px 5px 5px 5px;
+    flex-basis: 350px; 
    /* margin-bottom: 30px 30px 30px 30px; */
 }
   /* .divPanelBarItem2 .detailItem{
@@ -246,16 +257,11 @@
    margin-top: 5px;
    margin-right: 5px;
 }
- .flex-item-left {
-   /* padding: 10px; 
-   flex: 85%;
-   flex-basis: 350px;*/
- }
- 
- .flex-item-right {
-   /* padding: 10px; 
-   flex: 20%;*/
- }
+.calibrated-notes
+{
+    width: 600px;
+    margin: 15px 15px 0px 0px;
+}
  /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media (max-width: 800px) {
    .flex-container {
@@ -263,8 +269,15 @@
    }
  }
   
- @media (max-width: 800px) {
+  @media (max-width: 1010px) {
    .cards-container {
       flex-direction: column;
     }
+  } 
+  @media (max-width: 800px) {
+   .divDeviceDetails {
+      width: 500px; 
+    }
   }
+
+  

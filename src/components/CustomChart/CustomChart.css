@@ -7,7 +7,7 @@
   .divDinamicLimits{
     border: 1px solid black;
     overflow: auto; 
-    height: 240px; 
+     height: 450px;  
   }
   .divControlsRange
   {

@@ -1,0 +1,98 @@
+.check-channel
+{
+    padding: 5px 5px 5px 5px;
+}
+* 
+{
+    --transition: 0.15s;
+    --border-radius: 0.5rem;
+    --background: #b8b2b2;
+    /* --box-shadow: #ffc107; */
+}
+  
+  
+  
+  .cont-main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .cont-checkbox {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    background: white;
+    transition: transform var(--transition);
+    margin: 4px 4px 0px 0px;
+    margin-left: 4px;
+  }
+  
+  
+  .cont-checkbox:active {
+    transform: scale(0.9);
+  }
+  
+  .inpu {
+    display: none;
+  }
+  
+   .inpu:checked + .labe { 
+    /* opacity: 1; */
+    box-shadow: 0 0 0 3px var(--background);
+  }
+  
+  .labe {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0.6;
+  }
+  
+  
+  .labe .cover-checkbox {
+  
+    position: absolute;
+    right: 7px;
+     top: 12px;
+    z-index: 1;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    /* background: #ffc107; */
+    border: 2px solid #fff;
+    transition: transform var(--transition),
+      opacity calc(var(--transition) * 1.2) linear;
+      opacity: 1;
+      transform: scale(1);
+  }
+  
+  .labe .cover-checkbox svg {
+    width: 10px;
+    height: 8px;
+    display: inline-block;
+    vertical-align: top;
+    fill: none;
+    margin: 4px 0 0 0;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 16px;
+    transition: stroke-dashoffset 0.4s ease var(--transition);
+    stroke-dashoffset: 0;
+  }
+  
+   .info {
+    text-align: center;
+    margin-top: 0.2rem;
+    font-weight: 600;
+    font-size: 0.6rem;
+  }
+  
