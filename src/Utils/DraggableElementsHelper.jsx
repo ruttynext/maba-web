@@ -69,9 +69,9 @@ import React from 'react'
 
  const DraggableElement = ({ prefix, elements }) => (
   
-    <Droppable droppableId={`${prefix}`} direction="horizontal"  style={{display: "flex"}}>
+    <Droppable droppableId={`${prefix}`} direction="horizontal"  style={{display: "flex", width: "100%", overflow: "auto",}}>
       {(provided, snapshot) => (
-        <div {...provided.droppableProps} ref={provided.innerRef} style={{minWidth: "Nan",}} className='flex-container'>
+        <div {...provided.droppableProps} ref={provided.innerRef} style={{minWidth: "Nan", overflow: "auto", width: "100%",}} className='flex-container'>
           {elements.map((item, index) => (
             <ListItem key={item.id} item={item} index={index} />
           ))}

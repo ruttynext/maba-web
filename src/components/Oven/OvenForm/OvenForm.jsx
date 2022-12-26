@@ -236,7 +236,10 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
       return(
         <RangeCell {...props}/>);
       };
-
+      const gridWidth = 600;
+      const setPercentage = (percentage) => {
+        return Math.round(gridWidth / 100) * percentage;
+      };
    return (
     <div className='divCalibrationAreas'>
       <PanelBar>
@@ -245,10 +248,10 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
                   <div>
                       <Grid
                           data={TemperuraData}>
-                              <GridColumn field="Type" title="סוג" width={"100px"}/>
-                              <GridColumn field="MeasuringValue" title="ערך מדידה" cell={CustomComboBoxCell} width={"100px"}/>
-                              <GridColumn field="Range" title="טווח מכשיר" cell={CustomRangeCell} width={"200px"} />  
-                              <GridColumn field="Range" title="טווח כיול" cell={CustomRangeCell} width={"200px"}/>
+                              <GridColumn field="Type" title="סוג" width={setPercentage(20)}/>
+                              <GridColumn field="MeasuringValue" title="ערך מדידה" cell={CustomComboBoxCell} width={setPercentage(20)}/>
+                              <GridColumn field="Range" title="טווח מכשיר" cell={CustomRangeCell} width={setPercentage(30)} />  
+                              <GridColumn field="Range" title="טווח כיול" cell={CustomRangeCell} width={setPercentage(30)}/>
                       </Grid>
                   </div>
               </div>
@@ -300,17 +303,17 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
                   </div>
            
            
-              <div className='detailItem2'>                                   
+              <div className='detailItem'>                                   
                     <Label>הערות לדוח:</Label> 
                     <div className='flex-container'>
-                        <DropDownList ></DropDownList>&nbsp;
+                        <DropDownList style={{width: "250px",}}></DropDownList>&nbsp;
                         <Button  icon="plus" themeColor={"primary"}>הוספה</Button>
                     </div>      
                 </div>
-                <div className='detailItem2'>    
+                <div className='detailItem'>    
                     <Label>תיאור הפריט ומצבו:</Label> 
                     <div className='flex-container'>
-                        <DropDownList></DropDownList>&nbsp;
+                        <DropDownList style={{width: "250px",}}></DropDownList>&nbsp;
                         <Button icon="plus" themeColor={"primary"}>הוספה</Button>
                     </div>      
                 </div>
@@ -333,22 +336,23 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
   
     return(
       [
+         {
+           id: 0,
+           elements: [
+             {id: "0", content: <ChannelsSelectionToForm form={form}/>},
+                     {id: "1", content: <DeviceDetails/>}]
+         },
+         {
+           id: 1,
+           elements: [{id: "2", content: <CustomerDetailsContainer/>},
+                     {id: "3", content: <CalibrateDetailsContainer openSignForm={openSignForm} setOpenSignForm= {setOpenSignForm} calibratorSignature={calibratorSignature}/> }]
+         },
         {
-          id: 0,
-          elements: [
-            {id: "0", content: <ChannelsSelectionToForm form={form}/>},
-                    {id: "1", content: <DeviceDetails/>}]
-      },
-      {
-          id: 1,
-          elements: [{id: "2", content: <CustomerDetailsContainer/>},
-                    {id: "3", content: <CalibrateDetailsContainer openSignForm={openSignForm} setOpenSignForm= {setOpenSignForm} calibratorSignature={calibratorSignature}/> }]
-      },
-      {
           id: 2,
           elements: [{id: "4", content: <CalibrationRangesContainer/>},
-                    {id: "5", content: <EnvironmentalConditionsDuringCalibrationContainer/>}]
-      }
+                    {id: "5", content: <EnvironmentalConditionsDuringCalibrationContainer/>}
+                ]
+        }
       ]);
   };
 
@@ -389,23 +393,19 @@ function OvenForm({form}) {
     };
 
     return (
-        <>   
+        <div style={{ width: "100%",}}>   
             <button icon="folder" onClick={openPopUpDisplayReport} ref={anchor} className={"k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"}>
                  הצגת דוחות קודמים
             </button> 
            
-         <Popup show={showPopUpReports} popupClass={"popup-content"} anchor={anchor.current}>
-                <Button icon="pdf" themeColor={"primary"} fillMode="link">
-                    דוח 1
-                </Button>
-                <Button icon="pdf" themeColor={"primary"} fillMode="link">
-                   דוח 2
-                </Button>
-          </Popup> 
+            <Popup show={showPopUpReports} popupClass={"popup-content"} anchor={anchor.current}>
+                <Button icon="pdf" themeColor={"primary"} fillMode="link">דוח 1</Button>
+                <Button icon="pdf" themeColor={"primary"} fillMode="link">דוח 2</Button>
+            </Popup> 
               {/* container of all elements to drag and drop */}
-              <DragDropContainer elements={elements} setElements={setElements} 
-                style={{display: "flex", flexDirection : "column", margin: "5px 5px 5px 5px",}}>
-              </DragDropContainer>
+             <DragDropContainer elements={elements} setElements={setElements} 
+                style={{display: "flex", flexDirection : "column", margin: "5px 5px 5px 5px", width: "100%",}}>
+              </DragDropContainer> 
               <br/>
               <div className='divRanges'>
                     <PanelBar>
@@ -444,7 +444,7 @@ function OvenForm({form}) {
                  <SignWeb signData={calibratorSignature} parentCallback={ sigImageCallback } closeSignWeb={() =>setOpenSignForm(false)}></SignWeb>
          
           )} 
-       </>
+       </div>
     );
 }
 

@@ -45,6 +45,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
 
   /* container to display report draft */
   const DispalyReportContainer = () => {
+    
     const [displayReport, setDisplayReport] = useState(false);
     const [file, setFile] = useState(reportPdf);
     const [numPages, setNumPages] = useState(null);
@@ -168,18 +169,18 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
 
    
     return (
-      <div style={{paddingRight: "15px",}}>
+      <div style={{paddingRight: "15px", width: "100%",}} >
         {/* Menu of the top of the page  */}      
         <>
           <div className='flex-container'>
             <div className='detailItem'> 
-                <Label>אופן קבלת נתונים</Label> 
-                <ComboBox data={["הידרה", "ערוצים מתוך הקלטה שמורה/ אקסל/ הידרות אלחוטיות/ קובץ לוג "]} style={{width: "350px",}}></ComboBox>                      
+                <Label>מקור נתונים:</Label> 
+                <ComboBox data={["הידרה", "ערוצים מתוך הקלטה שמורה/ אקסל/ הידרות אלחוטיות/ קובץ לוג ", "מדג'טק","קארטסנס","גרנט"]} style={{width: "350px",}}></ComboBox>                      
             </div>
-            {/* <div className='detailItem'>
-                <Label>קצב דגימה (דקות):</Label>
+             <div className='detailItem'>
+                <Label>קצב דגימה (שניות):</Label>
                 <NumericTextBox style={{width: "70%",}}/>
-            </div> */}
+            </div> 
             
             <Button className='nextOrPrevBtn' onClick={handleIndexPage}>{firstPage ? "הבא": "הקודם"}
                 <span className={firstPage ? "k-icon k-i-arrow-chevron-left" : "k-icon k-i-arrow-chevron-right"}></span>
@@ -191,7 +192,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
         </>
         {/* Display Report button*/}
         <DispalyReportContainer></DispalyReportContainer>   
-          <div style={{paddingTop: "15px",}}>
+          <div style={{paddingTop: "15px", width: "100%",}}>
             {firstPage ? 
               <>
                  
@@ -233,13 +234,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
                                     
                                 </div>
                              
-                                </div>    <br/>
-                                <Label>אופן קבלת נתונים</Label> 
-                                <div className='flex-container'>
-                                    <ComboBox data={["הידרה", "ערוצים מתוך הקלטה שמורה/ אקסל/ הידרות אלחוטיות/ קובץ לוג "]} style={{width: "350px",}}></ComboBox>
-
-                                </div>  
-                                
+                                </div>                                   
                               <DialogActionsBar>
                                 <button className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" onClick={showOrHideDialogAddReport}>ביטול</button>
                                 <button className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" onClick={createNewReport}>אישור</button>

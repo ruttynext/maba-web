@@ -38,12 +38,12 @@
 }
 
 .divEnvironmentalconditions{
-    width: 400px; 
+    /* width: 400px;  */
    margin: 15px 15px 0px 0px;
 }
 .divChooseChannelsCol
 {
-    width: 620px;
+    /* width: 620px; */
     margin: 15px 15px 0px 0px;
     
     height: 250px;
@@ -54,17 +54,17 @@
 }
 .divCustomerDetails
 {
-   width: 500px;
+   /* width: 500px; */
    margin: 15px 15px 0px 0px;
 }
 .calibrate-Details
 {
-   width: 500px;
+   /* width: 500px; */
    margin: 15px 15px 0px 0px;
 }
 .divDeviceDetails
 {
-   width: 1000px; 
+    width: 80%;  
    margin: 15px 15px 0px 0px;
 }
 .divRanges
@@ -114,7 +114,7 @@
 }
 .c-ModalC{
    height: 900px;
-   width: 150px;
+   /* width: 150px; */
 }
 /* input:checked .recharts-surface{
    cursor: zoom-in;
@@ -263,7 +263,7 @@
 }
 .calibrated-notes
 {
-    width: 600px;
+    /* width: 600px; */
     margin: 15px 15px 0px 0px;
 }
  /* Responsive layout - makes a one column-layout instead of two-column layout */
