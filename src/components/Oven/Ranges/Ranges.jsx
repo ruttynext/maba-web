@@ -145,6 +145,8 @@ const DeleteRange = (props) => {
 
 function Ranges(props) {
 
+    const [openChannelMapping, setOpenChannelMapping] = useState(false);
+    
     const MyDeleteRange = (props) => (
         <DeleteRange {...props}/>
       );
@@ -202,7 +204,7 @@ function Ranges(props) {
                                 <Label>מיפוי רגשים:</Label>  
                                 <div className='flex-container'>
                                     <Input value={"הוגדר"} style={{background: "#90ee90", textAlign: "center", width: "70px"}}></Input>&nbsp;
-                                    <Button themeColor={"primary"}>עיצוב</Button>
+                                    <Button themeColor={"primary"} onClick={setOpenChannelMapping}>עיצוב</Button>
                                 </div>      
                             </div>
                             <div className='detailItem'>    
