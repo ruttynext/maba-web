@@ -13,7 +13,7 @@ import { Dialog, DialogActionsBar } from "@progress/kendo-react-dialogs";
 import { reportsActions } from '../../../store/reports-slice';
 import './OvenTest3.css'
 import OvenForm from '../../../components/Oven/OvenForm/OvenForm';
-import ChannelsSelection from '../../../components/Oven/ChannelsSelection/ChannelsSelection';
+
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
@@ -119,7 +119,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
 
     const [ certificate, SetCertificate ] = useState({});
     const [ firstPage, SetFirstPage ] = useState(true);
-    const [openCheannelsSelectionDialog, setOpenCheannelsSelectionDialog] = useState(false);
+ 
     const [selected, setSelected] = useState(0);
     const [openDialogAddReport, setOpenDialogAddReport] = useState(false);
 
@@ -133,7 +133,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
     //tab click event
     const handleSelectTab = (e) => {
       
-      console.log("handleSelectTab" + e.selected);
       //Click on create a new tab
       if(listReports.length === e.selected)
       {
@@ -174,17 +173,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
         <>
           <div className='flex-container'>
             <div className='detailItem'> 
-                <Label>מס תעודה</Label> 
-                <MultiColumnComboBox
-                  data={certificates}
-                  columns={columns}
-                  textField={"certificateNum"} onChange={e=> (SetCertificate(e.value))}/>
+                <Label>אופן קבלת נתונים</Label> 
+                <ComboBox data={["הידרה", "ערוצים מתוך הקלטה שמורה/ אקסל/ הידרות אלחוטיות/ קובץ לוג "]} style={{width: "350px",}}></ComboBox>                      
             </div>
             {/* <div className='detailItem'>
                 <Label>קצב דגימה (דקות):</Label>
                 <NumericTextBox style={{width: "70%",}}/>
             </div> */}
-            <Button onClick={() => setOpenCheannelsSelectionDialog(true)}>בחירת ערוצים מאוגר נתונים</Button> &nbsp;
+            
             <Button className='nextOrPrevBtn' onClick={handleIndexPage}>{firstPage ? "הבא": "הקודם"}
                 <span className={firstPage ? "k-icon k-i-arrow-chevron-left" : "k-icon k-i-arrow-chevron-right"}></span>
             </Button>
@@ -198,7 +194,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
           <div style={{paddingTop: "15px",}}>
             {firstPage ? 
               <>
-                 {/* <HydraSelection></HydraSelection> */}
+                 
                 
               </> :
               <>  
@@ -254,12 +250,8 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
               </>
             } 
        </div>
-       {
-          openCheannelsSelectionDialog && 
-      
-             <ChannelsSelection closeDialog={() => setOpenCheannelsSelectionDialog(false)}></ChannelsSelection>
-         
-       }
+  
+       
       </div>
     );
 }

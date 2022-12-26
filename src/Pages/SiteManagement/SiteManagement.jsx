@@ -7,7 +7,7 @@ import './SiteManagement.css'
 import { Loader } from "@progress/kendo-react-indicators";
 import configData from "../../config.json";
 import { Checkbox } from "@progress/kendo-react-inputs";
-
+import items from '../../data/items.json';
 
 const EditCommandCell = (props) => {
 
@@ -42,7 +42,7 @@ function SiteManagement(props) {
   const [openForm, setOpenForm] = React.useState(false);
   const [editItem, setEditItem] = React.useState({UserNumber: 20,});
   const [mode, setMode] = React.useState(EditMode.Edit);
-  const [data, setData] = React.useState(null);
+  const [data, setData] = React.useState(items);
 
   const enterEdit = (item, modeButton) => {
 

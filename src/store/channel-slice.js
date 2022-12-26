@@ -6,12 +6,14 @@ const channelsSlice = createSlice({
                                     {
                                         id: 0,
                                         hydraNumber: "21-424",
+                                        channelsAmount: 60,
                                         channels: []
                                     },
                                     {
                                         id: 1,
                                         selected: false,
                                         hydraNumber: "21-473",
+                                        channelsAmount: 40,
                                         channels: []
                                     }
                                    ] 
@@ -22,12 +24,11 @@ const channelsSlice = createSlice({
        
             const detailsChannel = action.payload.detailsChannel;
             const channelsArray = action.payload.channelsArray;
-            console.log("setChanneldata");
+            var channels = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === detailsChannel.hydraNumber).channels;
             channelsArray.map(channelItem => {
 
-                const existingItem = state.channelsData.find(
-                                     (hydraItem) => hydraItem.hydraNumber === detailsChannel.hydraNumber)
-                                     .channels.find((channel) => channel.name === channelItem.id);
+                const existingItem = channels.find((channel) => channel.name === channelItem.id);
+
                 if (existingItem) {
                   
                     existingItem.sensorValue = detailsChannel.sensorValue;
@@ -39,48 +40,44 @@ const channelsSlice = createSlice({
                 } 
                 else
                 {
-                    state.channelsData.find((hydraItem) => hydraItem.hydraNumber === detailsChannel.hydraNumber)
-                     .channels.push({
-                        hydraNumber: "Ff",
+                    channels.push({
                                 name: channelItem.id,
                                 sensorValue: detailsChannel.sensorValue, 
                                 measurementType: detailsChannel.measurementType,
                                 unitsNumber: detailsChannel.unitsNumber,
                                 lowerLimit: detailsChannel.lowerLimit,
-                                UpperLimit: detailsChannel.UpperLimit,
-                                reports: []});         
+                                UpperLimit: detailsChannel.UpperLimit});         
                 }
             })
  
         },
         
-        removeChannel(state, action) {
+        // removeChannel(state, action) {
             
-            const channel = action.payload.channel;
-            const channelsItems = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === channel.hydraNumber);
+        //     const channel = action.payload.channel;
+        //     const channelsItems = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === channel.hydraNumber);
 
-            channelsItems.channels = channelsItems.channels.filter((channelItem) => channelItem.name !== channel.id);
-        },
+        //     channelsItems.channels = channelsItems.channels.filter((channelItem) => channelItem.name !== channel.id);
+        // },
 
-        setChannelToReport(state, action) {
+        // setChannelToReport(state, action) {
             
-            const item = action.payload.item;
+        //     const item = action.payload.item;
            
-            const existingItem = (state.channelsData.find(
-                    (hydraItem) => hydraItem.hydraNumber === item.hydraNumber)).channels.find((channel) => channel.name === item.id);
+        //     const existingItem = (state.channelsData.find(
+        //             (hydraItem) => hydraItem.hydraNumber === item.hydraNumber)).channels.find((channel) => channel.name === item.id);
 
-            if(existingItem) {
-                console.log("existingItem");
-                existingItem.reports.push(item.report)
-            }
-        },
+        //     if(existingItem) {
+                
+        //         existingItem.reports.push(item.report)
+        //     }
+        // },
 
         expandedHydra(state, action) {
          
             const detailsHydra = action.payload.detailsHydra;
-            console.log(detailsHydra);
-            const existingItem = state.channelsData.find(
-                                 (hydraItem) => hydraItem.hydraNumber === detailsHydra.hydraNumber)
+          
+            const existingItem = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === detailsHydra.hydraNumber)
             if (existingItem) 
             {
                existingItem.expanded = detailsHydra.expanded;
@@ -88,21 +85,29 @@ const channelsSlice = createSlice({
         },
 
         selectedHydra(state, action) {
-           console.log("selectedHydra");
+         
             const detailsHydra = action.payload.detailsHydra;
-            console.log(detailsHydra.hydraNumber);
+           
             state.channelsData.map(item => (
                
                 {...item, 'selected' : item.hydraNumber === detailsHydra.hydraNumber ? true : false, 
                           
                 } ));
-                console.log(state.channelsData);                
+                               
         },
-        reorderedData(state, action) {
-            
-            state.channelsData = action.payload.reorderedData;
 
-        },
+        // changeChannelOrder(state, action) {
+            
+        //     var detailItem = action.payload.detailItem;
+        //     var channels = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === detailItem.hydraNumber).channels;
+        //     const existingItem = state.channelsData.find(
+        //         (hydraItem) => hydraItem.hydraNumber === detailItem.hydraNumber)
+        //     if (existingItem) 
+        //     {
+        //     existingItem.expanded = detailsHydra.expanded;
+        //     }
+
+        // },
     },
 });
 

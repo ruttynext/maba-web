@@ -45,8 +45,12 @@
 {
     width: 620px;
     margin: 15px 15px 0px 0px;
-    overflow: auto; 
+    
     height: 250px;
+}
+.panel-grid-Channels{
+   overflow: auto; 
+   height: 150px;
 }
 .divCustomerDetails
 {

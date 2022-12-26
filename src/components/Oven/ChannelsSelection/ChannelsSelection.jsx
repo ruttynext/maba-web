@@ -1,18 +1,15 @@
 import {React, useState} from 'react';
-import {connect} from 'react-redux';
-import { Checkbox, NumericTextBox } from '@progress/kendo-react-inputs';
-import { Dialog , DialogActionsBar} from '@progress/kendo-react-dialogs';
+
+import { Dialog } from '@progress/kendo-react-dialogs';
 import './ChannelsSelection.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { channelsActions } from '../../../store/channel-slice';
+import { reportsActions } from '../../../store/reports-slice';
 import { ComboBox } from '@progress/kendo-react-dropdowns';
 import { Label, Error } from '@progress/kendo-react-labels';
-import { Grid, GridColumn } from '@progress/kendo-react-grid';
-import { Button } from '@progress/kendo-react-buttons';
 import { Form, Field, FormElement } from "@progress/kendo-react-form";
-import { TabStrip, TabStripTab } from "@progress/kendo-react-layout";
-import { TreeView, processTreeViewItems } from "@progress/kendo-react-treeview";
-
+import { TreeView } from "@progress/kendo-react-treeview";
+import {  NumericTextBox } from '@progress/kendo-react-inputs';
 const sensorItems = [
   "123",
   "523",
@@ -35,7 +32,7 @@ const unitsType = [
   "°F"
 ];
 
-const ItemSelected = ({id, selectItem, isSelect, activeChannel, listReports}) => {
+const ItemSelected = ({id, selectItem, isSelect, activeChannel}) => {
   
   const isChannelActive = activeChannel === undefined ? false : true;
 
@@ -46,13 +43,12 @@ const ItemSelected = ({id, selectItem, isSelect, activeChannel, listReports}) =>
      
    { isChannelActive ?
     <> 
-     <span className="cover-checkbox" style={{background: activeChannel.reports.length > 0 ?
-       "#" + listReports.find((item) => item.id === activeChannel.reports[0]).color :"#ffc107",}}>
+     <span className="cover-checkbox" style={{background: "#" + activeChannel.color,}}>
         <svg viewBox="0 0 12 10">
           <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
         </svg>
       </span> 
-    </>:""
+    </> : ""
   }
       <div className="info">{id}</div>
     </label>
@@ -84,10 +80,10 @@ const comboBoxField = (fieldRenderProps) => {
   );
 };
 
-const createItemsSelectedArr = () =>{
+const createItemsSelectedArr = (channelsAmount) =>{
   
   const tempArr = [];  
-  for (let i = 1; i <= 60; i++)
+  for (let i = 1; i <= channelsAmount; i++)
   {
     tempArr.push({id : i, selected: false});
   }
@@ -96,14 +92,22 @@ const createItemsSelectedArr = () =>{
 
 }
 
-function ChannelsSelectionByHydra({hydraNumber, channelsList}) {
+// const getChannelsActive = (listReports) =>{
+ 
+//   listReports.map((item) => {
+//      arr.push(item.)
+//   })
+//    const arr = [];
+
+// }
+
+function ChannelsSelectionByHydra({hydraObj, form}) {
   
-  console.log("ChannelsSelectionByHydra");
-  console.log(channelsList);
-  const [ itemsSelected, setItemsSelected ] = useState(createItemsSelectedArr);
+  
+  const [ itemsSelected, setItemsSelected ] = useState(createItemsSelectedArr(hydraObj.channelsAmount));
   const listReports = useSelector((state) => state.reportsData.reportsDataList);
   const [ sensorValue, setSensorValue ] = useState("");
-  
+ // const [channelsActive, setChannelsActive ] = useState(getChannelsActive(listReports));
 
   const dispatch = useDispatch();
   const [channelsMatrix, setChannelsMatrix] = useState({ x: 10, y: 6 });
@@ -113,7 +117,7 @@ function ChannelsSelectionByHydra({hydraNumber, channelsList}) {
 
     if(isSetDetailsChannel)
     {
-      dispatch(channelsActions.removeChannel({ channel: {id: id, hydraNumber: hydraNumber}},));
+      dispatch(channelsActions.removeChannel({ channel: {id: id, hydraNumber: hydraObj.hydraNumber}},));
       return;
     }
 
@@ -131,26 +135,24 @@ function ChannelsSelectionByHydra({hydraNumber, channelsList}) {
 
 
    const generateChannelsSelection = () => {
-    
+
     let contentRows = [];
     let content = [];
     let index = 0;
 
     itemsSelected.map(item => {
       
-      const activeChannel = channelsList.find(
-            (channelItem) => channelItem.name === item.id);
-      
-      content.push(<ItemSelected id={item.id} selectItem={selectItem} isSelect={item.selected} 
-                          activeChannel={activeChannel} listReports = {listReports}/>);
+    const activeChannel = listReports.find((reportItem) => reportItem.channels.some(code => code.hydraId ===  hydraObj.id && code.name === item.id));
+   
+      content.push(<ItemSelected id={item.id} selectItem={selectItem} isSelect={item.selected} activeChannel={activeChannel} />);
       index = index + 1;
      
       if(index === channelsMatrix.x)
-         {
+        {
            contentRows.push(<div className='cont-main'>{content}</div>);
            content = [];
            index= 0;
-         }
+        }
     })
 
     if(content.length > 0)
@@ -165,15 +167,21 @@ function ChannelsSelectionByHydra({hydraNumber, channelsList}) {
   {
    
     dispatch(channelsActions.setChanneldata(
-      { detailsChannel: { hydraNumber: hydraNumber, sensorValue: sensorValue, measurementType: dataItem.measurementType, 
+    { detailsChannel: { hydraNumber: hydraObj.hydraNumber, sensorValue: sensorValue, measurementType: dataItem.measurementType, 
                           unitsNumber: dataItem.unitsNumber, lowerLimit:  dataItem.lowerLimit, UpperLimit:  dataItem.UpperLimit},
         channelsArray: itemsSelected.filter(item => {
                         return item.selected === true;})
-      },));
-
+    },));
+    
+    dispatch(reportsActions.addChannelsToReport(
+    { 
+          details: {hydraNumber: hydraObj.id, reportId: form.id},
+          channelsArray: itemsSelected.filter(item => {
+                          return item.selected === true;})
+    },));
    
      //reset all items that selected.
-     setItemsSelected(current =>
+    setItemsSelected(current =>
       current.map(obj => {
           return {...obj,  'selected' : false};  
       }),
@@ -318,12 +326,12 @@ function ChannelsSelection(props) {
   };
 
   //* event that fires when an item is clicked or when Enter is pressed on a focused item.
-  const selectedItem = (props) => {
+  const selectedItem = (event) => {
 
-     if(props.item.channels)
+     if(event.item.channels)
      {
-        setItemSelect([props.itemHierarchicalIndex]);
-        setHydraSelected(props.item.id);
+        setItemSelect([event.itemHierarchicalIndex]);
+        setHydraSelected(event.item.id);
 
         // dispatch(channelsActions.selectedHydra(
         //   { 
@@ -333,12 +341,12 @@ function ChannelsSelection(props) {
   }
   
    //* Returns the title of the item 
-  const headerItem = (props) => {
+  const headerItem = (event) => {
        
       //* If the item is the parent, then returns hydraNumber value, and to childrens items returns channel name value.
       return (
          <>
-            {props.item.channels ? props.item.hydraNumber : props.item.name}
+            {event.item.channels ? event.item.hydraNumber : event.item.name}
          </>
       );
   };
@@ -349,29 +357,17 @@ function ChannelsSelection(props) {
         <Dialog title={'בחירת ערוצים מאוגר נתונים'} onClose={props.closeDialog}>  
           
              <div className='flex-container'>
-
-                  <TreeView item={headerItem}
-                   data={hydraList}
-                   expandIcons={true} onItemClick={selectedItem} 
-                   onExpandChange={onExpandChange} childrenField={"channels"} textField={"hydraNumber"} />
+                 <div className='div-details-hydra'>
+                      <TreeView item={headerItem}
+                        data={hydraList}
+                        expandIcons={true} onItemClick={selectedItem} 
+                        onExpandChange={onExpandChange} childrenField={"channels"} textField={"hydraNumber"} />
+                 </div>
+                  
 
                  {
-                  <ChannelsSelectionByHydra hydraNumber={hydraList[hydraSelected].hydraNumber} channelsList={hydraList[hydraSelected].channels}/> 
+                  <ChannelsSelectionByHydra hydraObj={hydraList[hydraSelected]} form={props.form}/> 
                  }  
-              
-               {/* <div>
-                  <TabStrip selected={selected} onSelect={handleSelect}>
-                      { 
-                        hydraList.map((item, index) => 
-                        {  
-                            return(       
-                                <TabStripTab title={item.hydraNumber}>
-                                      <ChannelsSelectionByHydra hydraNumber={item.hydraNumber} channelsList={item.channels}/>    
-                                </TabStripTab>) 
-                        })
-                      }  
-                  </TabStrip>
-              </div>  */}
               <div>
 
               </div>

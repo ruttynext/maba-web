@@ -353,7 +353,6 @@ function CustomChart(props) {
          
          if(stateChart === stateChartEnum.zoomActive)
          {
-           console.log("x: " + e.chartX + " y: " + e.chartY);
            setRefAreaZoom({x1: e.chartX, y1: e.chartY, x2: e.chartX, y2: e.chartY});
          }
 
@@ -821,14 +820,6 @@ function CustomChart(props) {
                                  })
                            }
                            
-                    {/* <g >
-                              <rect 
-                                  x="320.7368421052631"
-                                  y="5"
-                                  width="162.63157894736844"
-                                  height="390.01736068725586" 
-                                  fill='none' style={{strokeWidth:5 ,stroke:'#009900', strokeDasharray:2}}></rect>
-                    </g> */}
                     {
                       refAreaZoom && refAreaZoom.x2 !== 0 ? 
                       <rect width={Math.abs(refAreaZoom.x2 - refAreaZoom.x1)} height={Math.abs(refAreaZoom.y2 - refAreaZoom.y1)} 

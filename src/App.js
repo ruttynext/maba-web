@@ -43,7 +43,7 @@ function App() {
                 {activeUser ? <MainNavbar ></MainNavbar> : ''} 
                 <Routes>
                       <Route exact={true} path="/" element={<HomePage></HomePage>}/>
-                      <Route exact={true} path="login" element={<LoginPage path="/login" activeUser={activeUser} onLogin={user => onLogin(user)}/>}/>
+                      <Route exact={true} path="/login" element={<LoginPage/>}/>
                       <Route exact={true} path="/SiteManagement" element={<SiteManagement/>}/>
                       
                          <Route exact={true} path="/OvenTest3" element={<OvenTest3></OvenTest3>}></Route>
