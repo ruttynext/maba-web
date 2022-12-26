@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/maba-web/static/css/main.7809f628.css",
-    "main.js": "/maba-web/static/js/main.cda526db.js",
+    "main.js": "/maba-web/static/js/main.52f41d27.js",
     "static/js/787.b6063c01.chunk.js": "/maba-web/static/js/787.b6063c01.chunk.js",
     "static/media/220837062.pdf": "/maba-web/static/media/220837062.11b506ee30f421e1c9ad.pdf",
     "index.html": "/maba-web/index.html",
     "main.7809f628.css.map": "/maba-web/static/css/main.7809f628.css.map",
-    "main.cda526db.js.map": "/maba-web/static/js/main.cda526db.js.map",
+    "main.52f41d27.js.map": "/maba-web/static/js/main.52f41d27.js.map",
     "787.b6063c01.chunk.js.map": "/maba-web/static/js/787.b6063c01.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7809f628.css",
-    "static/js/main.cda526db.js"
+    "static/js/main.52f41d27.js"
   ]
 }
