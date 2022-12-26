@@ -38,10 +38,13 @@ function App() {
           <>   
            <Provider store={store}>
           <React.Fragment>
-            <BrowserRouter> 
+            
+             <BrowserRouter> 
               <HeaderPage activeUser={activeUser} onLogout={(user) => onLogout(null)} ></HeaderPage>
-                {activeUser ? <MainNavbar ></MainNavbar> : ''} 
-                <Routes>
+              
+                {activeUser ? <MainNavbar ></MainNavbar> : ''}
+                  <OvenTest3></OvenTest3>
+                {/* <Routes>
                       <Route exact={true} path="/" element={<HomePage></HomePage>}/>
                       <Route exact={true} path="/login" element={<LoginPage/>}/>
                       <Route exact={true} path="/SiteManagement" element={<SiteManagement/>}/>
@@ -51,8 +54,8 @@ function App() {
                     
                       <Route exact={true} path="/ReferenceLine" element={<ReferenceLine/>}/>
                       
-                </Routes>
-            </BrowserRouter>
+                </Routes> */}
+            </BrowserRouter> 
           </React.Fragment> 
           </Provider>
           </>   
