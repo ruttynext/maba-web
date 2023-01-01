@@ -1,6 +1,4 @@
-.c-reference-line {
-    display: flex;
-  }
+
   .flexControls{
     display: flex; 
   }
@@ -19,8 +17,9 @@
   }
   .divLinechart
   {  
+      width: 100%;  
      overflow: auto;
-     direction: ltr;
+     direction: ltr; 
   }
   .menu {
     font-size: 14px;
@@ -37,3 +36,12 @@
     opacity: 1;
     transition: opacity 0.5s linear;
   }
+  .highlight-bar-charts{
+    width: 100%;
+    overflow: auto;
+  }
+  .divLimits{
+    width: 15%;
+    height: 100%;
+  }
+ 
