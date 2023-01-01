@@ -7,8 +7,10 @@ import { Button } from "@progress/kendo-react-buttons";
 import { PanelBar, PanelBarItem } from "@progress/kendo-react-layout";
 import { Calendar, DatePicker } from "@progress/kendo-react-dateinputs";
 import { Popup } from "@progress/kendo-react-popup";
+import { Document, Page, pdfjs  } from 'react-pdf';
 import TemperuraData from '../../../data/temperura.json';
 import './OvenForm.css'
+import reportPdf from "./220837062.pdf";
 //import HydraSelection from '../../../components/Oven/HydraSelection/HydraSelection';
 import Ranges from '../../../components/Oven/Ranges/Ranges';
 import SignWeb from '../../../components/SignForm/SignWeb';
@@ -17,6 +19,7 @@ import { DragDropContainer} from '../../../Utils/DraggableElementsHelper';
 
 import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
 
+pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 
  
@@ -31,6 +34,7 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
   };
   
   const RangeCell = (props) => {
+    
     const [isDisplayFields, setIsDisplayFields] = useState(props.dataItem.Type === "טמפרטורה"? true : false);
     const [valueField1, setvalueFieldalueField1] = useState("");
     const [valueField2, setvalueFieldalueField2] = useState("");
@@ -70,7 +74,7 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
             calendar={typeNextCalibrationDate === TypesNextCalibrationDateItems[1] ? props => (
                     <Calendar
                         {...props}
-                        style={{width: "50px",}}
+                        style={{width: "30px",}}
                         // onChange={handleChange}
                         bottomView="year"
                         topView="decade"
@@ -142,16 +146,18 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
                             </div>                           
                         </div>    
                     </div>
-                    <div className='detailItem'>
-                        <Label>שם מאשר התעודה:</Label>    
-                        <ComboBox></ComboBox>
-                    </div>
-                    <div className='detailItem'>
-                        <Label></Label>
-                        <div className='flex-container'>
-                            <Button themeColor={"primary"} onClick={() =>setOpenSignForm(true)}>חתימה</Button>
-                            <Input></Input>
-                        </div>    
+                    <div className='flex-container'>
+                          <div className='detailItem'>
+                              <Label>שם מאשר התעודה:</Label>    
+                              <ComboBox></ComboBox>
+                          </div>
+                          <div className='detailItem'>
+                              <Label></Label>
+                              <div className='flex-container'>
+                                  <Button themeColor={"primary"} onClick={() =>setOpenSignForm(true)}>חתימה</Button>
+                                  <Input></Input>
+                              </div>    
+                          </div>
                     </div>
                 </div>   
             </PanelBarItem>
@@ -237,6 +243,7 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
         <RangeCell {...props}/>);
       };
       const gridWidth = 600;
+
       const setPercentage = (percentage) => {
         return Math.round(gridWidth / 100) * percentage;
       };
@@ -295,7 +302,7 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
                   </div>
                   <div className='detailItem'>
                       <Label>תאריך כיול:</Label>    
-                      <DatePicker style={{width: "50px",}} defaultValue={new Date()} format="dd/MM/yyyy"></DatePicker>
+                      <DatePicker style={{width: "30px",}} defaultValue={new Date()} format="dd/MM/yyyy"></DatePicker>
                   </div>
                   <div className='detailItem'>
                       <Label>תאריך כיול הבא:</Label>
@@ -307,7 +314,7 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
                     <Label>הערות לדוח:</Label> 
                     <div className='flex-container'>
                         <DropDownList style={{width: "250px",}}></DropDownList>&nbsp;
-                        <Button  icon="plus" themeColor={"primary"}>הוספה</Button>
+                        <Button icon="plus" themeColor={"primary"}>הוספה</Button>
                     </div>      
                 </div>
                 <div className='detailItem'>    
@@ -329,6 +336,64 @@ import ChannelsSelectionToForm from '../ChannelsSelectionToForm';
    );
   };
 
+  const options = {
+    cMapUrl: 'cmaps/',
+    cMapPacked: true,
+    standardFontDataUrl: 'standard_fonts/',
+  };
+
+  /* container to display report draft */
+  const DispalyReportContainer = () => {
+    
+    const [displayReport, setDisplayReport] = useState(false);
+    const [file, setFile] = useState(reportPdf);
+    const [numPages, setNumPages] = useState(null);
+
+    const hundleDisplayReport = () =>{
+      setDisplayReport(current => !current);
+
+    };
+      
+    function onDocumentLoadSuccess({ numPages: nextNumPages }) {
+      setNumPages(nextNumPages);
+    } 
+
+    function loadError(error) {
+      console.log(error.message);           
+    }
+    
+  return (
+    <>
+    <div className='viewReport'>
+          <div className='btnViewReport'>
+              <Button onClick={hundleDisplayReport} themeColor={"info"}>
+                   <span className={displayReport ? "k-icon k-i-arrow-60-down" : "k-icon k-i-arrow-60-up"}></span> 
+                   {displayReport ? "הסתר דוח" : " הצג דוח"  }
+              </Button>
+          </div>
+    </div> 
+      {
+          displayReport ? 
+          <div className='viewReportDialoug'>
+              <div>
+                  <div className='Div-close-view-report-dialoug'>
+                      <Button onClick={(e) => setDisplayReport(false)} themeColor={"info"}>
+                        <span className="k-icon k-i-close"></span>
+                       </Button>                     
+                  </div>                    
+                  <div>
+                      <Document file={file} onLoadSuccess={onDocumentLoadSuccess} options={options} onLoadError={loadError} loading={<h1>טוען      </h1>}>
+                              {Array.from(new Array(numPages), (el, index) => (
+                              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                              ))}     
+                      </Document>
+                  </div>         
+              </div>
+        </div> : ""
+      }
+    </>
+  );
+  };
 
 
   /* returns array of elements to drag and drop */
@@ -393,14 +458,25 @@ function OvenForm({form}) {
     };
 
     return (
-        <div style={{ width: "100%",}}>   
+        <div style={{ width: "100%",}}>
+            {/* Display Report button*/}
+            
+            <div className='viewCreateReport'>
+                      <Button themeColor={"success"}>הנפק דוח</Button>
+            </div>  
+            <DispalyReportContainer></DispalyReportContainer> 
+ 
             <button icon="folder" onClick={openPopUpDisplayReport} ref={anchor} className={"k-button k-button-md k-rounded-md k-button-solid k-button-solid-base"}>
                  הצגת דוחות קודמים
             </button> 
            
             <Popup show={showPopUpReports} popupClass={"popup-content"} anchor={anchor.current}>
-                <Button icon="pdf" themeColor={"primary"} fillMode="link">דוח 1</Button>
-                <Button icon="pdf" themeColor={"primary"} fillMode="link">דוח 2</Button>
+                 <Button icon="pdf" themeColor={"primary"} fillMode="link">
+                       <a href={reportPdf} target="_blank" rel="noreferrer">דווח 1 </a>
+                  </Button>
+                 <Button icon="pdf" themeColor={"primary"} fillMode="link">
+                    <a href={reportPdf} target="_blank" rel="noreferrer">דוח 2</a>
+                 </Button>  
             </Popup> 
               {/* container of all elements to drag and drop */}
              <DragDropContainer elements={elements} setElements={setElements} 

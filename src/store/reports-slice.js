@@ -44,27 +44,14 @@ const reportsSlice = createSlice({
         }, 
 
         setChannelSerialNumber(state, action) {
- console.log("setChannelSerialNumber");
+
 
             const detailsItem = action.payload.detailItem;
-             console.log(detailsItem);
-           // console.log(detailsItem);
-           // var channels = state.reportsDataList.find((reportItem) => reportItem.id === detailsItem.reportId).channels;
             
-            // channels.map(item => {
-            //     if (item.serialNumber === detailsItem.serialNumber) {
-            //         return {...item, serialNumber: detailsItem.newSerialNumber};
-            //     }
-            //     if (item.serialNumber === detailsItem.newSerialNumber) {
-            //         return {...item, serialNumber: detailsItem.serialNumber};
-            //     }
-            // });
-
             const channels = state.reportsDataList.find((reportItem) =>  reportItem.id === detailsItem.reportId).channels;
 
             
-           // console.log("existingItem");
-           // console.log(channels);
+           
             if (channels) 
             {
                 const itemSelected = channels.find((item) =>  item.serialNumber === detailsItem.serialNumber);
@@ -72,20 +59,18 @@ const reportsSlice = createSlice({
                 const ItemReplace = channels.find((item) =>  item.serialNumber === detailsItem.newSerialNumber);
                 itemSelected.serialNumber = detailsItem.newSerialNumber;
                 ItemReplace.serialNumber = detailsItem.serialNumber;
-               // channels[0].serialNumber = 6;
-                //  channels.map(item => (item.serialNumber === detailsItem.serialNumber ?
-                //  {
-                //    ...item, 
-                //   'serialNumber' : 6,     
-                //  } : item))
             }
-           // console.log(channels);
+        },
 
-            // channels.map(item => (item.serialNumber === detailsItem.serialNumber ?
-            //     {
-            //       ...item, 
-            //      'serialNumber' : 6,     
-            //     } : item))
+        removeChannelFromReport(state, action) {
+
+            const detailsItem = action.payload.detailItem;    
+                 
+            const reportItems = state.reportsDataList.find((reportItem) =>  reportItem.id === detailsItem.reportId);
+            reportItems.channels = reportItems.channels.filter((channelItem) => channelItem.serialNumber !== detailsItem.serialNumber);
+
+            reportItems.channels = reportItems.channels.map((item) => item.serialNumber > detailsItem.serialNumber ? 
+                                                            {...item, serialNumber: item.serialNumber -1} : item);
         },
     },
 });

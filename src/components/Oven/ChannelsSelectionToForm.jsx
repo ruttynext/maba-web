@@ -3,6 +3,7 @@ import { PanelBar, PanelBarItem } from "@progress/kendo-react-layout";
 import { Grid, GridColumn, getSelectedState} from "@progress/kendo-react-grid";
 import { useSelector, useDispatch } from 'react-redux';
 import { reportsActions } from './../../store/reports-slice';
+
 import ChannelsSelection from './ChannelsSelection/ChannelsSelection';
 import { Button } from '@progress/kendo-react-buttons';
 import { getter } from '@progress/kendo-react-common';
@@ -28,8 +29,9 @@ const initialSort = [
       const container = {};
      
       var hydraItem = listAllChannels.find((hydraItem) => hydraItem.id === item.hydraId)
-      var channel = hydraItem.channels.some(code => code.id === item.name);
-      
+      var channel = hydraItem.channels.find(code => code.name === item.name);
+      console.log("channel");
+      console.log(channel);
       container.hydraNumber = hydraItem.hydraNumber;
       container.name = item.name;   
       
@@ -45,25 +47,33 @@ const initialSort = [
    return arr;
 
   }
+  const DeleteItem = (props) => {
 
- 
+    return (
+      <td>
+        <Button>
+            <span className='k-icon k-i-delete'></span>
+        </Button>
+      </td>
+    );
+  };
+  
   /* Channels Selection */
 function ChannelsSelectionToForm ({form}) {
-  console.log("ChannelsSelectionToForm");
 
   const listChannelsOfCurrentReport = useSelector((state) => state.reportsData.reportsDataList.find((item) =>item.id === form.id).channels);
   console.log(listChannelsOfCurrentReport);
   const listAllChannels = useSelector((state) => state.channelData.channelsData);
-  
+  console.log("listAllChannels");
+  console.log(listAllChannels);
   var data = getChannelData(listChannelsOfCurrentReport, listAllChannels);
-console.log("data");
-console.log(data);
+  console.log("datadata");
+  console.log(data);
   const dispatch = useDispatch();
   
   const [selectedState, setSelectedState] = useState({});
   const [itemSelected, setItemSelected] = useState("");
-  console.log("itemSelected");
-  console.log(itemSelected);
+ 
   const [openCheannelsSelectionDialog, setOpenCheannelsSelectionDialog] = useState(false);
 
   const onSelectionChange = event => {
@@ -104,6 +114,7 @@ console.log(data);
                       serialNumber: itemSelected.serialNumber,
                       newSerialNumber: newSerialNumber} 
       }));
+
       setItemSelected(prevItem => ({
         ...prevItem,
         serialNumber: newSerialNumber
@@ -130,6 +141,29 @@ const getActiveButton = (up)=>
   }
  
 }
+const deleteChannelCell = (props) => {
+  
+  const removeChannel = () =>{
+
+    dispatch(reportsActions.removeChannelFromReport(
+      {
+      
+          detailItem: {reportId : form.id,
+                       serialNumber: props.dataItem.serialNumber} 
+       }));
+
+     console.log(props.dataItem);
+  }
+
+  return(
+    <td>
+        <Button onClick={removeChannel}>
+            <span className='k-icon k-i-delete'></span>
+        </Button>
+    </td>);
+
+  };
+
   return (
     <div className='divChooseChannelsCol'>       
       <PanelBar>
@@ -156,13 +190,12 @@ const getActiveButton = (up)=>
                             ...item,
                             [SELECTED_FIELD]: selectedState[idGetter(item)]
                           })), initialSort)} dataItemKey={DATA_ITEM_KEY} selectedField={SELECTED_FIELD} selectable={{}} onRowClick={clicked}  onSelectionChange={onSelectionChange}>
-                      <GridColumn field="name" title="שם"   width={setPercentage(10)}/>
-                      <GridColumn field="serialNumber" title="מס סידורי" width={setPercentage(15)}/>
-                      <GridColumn field="unitsNumber" title="יחידות"  width={setPercentage(15)}/>
-                      <GridColumn field="sensorValue" title="מס רגש"  width={setPercentage(15)}/> 
-                      <GridColumn field="name" title="רגש"  width={setPercentage(10)}/>
-                      <GridColumn field="name" title="ערוץ"  width={setPercentage(10)}/> 
-                      <GridColumn field="hydraNumber"  title="אוגר נתונים" width={setPercentage(20)}/>       
+                      <GridColumn field="name" title="#"   width={setPercentage(10)}/>
+                      <GridColumn field="unitsNumber" title="יחידות"  width={setPercentage(12)}/>
+                      <GridColumn field="serialNumber" title="ערוץ" width={setPercentage(15)}/>  
+                      {/* <GridColumn field="sensorValue" title="מס רגש"  width={setPercentage(15)}/>  */}
+                      <GridColumn field="hydraNumber"  title="אוגר נתונים" width={setPercentage(16)}/>   
+                      <GridColumn title="מחיקה" cell={deleteChannelCell} width={setPercentage(12)}/>        
                   </Grid>
               </div> 
             </div>    

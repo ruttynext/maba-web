@@ -1,7 +1,7 @@
 [
 	{
 			"RangeId" : "1",
-		    "RangeName": "שם תחום 1",
+		    "RangeName": "טמפרטורה מכוונת C °0.2", 
 		    "IntentionalValue": "15 kpa",
 		    "Conclusion": "",
 			"certificateNum" : "2102156/16",

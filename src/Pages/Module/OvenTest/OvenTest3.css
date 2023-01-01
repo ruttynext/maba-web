@@ -1,5 +1,6 @@
 .flexrow{
     display: flex ; 
+    flex-direction: row;
    /* flex-wrap: nowrap;  */
  
 }
@@ -15,12 +16,12 @@
 } 
 .flexRightcolumnRanges
 {
-   width: 25%;
+   width: 10%;
    margin-right: 20px;
 } 
 .flexMiddlecolumnRanges
 {
-   width: 70%;
+   width: 90%;
    margin-right: 20px;
 } 
 
@@ -45,7 +46,7 @@
 {
     /* width: 620px; */
     margin: 15px 15px 0px 0px;
-    
+   z-index: -1;
     height: 250px;
 }
 .panel-grid-Channels{
@@ -155,8 +156,9 @@
    background-color: #f8f7f7 !important;
 }
 .divPanelBarItem{
+   width: 100%;
    padding: 10px 10px 10px 10px;
-     z-index: -1;
+   z-index: -1; 
 }
 .divPanelBarItem2{
    padding: 0px 10px 10px 10px;
@@ -266,6 +268,21 @@
     /* width: 600px; */
     margin: 15px 15px 0px 0px;
 }
+.required-field{
+  content: "*";
+   color: red;
+}
+.referance-Line-container{
+   width: 100%;
+}
+
+.k-tabstrip>.k-content>.k-animation-container{
+   width: 100%
+ }
+ .div-detail-selected-range{
+   display: flex;
+   flex-direction: row;
+ }
  /* Responsive layout - makes a one column-layout instead of two-column layout */
 @media (max-width: 800px) {
    .flex-container {

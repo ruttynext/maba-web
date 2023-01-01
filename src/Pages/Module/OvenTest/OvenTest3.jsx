@@ -1,21 +1,17 @@
 import {React, useState} from 'react';
 import { TabStrip, TabStripTab } from "@progress/kendo-react-layout";
-import { ComboBox, MultiColumnComboBox, DropDownList } from '@progress/kendo-react-dropdowns';
 import { Label } from "@progress/kendo-react-labels";
 import { certificates } from '../../../data/certificates';
 import { Button } from "@progress/kendo-react-buttons";
-import { Input, NumericTextBox } from '@progress/kendo-react-inputs';
-import reportPdf from "./220837062.pdf";
-import { Document, Page, pdfjs  } from 'react-pdf';
+import { Input } from '@progress/kendo-react-inputs';
 import ChannelsData from '../../../data/ChannelData.json';
 import { useSelector, useDispatch } from 'react-redux';
 import { Dialog, DialogActionsBar } from "@progress/kendo-react-dialogs";
 import { reportsActions } from '../../../store/reports-slice';
 import './OvenTest3.css'
 import OvenForm from '../../../components/Oven/OvenForm/OvenForm';
-
-
-pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import SelectingDataSourceOfChannels from '../../../components/Oven/SelectingDataSourceOfChannels/SelectingDataSourceOfChannels';
+import { ComboBox } from '@progress/kendo-react-dropdowns';
 
   const columns = [
     {
@@ -43,54 +39,6 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
   
 
 
-  /* container to display report draft */
-  const DispalyReportContainer = () => {
-    
-    const [displayReport, setDisplayReport] = useState(false);
-    const [file, setFile] = useState(reportPdf);
-    const [numPages, setNumPages] = useState(null);
-
-    const hundleDisplayReport = () =>{
-      setDisplayReport(current => !current);
-
-    };
-      
-    function onDocumentLoadSuccess({ numPages: nextNumPages }) {
-      setNumPages(nextNumPages);
-    } 
-
-    function loadError(error) {
-      console.log(error.message);           
-    }
-    
-  return (
-    <>
-    <div className='viewReport'>
-          <div className='btnViewReport'>
-              <Button onClick={hundleDisplayReport} themeColor={"info"}><span className={displayReport ? "k-icon k-i-arrow-60-down" : "k-icon k-i-arrow-60-up"}></span> 
-              {displayReport ? "הסתר דוח" : " הצג דוח"  }</Button>
-          </div>
-    </div> 
-      {
-          displayReport ? 
-          <div className='viewReportDialoug'>
-              <div>
-                  <div className='Div-close-view-report-dialoug'>
-                      <Button onClick={(e) => setDisplayReport(false)} themeColor={"info"}><span className="k-icon k-i-close"></span></Button>                     
-                  </div>                    
-                  <div>
-                      <Document file={file} onLoadSuccess={onDocumentLoadSuccess} options={options} onLoadError={loadError} loading={<h1>טוען      </h1>}>
-                              {Array.from(new Array(numPages), (el, index) => (
-                              <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-                              ))}     
-                      </Document>
-                  </div>         
-              </div>
-        </div> : ""
-      }
-    </>
-  );
-  };
 
   const Title = (props) => {
 
@@ -117,17 +65,20 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
   function OvenTest(props) {
     
     const listReports = useSelector((state) => state.reportsData.reportsDataList);
-
+    const [existingReportsList, setExistingReportsList] = useState(["דוח חדש"]);
     const [ certificate, SetCertificate ] = useState({});
     const [ firstPage, SetFirstPage ] = useState(true);
  
     const [selected, setSelected] = useState(0);
     const [openDialogAddReport, setOpenDialogAddReport] = useState(false);
-
     const dispatch = useDispatch();
 
      
     const handleIndexPage = (e) => {
+       
+      if(firstPage && listReports.length === 0)
+         showOrHideDialogAddReport();
+ 
         SetFirstPage(current => !current);
     };
 
@@ -171,35 +122,30 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
     return (
       <div style={{paddingRight: "15px", width: "100%",}} >
         {/* Menu of the top of the page  */}      
-        <>
-          <div className='flex-container'>
-            <div className='detailItem'> 
-                <Label>מקור נתונים:</Label> 
-                <ComboBox data={["הידרה", "ערוצים מתוך הקלטה שמורה/ אקסל/ הידרות אלחוטיות/ קובץ לוג ", "מדג'טק","קארטסנס","גרנט"]} style={{width: "350px",}}></ComboBox>                      
-            </div>
-             <div className='detailItem'>
-                <Label>קצב דגימה (שניות):</Label>
-                <NumericTextBox style={{width: "70%",}}/>
-            </div> 
-            
-            <Button className='nextOrPrevBtn' onClick={handleIndexPage}>{firstPage ? "הבא": "הקודם"}
-                <span className={firstPage ? "k-icon k-i-arrow-chevron-left" : "k-icon k-i-arrow-chevron-right"}></span>
-            </Button>
-            <div className='viewCreateReport'>
-                  <Button themeColor={"success"}>הנפק דוח</Button>
-            </div>
-          </div>
-        </>
-        {/* Display Report button*/}
-        <DispalyReportContainer></DispalyReportContainer>   
+       
+         
           <div style={{paddingTop: "15px", width: "100%",}}>
-            {firstPage ? 
+            <div className='flex-container'>
+                { firstPage && 
+                  <>
+                     <SelectingDataSourceOfChannels></SelectingDataSourceOfChannels>
+                  </>
+                  }
+                  <div>
+                       <Button className='nextOrPrevBtn' onClick={handleIndexPage}>{firstPage ? "הבא": "הקודם"}
+                           <span className={firstPage ? "k-icon k-i-arrow-chevron-left" : "k-icon k-i-arrow-chevron-right"}></span>
+                       </Button> 
+                  </div>
+                  
+            </div>
+            <br/>
+ 
+           {!firstPage &&
               <>
+                  
                  
-                
-              </> :
-              <>  
               {
+               
                  listReports.length > 0 ?
                 <TabStrip selected={selected} onSelect={handleSelectTab}>
                   { 
@@ -222,16 +168,18 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
                             <Dialog title={"דוח חדש"} onClose={showOrHideDialogAddReport} >
                                <div className='flex-container'>
                                 <div  className='detailItem'>
-                                    <Label>מס תעודה</Label> 
+                                    <Label>
+                                         מס תעודה<span className="required-field">*</span>
+                                    </Label> 
                                     <Input style={{width: "150px",}}/>
                                 </div>
                                 <div className='detailItem'>
-                                    <Label>בחירת כלי המיועד לכיול</Label> 
-                                    <div className='flex-container'>
-                                        <DropDownList data={["מאזניים אנליטים אלקטרונים", "ככ", "גג", "דד"]} style={{width: "250px",}}></DropDownList>&nbsp;
-                                        <Button  icon="plus" themeColor={"primary"}>הוספה</Button>
-                                    </div>
-                                    
+                                    <Label>בחירת דוח:</Label> 
+                                    <ComboBox data={existingReportsList} style={{width: "150px",}} value={existingReportsList[0]}></ComboBox>&nbsp;
+                                </div>
+                                <div className='detailItem'>
+                                    <Label>בחירת כלי המיועד לכיול<span className="required-field">*</span></Label> 
+                                    <ComboBox data={["מאזניים אנליטים אלקטרונים", "ככ", "גג", "דד"]} allowCustom={true} style={{width: "250px",}}></ComboBox>&nbsp;
                                 </div>
                              
                                 </div>                                   

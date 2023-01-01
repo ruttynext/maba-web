@@ -1,7 +1,7 @@
 import  {React, useState} from 'react';
 import { Input, NumericTextBox, Checkbox } from '@progress/kendo-react-inputs';
 import { Grid, GridColumn} from "@progress/kendo-react-grid";
-import { PanelBar, PanelBarItem } from "@progress/kendo-react-layout";
+import { PanelBar, PanelBarItem, Splitter } from "@progress/kendo-react-layout";
 import { Button } from "@progress/kendo-react-buttons";
 import { Label } from "@progress/kendo-react-labels";
 import { ComboBox, DropDownList } from '@progress/kendo-react-dropdowns';
@@ -10,7 +10,11 @@ import { Window } from "@progress/kendo-react-dialogs";
 import CalcalateRangesData from '../../../data/CalcalateRangesData.json';
 import CustomChart from '../../../components/CustomChart/CustomChart';
 import OvenRangeData from '../../../data/OvenRange.json';
-import { GetFormatTime } from '../../../Utils';
+import { ListBox } from '@progress/kendo-react-listbox';
+import { Dialog, DialogActionsBar } from "@progress/kendo-react-dialogs";
+import ChannelMapping from '../ChannelMapping/ChannelMapping';
+import LimitsDataInChart from './LimitsDataInChart';
+import './Ranges.css'
 
 const initialData2 = [
     { index: 1, timeStamp: "01/2/2019 01:00" , "Channels" : [{"ChannelName": "T1", "Value": 15}, {"ChannelName": "T2", "Value": 4.41}, {"ChannelName": "T3", "Value": 25}]},
@@ -61,7 +65,9 @@ const DeleteRange = (props) => {
 
     return (
       <td>
-        <Button>מחיקה</Button>
+        <Button>
+            <span className='k-icon k-i-delete'></span>
+        </Button>
       </td>
     );
   };
@@ -72,23 +78,31 @@ const DeleteRange = (props) => {
    
     const getDefaultLimit = () =>
     {
-        var dataValues = data.filter(o => (o.index >= 1 && o.index <= 2 ));      
-          
-        //Calculation of minimum and maximum dots between the limit lines
-        const maxObj = dataValues.reduce((prev, current)=>  (prev.maxValue > current.maxValue) ? prev : current);
-        const minObj = dataValues.reduce((prev, current)=>  (prev.minValue < current.minValue) ? prev : current);
+         //Finds the dots values are between the active limit lines.
+         var dataValues = data.slice(0, 2);
+       
+         //Calculation of minimum and maximum dots between the limit lines           
+         const maxObj = dataValues.reduce((prev, current)=>  (prev.maxValue > current.maxValue) ? prev : current);
+         const minObj = dataValues.reduce((prev, current)=>  (prev.minValue < current.minValue) ? prev : current);
     
         return [{'key': 0, 
                  'leftSide': {'activeTooltipIndex': 0, 'activeLabel': dataValues[0].timeStamp},
                  'rightSide': {'activeTooltipIndex': 1, 'activeLabel': dataValues[1].timeStamp}, 
                  'strokeWidthValue': 2,
                  'color': null, 
-                 'maxPoint': {'timeStamp' : maxObj.timeStamp, 'value': Math.max(maxObj.T1, maxObj.T2) },
-                 'minPoint': {'timeStamp' : minObj.timeStamp, 'value': Math.min(minObj.T1, minObj.T2) },
-                 'stabilizationLineKey' : null,
+                 'maxPoint': {'timeStamp' : maxObj.timeStamp, 'value': maxObj.maxValue },
+                 'minPoint': {'timeStamp' : minObj.timeStamp, 'value': minObj.minValue  },
+                 'stabilizationLine' : null,
                  'includeInResults': true,
                  'name': "זמן כיול"}];
-    }
+    };
+    
+    const [panes, setPanes] = useState([{size: "0%", collapsible: true,},{},]);
+    
+    const onChange = (event) => {
+        setPanes(event.newState);
+    }; 
+
     const [data, setData] = useState(reverData);
     const [precisionLines, sePrecisionLines] = useState({'topLimit': 15, bottonLimit:3});
     const [areaInData , setAreaInData] = useState(null);
@@ -115,14 +129,30 @@ const DeleteRange = (props) => {
       }
 
     return (
-      <> 
-      <br/> 
+      <div className='referance-Line-container'> 
        <Button onClick={(e) => openDialog(e)} >הרחב גרף</Button>&nbsp;
        <Checkbox>הצגת הגרף בדוח</Checkbox>
-      
-       <CustomChart limits={ranges} updateLimits={setRanges} maxValue = {150}
-         markes={markes} updateMarkes={setMarkes} data={data} updateData={setData} width={700} height={450} 
-          showRange={showRangeInDialoug} precisionLines = {precisionLines}/>
+       <div className='c-reference-line'> 
+        <div style={{width: "85%",}}>
+            <Splitter style={{height: 520,}} panes={panes} onChange={onChange}>
+                    <div>
+                            <CustomChart limits={ranges} updateLimits={setRanges} 
+                            markes={markes} updateMarkes={setMarkes} data={data} height={450} 
+                            showRange={showRangeInDialoug} precisionLines = {precisionLines}/>
+                    </div>
+                     <div>
+                            <CustomChart limits={ranges} updateLimits={setRanges} 
+                            markes={markes} updateMarkes={setMarkes} data={data} height={450} 
+                            showRange={showRangeInDialoug} precisionLines = {precisionLines}/>
+                    </div> 
+            </Splitter> 
+        </div>
+        <div style={{width: "15%",}}>
+            <LimitsDataInChart limits={ranges} updateLimits={setRanges} data={data}/>
+        </div>
+        
+      </div>
+       
             {
                  visible && 
                 (
@@ -133,42 +163,101 @@ const DeleteRange = (props) => {
                      initialWidth={1400}
                      style={positionDialoug}
                     >
-                        <CustomChart limits={ranges} updateLimits={setRanges} width={950} height={500} maxValue={150}
-                        data={areaInData ? data.slice(areaInData.areaFrom.activeTooltipIndex, areaInData.areaTo.activeTooltipIndex +1) : data.slice()} 
-                         updateData={setData}/>
+                        <CustomChart limits={ranges} updateLimits={setRanges} height={500} maxValue={150}
+                        data={areaInData ? data.slice(areaInData.areaFrom.activeTooltipIndex, areaInData.areaTo.activeTooltipIndex +1) : data.slice()}/>
                     </Window>
                 )
             }
-      </>
+      </div>
     );
   };  
 
+  const MyCustomItem = props => {
+    let {
+      dataItem,
+      selected,
+      ...others
+    } = props;
+    return <li {...others}>
+          <div>
+             <span style={{fontWeight: 'bold'}}>{props.dataItem.RangeName}</span>
+            <br />
+            <span>ערך מכוון: {props.dataItem.IntentionalValue}</span> <br />
+            <span>מצב: {"לא עומד"}</span> <br />
+            <span>קצב דגימה: {"3"}</span> <br />
+            <Button><span className='k-icon k-i-delete'></span></Button><br />
+            <span>________________________</span>
+          </div>
+        </li>;
+  };
+
+const SELECTED_FIELD = 'selected';
+
 function Ranges(props) {
 
+    const [rangeList, setRangeList] = useState(OvenRangeData);
     const [openChannelMapping, setOpenChannelMapping] = useState(false);
     
     const MyDeleteRange = (props) => (
         <DeleteRange {...props}/>
       );
+    
+    const showOrHideDialogChannelMapping = () =>
+    {
+        setOpenChannelMapping(!openChannelMapping);
+    };
+
+      const handleItemClick = (event) => {
+        setRangeList(
+            rangeList.map(item => {
+            if (item.RangeId === event.dataItem.RangeId) {
+                 item[SELECTED_FIELD] = !item[SELECTED_FIELD];
+            } else  {
+                 item[SELECTED_FIELD] = false;
+            }
+            return item;
+          })
+        );
+      };
 
     return (
         <div className ='flexrow'>
         <div className='flexRightcolumnRanges'>
-
-             <Button themeColor={"primary"}>תחום חדש</Button>
-                            <div className='divGridRange'>
-                                    <Grid
+             <Button icon="plus" themeColor={"primary"}>תחום חדש</Button>
+  
+                <ListBox textField='RangeId' style={{height:'100%', width: '100%',}} 
+                  data={rangeList} selectedField={SELECTED_FIELD} onItemClick={e => handleItemClick(e)} item={MyCustomItem} />
+                                    {/* <Grid
                                         data={OvenRangeData}>
                                         <GridColumn field="RangeName" title="שם"  />
                                         <GridColumn field="IntentionalValue" title="ערך מכוון" />
                                         <GridColumn field="Conclusion" title="מסקנה" />
                                         <GridColumn field="Range" title="מחיקה" cell={MyDeleteRange} />
-                                    </Grid>
-                            </div>
+                                    </Grid> */}
+                
         </div>
         <div className='flexMiddlecolumnRanges'>
+            <div className='div-detail-selected-range'>
+                 <div className='detailItem' style={{width: "20%",}}>
+                     <Label>שם תחום:</Label>
+                     <ComboBox data={rangeList} textField={"RangeName"}></ComboBox>
+                 </div> &nbsp;
+                 <div className='detailItem' style={{width: "7%",}}>
+                    <Label>מדידה:</Label>
+                    <Input value={"טמפרטורה"}></Input>
+                 </div>&nbsp;
+                 <div className='detailItem' style={{width: "8%",}}>
+                     <Label>יחידות:</Label>
+                     <ComboBox data={["°C"]} value={"°C"}></ComboBox>
+                 </div>&nbsp;
+                 <div className='detailItem' style={{width: "15%",}}>
+                     <Label>שיוך לחות:</Label>
+                     <ComboBox data={rangeList} textField={"RangeName"}></ComboBox>
+                 </div>
+            </div>
+            
         <PanelBar>
-            <PanelBarItem expanded={true} title="נתונים כללים בתחום">
+            <PanelBarItem title="נתונים כללים בתחום">
                 <div className='divPanelBarItem2'>
                             <div className='detailItem'>
                                 <Label>מסמך יחוס:</Label> 
@@ -204,7 +293,7 @@ function Ranges(props) {
                                 <Label>מיפוי רגשים:</Label>  
                                 <div className='flex-container'>
                                     <Input value={"הוגדר"} style={{background: "#90ee90", textAlign: "center", width: "70px"}}></Input>&nbsp;
-                                    <Button themeColor={"primary"} onClick={setOpenChannelMapping}>עיצוב</Button>
+                                    <Button themeColor={"primary"} onClick={showOrHideDialogChannelMapping}>עיצוב</Button>
                                 </div>      
                             </div>
                             <div className='detailItem'>    
@@ -233,15 +322,23 @@ function Ranges(props) {
                                     </div>      
                             </div> 
                 </div>
+                {
+                    openChannelMapping && (
+                        <Dialog title={"מיפוי רגשים"} onClose={showOrHideDialogChannelMapping} >
+                           <ChannelMapping></ChannelMapping>                                   
+                          <DialogActionsBar>
+                            <button className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" onClick={showOrHideDialogChannelMapping}>ביטול</button>
+                            <button className="k-button k-button-md k-rounded-md k-button-solid k-button-solid-base" >אישור</button>
+                          </DialogActionsBar>
+                        </Dialog>)
+                }
             </PanelBarItem>
-            <PanelBarItem title="הצגה גרפית של תחומים">
+            <PanelBarItem expanded={true} title="הצגה גרפית של תחומים">
                 <div className='divPanelBarItem'>
-                    <div>
-                        <ReferanceLineContainer/>
-                    </div>
+                     <ReferanceLineContainer/>      
                 </div>
             </PanelBarItem>
-            <PanelBarItem expanded={true} title="הגדרת חישובים">
+            <PanelBarItem title="הגדרת חישובים">
                <div className='divPanelBarItem'>
                <div className='cards-container'>
                
@@ -277,12 +374,12 @@ function Ranges(props) {
                                  <div className='detailSubItem'>  
                                         <div className='detailItem'>
                                             <Label>הבחנה:</Label>
-                                            <Input style={{width: "100px",}}></Input>
+                                            <Input style={{width: "80px",}}></Input>
                                         </div> 
 
                                         <div className='detailItem'>
                                             <Label>ערך:</Label>
-                                            <Input style={{width: "100px",}}></Input>
+                                            <Input style={{width: "80px",}}></Input>
                                         </div> 
                                 </div> 
                             </div>
@@ -297,7 +394,7 @@ function Ranges(props) {
                                     <div className='detailItem'>
                                         <Label></Label>
                                         <div className='flex-container'>
-                                        <NumericTextBox style={{width: "100px",}}/> 
+                                        <NumericTextBox style={{width: "80px",}}/> 
                                         <Label>+-</Label> 
                                         </div> 
                                     </div>     
@@ -309,7 +406,7 @@ function Ranges(props) {
                                 </div> 
                                 <div className='detailItem'>
                                     <Checkbox label={"אחידות"}></Checkbox>        
-                                    <NumericTextBox style={{width: "100px",}}/>        
+                                    <NumericTextBox style={{width: "80px",}}/>        
                                 </div> 
                             </div>
                                
@@ -321,7 +418,7 @@ function Ranges(props) {
                                    </Checkbox>
                                    <div className='detailSubItem'>
                                        <Checkbox label={"חישוב אוטומטי"}></Checkbox>&nbsp;
-                                       <NumericTextBox  style={{width: "100px",}}/>
+                                       <NumericTextBox  style={{width: "80px",}}/>
                                    </div> 
                                 </div>
 
@@ -332,7 +429,7 @@ function Ranges(props) {
                                    </Checkbox>
                                    <div className='detailSubItem'>
                                        <Checkbox label={"חישוב אוטומטי"}></Checkbox>&nbsp;
-                                       <NumericTextBox style={{width: "100px",}}/>
+                                       <NumericTextBox style={{width: "80px",}}/>
                                    </div> 
                                 </div>
                                 
@@ -342,7 +439,7 @@ function Ranges(props) {
                                    </Checkbox>
                                    <div className='detailSubItem'>
                                        <Checkbox label={"חישוב אוטומטי"}></Checkbox>&nbsp;
-                                       <NumericTextBox style={{width: "100px",}}/>
+                                       <NumericTextBox style={{width: "80px",}}/>
                                    </div> 
                                 </div> 
 
@@ -351,7 +448,7 @@ function Ranges(props) {
                     </div>
                </div>
             </PanelBarItem>
-            <PanelBarItem expanded={true} title="תוצאות כיול">
+            <PanelBarItem title="תוצאות כיול">
                <div className='divPanelBarItem'>
                 <br/>
                     <div>

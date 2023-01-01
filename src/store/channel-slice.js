@@ -7,13 +7,21 @@ const channelsSlice = createSlice({
                                         id: 0,
                                         hydraNumber: "21-424",
                                         channelsAmount: 60,
+                                        calibrationDate : "22/01/2021",
+                                        CalibrationDateValidity :  "22/01/2023",
+                                        status: "Ok",
+                                        active: true, 
+                                        samplingRate: 3,//קצב דגימה
                                         channels: []
                                     },
                                     {
                                         id: 1,
-                                        selected: false,
                                         hydraNumber: "21-473",
                                         channelsAmount: 40,
+                                        calibrationDate : "16/06/2021",
+                                        CalibrationDateValidity :"05/08/2022",
+                                        status: "Ok",
+                                        active: true,
                                         channels: []
                                     }
                                    ] 
@@ -23,11 +31,13 @@ const channelsSlice = createSlice({
         setChanneldata(state, action) {
        
             const detailsChannel = action.payload.detailsChannel;
+            console.log("detailsChannel");
+            console.log(detailsChannel);
             const channelsArray = action.payload.channelsArray;
-            var channels = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === detailsChannel.hydraNumber).channels;
+            var channelsData = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === detailsChannel.hydraNumber);
             channelsArray.map(channelItem => {
 
-                const existingItem = channels.find((channel) => channel.name === channelItem.id);
+                const existingItem = channelsData.channels.find((channel) => channel.name === channelItem.id);
 
                 if (existingItem) {
                   
@@ -40,7 +50,7 @@ const channelsSlice = createSlice({
                 } 
                 else
                 {
-                    channels.push({
+                    channelsData.channels.push({
                                 name: channelItem.id,
                                 sensorValue: detailsChannel.sensorValue, 
                                 measurementType: detailsChannel.measurementType,
@@ -52,26 +62,25 @@ const channelsSlice = createSlice({
  
         },
         
-        // removeChannel(state, action) {
+        //  removeChannel(state, action) {
             
-        //     const channel = action.payload.channel;
-        //     const channelsItems = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === channel.hydraNumber);
+        //      const channel = action.payload.channel;
+        //      const channelsItems = state.channelsData.find((hydraItem) => hydraItem.hydraNumber === channel.hydraNumber);
 
-        //     channelsItems.channels = channelsItems.channels.filter((channelItem) => channelItem.name !== channel.id);
-        // },
+        //      channelsItems.channels = channelsItems.channels.filter((channelItem) => channelItem.name !== channel.id);
+        //  },
 
-        // setChannelToReport(state, action) {
+        //  setChannelToReport(state, action) {
             
-        //     const item = action.payload.item;
+        //      const item = action.payload.item;
            
-        //     const existingItem = (state.channelsData.find(
-        //             (hydraItem) => hydraItem.hydraNumber === item.hydraNumber)).channels.find((channel) => channel.name === item.id);
+        //      const existingItem = (state.channelsData.find(
+        //              (hydraItem) => hydraItem.hydraNumber === item.hydraNumber)).channels.find((channel) => channel.name === item.id);
 
-        //     if(existingItem) {
-                
-        //         existingItem.reports.push(item.report)
-        //     }
-        // },
+        //      if(existingItem) { 
+        //          existingItem.reports.push(item.report)
+        //      }
+        //  },
 
         expandedHydra(state, action) {
          
