@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/maba-web/static/css/main.b062ac5b.css",
-    "main.js": "/maba-web/static/js/main.6ec965b4.js",
+    "main.css": "/maba-web/static/css/main.e5e09aff.css",
+    "main.js": "/maba-web/static/js/main.29a87c8a.js",
     "static/js/787.b6063c01.chunk.js": "/maba-web/static/js/787.b6063c01.chunk.js",
     "static/media/220837062.pdf": "/maba-web/static/media/220837062.11b506ee30f421e1c9ad.pdf",
     "index.html": "/maba-web/index.html",
-    "main.b062ac5b.css.map": "/maba-web/static/css/main.b062ac5b.css.map",
-    "main.6ec965b4.js.map": "/maba-web/static/js/main.6ec965b4.js.map",
+    "main.e5e09aff.css.map": "/maba-web/static/css/main.e5e09aff.css.map",
+    "main.29a87c8a.js.map": "/maba-web/static/js/main.29a87c8a.js.map",
     "787.b6063c01.chunk.js.map": "/maba-web/static/js/787.b6063c01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b062ac5b.css",
-    "static/js/main.6ec965b4.js"
+    "static/css/main.e5e09aff.css",
+    "static/js/main.29a87c8a.js"
   ]
 }
