@@ -62,7 +62,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
     
    return (
     <div className='flex-container'>
-        <ComboBox style={{width: "150px",}} 
+        <ComboBox style={{width: "170px",}} 
               data={TypesNextCalibrationDateItems} 
               value={typeNextCalibrationDate}  
               onChange={(e) => (SetTypeNextCalibrationDate(e.value))}>                                    
@@ -96,16 +96,18 @@ pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pd
       <div className='divCustomerDetails'>
         <PanelBar>
           <PanelBarItem expanded={true} title="פרטי הלקוח">     
-              <div className='divPanelBarItem2'>
-                    <div className='detailItem'>
-                        <Label>שם הלקוח:</Label>    
-                        <ComboBox></ComboBox>
-                    </div>
-                    <div className='detailItem'>
-                        <Label>כתובת הלקוח:</Label>    
-                        <Input value={customerAddress}
-                        onChange={(e)=>SetCustomerAddress(e.value)}></Input>
-                    </div>
+              <div className='divPanelBarItem'>
+                <div className='flex-container'>
+                  <div className='detailItem'>
+                          <Label>שם הלקוח:</Label>    
+                          <ComboBox></ComboBox>
+                  </div>
+                  <div className='detailItem'>
+                          <Label>כתובת הלקוח:</Label>    
+                          <Input value={customerAddress}
+                          onChange={(e)=>SetCustomerAddress(e.value)}></Input>
+                  </div>
+                </div>
                     <div className='detailItem2'>                                  
                         <Label>כתובת האתר בו בוצע הכיול :</Label> 
                         <div className='flex-container'>

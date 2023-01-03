@@ -11,10 +11,13 @@ const arr = [
 ];
 
 function ChannelMapping(props) {
-   
+    const [file, setFile] = useState();
     const [ragashimList, setRagashimList] = useState(arr);
 
-
+    function handleChange(e) {
+        console.log(e.target.files);
+        setFile(URL.createObjectURL(e.target.files[0]));
+    }
 const handlePointerDown = (e, name) => {
 
      const el = e.target;
@@ -65,20 +68,24 @@ const handlePointerMove = (e, name, position) => {
 
     return (
         <div>
-            <svg height="400" width="400">
-                <image href={capture} height="200" width="200"/>
-                 {
-                    ragashimList.map(({ name, position }, index) => 
-                    {             
-                        return(
-                            <g fill={position.active ? "blue" : "brown"} style={{cursor : "grabbing" }} onPointerDown={(e) => handlePointerDown(e, name)} 
-                              onPointerUp={(e) => handlePointerUp(e, name, position)} onPointerMove={(e) => handlePointerMove(e, name, position)}>
-                                <circle cx={position.x} cy={position.y} r="4" />   
-                                <text x={position.x + 23} y={position.y + 5} >{name}</text>
-                            </g>);
-                    })
-                }               
-            </svg>
+            <input type="file" onChange={handleChange} placeholder={"ff"} />
+            <div>
+                <svg height="400" width="400">
+                    <image href={file} height="250" width="250"/>
+                    {
+                        ragashimList.map(({ name, position }, index) => 
+                        {             
+                            return(
+                                <g fill={position.active ? "blue" : "brown"} style={{cursor : "grabbing" }} onPointerDown={(e) => handlePointerDown(e, name)} 
+                                onPointerUp={(e) => handlePointerUp(e, name, position)} onPointerMove={(e) => handlePointerMove(e, name, position)}>
+                                    <circle cx={position.x} cy={position.y} r="4" />   
+                                    <text x={position.x + 23} y={position.y + 5} >{name}</text>
+                                </g>);
+                        })
+                    }               
+                </svg>
+            </div>
+
         </div>
     );
 }
